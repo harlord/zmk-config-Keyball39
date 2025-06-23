@@ -65,7 +65,6 @@
     behaviors {
         input_processor_temp_layer: input-processor-temp-layer {
             compatible = "zmk,input-processor-temp-layer";
-            label = "TEMP_LAYER";
             #input-processor-cells = <2>;   // ← esta línea es obligatoria
             layer = <SCROLL>;
             trigger-type = "relative";
