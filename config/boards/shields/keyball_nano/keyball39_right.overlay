@@ -55,12 +55,13 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        //automouse-layer = <1>;
+        automouse-layer = <1>;
 	scroll-layers = <2>;
 	snipe-layers = <3>;
     };
 };
 
+/*
 / {
   /omit-if-no-ref/ zip_temp_layer_exclude_39: zip_temp_layer_exclude_39 {
       compatible = "zmk,input-processor-temp-layer";
@@ -74,3 +75,4 @@
     input-processors = <&zip_temp_layer_exclude_39 1 30000>;
   };
 };
+*/
