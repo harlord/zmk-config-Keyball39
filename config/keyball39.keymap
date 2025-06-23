@@ -12,7 +12,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <input/processors.dtsi>
+//#include <input/processors.dtsi>
 
 
 //     0  1  2  3  4         5  6  7  8  9
@@ -326,10 +326,10 @@ layer_kdl_slh_30 {
     };
 
     /* Custom temp-layer processor that excludes key 39 from deactivation */
-    /omit-if-no-ref/ zip_temp_layer_exclude_39: zip_temp_layer_exclude_39 {
-        compatible = "zmk,input-processor-temp-layer";
-        #input-processor-cells = <2>;
-        excluded-positions = <39>;
+    // /omit-if-no-ref/ zip_temp_layer_exclude_39: zip_temp_layer_exclude_39 {
+    //    compatible = "zmk,input-processor-temp-layer";
+    //    #input-processor-cells = <2>;
+    //    excluded-positions = <39>;
     };
 
 };
