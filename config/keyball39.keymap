@@ -330,7 +330,7 @@ layer_kdl_slh_30 {
     //    compatible = "zmk,input-processor-temp-layer";
     //    #input-processor-cells = <2>;
     //    excluded-positions = <39>;
-    };
+    //};
 
 };
 
