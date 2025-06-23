@@ -12,6 +12,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <input/processors.dtsi>
+
 
 //     0  1  2  3  4         5  6  7  8  9
 //    10 11 12 13 14        15 16 17 18 19
@@ -24,28 +26,30 @@
 //        32 33 34         35 36 37
 
 #define BASE 0
-#define KDL_Q_0 1
-#define KDL_U_7 2
-#define KDL_A_10 3
-#define KDL_R_11 4
-#define KDL_S_12 5
-#define KDL_T_13 6
-#define KDL_G_14 7
-#define KDL_M_15 8
-#define KDL_NN_16 9
-#define KDL_E_17 10
-#define KDL_I_18 11
-#define KDL_O_19 12
-#define KDL_SLH_30 13
-#define LOWER  14
-#define RAISE  15
-#define HOMEROW 16
-#define NAVOVERR 17
-#define DIRECTACC 18
-#define FUNC 19
-#define ADJ  20
-#define NUMBERS 21
-#define SCROLL  22
+#define MOUSE 1
+#define SCROLL 2
+#define SNIPE 3
+#define KDL_Q_0 4
+#define KDL_U_7 5
+#define KDL_A_10 6
+#define KDL_R_11 7
+#define KDL_S_12 8
+#define KDL_T_13 9
+#define KDL_G_14 10
+#define KDL_M_15 11
+#define KDL_NN_16 12
+#define KDL_E_17 13
+#define KDL_I_18 14
+#define KDL_O_19 15
+#define KDL_SLH_30 16
+#define LOWER  17
+#define RAISE  18
+#define HOMEROW 19
+#define NAVOVERR 20
+#define DIRECTACC 21
+#define FUNC 22
+#define ADJ  23
+#define NUMBERS 24
 
 &lt {
     tapping-term-ms = <240>;
@@ -62,27 +66,6 @@
 &caps_word { continue-list = <UNDERSCORE MINUS>; };
 
 / {
-    behaviors {
-        input_processor_temp_layer: input-processor-temp-layer {
-            compatible = "zmk,input-processor-temp-layer";
-            #input-processor-cells = <2>;   
-        };
-    };
-
-    input-processors {
-        compatible = "zmk,input-processors";
-        processors = <&input_processor_temp_layer>;
-    };
-};
-
-&input_processor_temp_layer {
-    compatible = "zmk,input-processor-temp-layer";
-    layer = <SCROLL>;
-    trigger-type = "relative";  // Responds to pointer movement (relative motion)
-    timeout-ms = <1000>;        // Duration in ms to stay on SCROLL layer after last motion
-};
-
-/ {
 
     #include "macros/macros_general.dtsi"
     #include "behaviors/behaviors_general.dtsi"
@@ -97,6 +80,35 @@
                                &kh KDL_A_10 A        &kh KDL_R_11 R    &kh KDL_S_12 S    &kh KDL_T_13 T   &kh KDL_G_14 G                  &kh KDL_M_15 M    &kh KDL_NN_16 N    &kh KDL_E_17 E          &kh KDL_I_18 I       &kh KDL_O_19 O
                                &kp Z                 &kp X             &kp C             &kp D            &kp V                           &kp K             &kp H              &kp COMMA               &kp DOT              &kp SLASH             
                                &mo SCROLL  &trans  &trans &trans  &lm_homerow_short LSHFT BACKSPACE  &lm_homerow_short LGUI TAB                &base_th_mo_kp_hp RAISE ENTER  &spacelm NAVOVERR SPACE  &mo SCROLL
+            >;
+        };
+        mouse_layer {
+            label = "MOUSE";
+            bindings = <
+&kp N1          &kp N2          &kp N3        &kp N4     &kp N5                  &kp N6         &kp N7     &kp N8  &kp N9     &kp N0
+&kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none                   &kp PAGE_UP    &mkp LCLK  &none   &mkp RCLK  &mkp MCLK
+&none           &none           &none         &none      &none                   &kp PAGE_DOWN  &none      &none   &none      &none
+&none           &trans          &trans        &trans     &trans  &trans  &trans  &mo 3                                        &none
+            >;
+        };
+
+         scroll_layer {
+            label = "SCROLL";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans
+            >;
+        };
+
+        snipe_layer {
+            label = "SNIPE";
+            bindings = <
+&trans  &trans  &trans  &trans  &bootloader                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans                          &trans
             >;
         };
 
@@ -311,15 +323,21 @@ layer_kdl_slh_30 {
             >;
         };
 
-        scroll_layer {
-            label = "SCROLL";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans
-            >;
-        };
-
     };
+
+    /* Custom temp-layer processor that excludes key 39 from deactivation */
+    /omit-if-no-ref/ zip_temp_layer_exclude_39: zip_temp_layer_exclude_39 {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        excluded-positions = <39>;
+    };
+
+    /* Override trackball listener to enable MOUSE layer with very long timeout */
+    &trackball_listener {
+        input-processors = <&zip_temp_layer_exclude_39 MOUSE 30000>;
+    };
+
+    /* Alternative: Use a toggle behavior on key 39 to manually control MOUSE layer */
+    /* Bind &tog MOUSE to key 39 in your base layer for manual toggle control */
+
 };
