@@ -63,7 +63,14 @@
 
 / {
     behaviors {
-        input_processor_temp_layer: input-processor-temp-layer {};
+        input_processor_temp_layer: input-processor-temp-layer {
+            compatible = "zmk,input-processor-temp-layer";
+            label = "TEMP_LAYER";
+            #input-processor-cells = <0>;   // ← esta línea es obligatoria
+            layer = <SCROLL>;
+            trigger-type = "relative";
+            timeout-ms = <1000>;
+        };
     };
 
     input-processors {
@@ -72,12 +79,12 @@
     };
 };
 
-&input_processor_temp_layer {
-    compatible = "zmk,input-processor-temp-layer";
-    layer = <SCROLL>;
-    trigger-type = "relative";  // Responds to pointer movement (relative motion)
-    timeout-ms = <1000>;        // Duration in ms to stay on SCROLL layer after last motion
-};
+//&input_processor_temp_layer {
+//    compatible = "zmk,input-processor-temp-layer";
+//    layer = <SCROLL>;
+//    trigger-type = "relative";  // Responds to pointer movement (relative motion)
+//    timeout-ms = <1000>;        // Duration in ms to stay on SCROLL layer after last motion
+//};
 
 / {
 
