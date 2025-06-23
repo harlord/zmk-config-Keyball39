@@ -5,6 +5,7 @@
  */
  
 #include "keyball39.dtsi"
+#include <input/processors.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -64,5 +65,13 @@
   trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
+    input-processors = <&zip_temp_layer_exclude_39 MOUSE 30000>;
   };
+};
+
+/* Custom temp-layer processor that excludes key 39 from deactivation */
+/omit-if-no-ref/ zip_temp_layer_exclude_39: zip_temp_layer_exclude_39 {
+    compatible = "zmk,input-processor-temp-layer";
+    #input-processor-cells = <2>;
+    excluded-positions = <39>;
 };
