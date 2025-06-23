@@ -31,7 +31,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - SCROLL
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -39,7 +39,7 @@ layers:
   - {t: '$$mdi:keyboard-tab$$', h: '&lm_mac_homerow LGUI'}
   - {t: '$$mdi:keyboard-return$$', h: RAISE}
   - {t: '$$mdi:keyboard-space$$', h: NAVOVERR}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - SCROLL
   KDL_Q_0:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -911,6 +911,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -918,8 +919,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
 combos:
 - p: [0, 1, 2]
   k: $$mdi:keyboard-esc$$
