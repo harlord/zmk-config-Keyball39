@@ -62,6 +62,7 @@
 &caps_word { continue-list = <UNDERSCORE MINUS>; };
 
 / {
+    
     #include "macros/macros_general.dtsi"
     #include "behaviors/behaviors_general.dtsi"
     #include "combos/combos_general.dtsi"
