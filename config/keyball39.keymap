@@ -331,9 +331,6 @@ layer_kdl_slh_30 {
         #input-processor-cells = <2>;
         excluded-positions = <39>;
     };
-
-
-
 };
 
     /* Override trackball listener to enable MOUSE layer with very long timeout */
