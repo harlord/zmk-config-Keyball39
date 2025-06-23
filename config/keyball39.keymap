@@ -65,8 +65,7 @@
     behaviors {
         input_processor_temp_layer: input-processor-temp-layer {
             compatible = "zmk,input-processor-temp-layer";
-            #input-processor-cells = <2>;   // ← esta línea es obligatoria
-            timeout-ms = <1000>;
+            #input-processor-cells = <2>;   
         };
     };
 
