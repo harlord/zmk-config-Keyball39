@@ -332,12 +332,14 @@ layer_kdl_slh_30 {
         excluded-positions = <39>;
     };
 
+
+
+};
+
     /* Override trackball listener to enable MOUSE layer with very long timeout */
     &trackball_listener {
         input-processors = <&zip_temp_layer_exclude_39 MOUSE 30000>;
     };
-
-};
 
 // Alternative: Use a toggle behavior on key 39 to manually control MOUSE layer
 // Bind &tog MOUSE to key 39 in your base layer for manual toggle control
