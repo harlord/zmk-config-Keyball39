@@ -88,7 +88,7 @@
 &kp N1          &kp N2          &kp N3        &kp N4     &kp N5                  &kp N6         &kp N7     &kp N8  &kp N9     &kp N0
 &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none                   &kp PAGE_UP    &mkp LCLK  &none   &mkp RCLK  &mkp MCLK
 &none           &none           &none         &none      &none                   &kp PAGE_DOWN  &none      &none   &none      &none
-&none           &trans          &trans        &trans     &trans  &trans  &trans  &mo 3                                        &none
+&none           &trans          &trans        &trans     &trans  &trans  &trans  &mo 3                                        &to BASE
             >;
         };
 
@@ -337,7 +337,7 @@ layer_kdl_slh_30 {
         input-processors = <&zip_temp_layer_exclude_39 MOUSE 30000>;
     };
 
-    /* Alternative: Use a toggle behavior on key 39 to manually control MOUSE layer */
-    /* Bind &tog MOUSE to key 39 in your base layer for manual toggle control */
-
 };
+
+// Alternative: Use a toggle behavior on key 39 to manually control MOUSE layer
+// Bind &tog MOUSE to key 39 in your base layer for manual toggle control
