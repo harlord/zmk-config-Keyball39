@@ -66,3 +66,14 @@
     device = <&trackball>;
   };
 };
+
+input_processors {
+    /* Trigger &tog_on MOUSE on any movement event */
+    zip_motion_tog_on: zip_motion_tog_on {
+        compatible = "zmk,input-processor-behaviors";
+        #input-processor-cells = <0>;
+        type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_X INPUT_REL_Y>;
+        bindings = <&tog_on MOUSE &tog_on MOUSE>;
+    };
+};
