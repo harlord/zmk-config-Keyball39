@@ -5,6 +5,7 @@
  */
  
 #include "keyball39.dtsi"
+#include <input/processors.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -61,19 +62,20 @@
 };
 
 / {
-  trackball_listener {
-    compatible = "zmk,input-listener";
-    device = <&trackball>;
-  };
-};
+    /* Define input processor to toggle MOUSE layer on movement */
+    input_processors {
+        zip_motion_tog_on: zip_motion_tog_on {
+            compatible = "zmk,input-processor-behaviors";
+            #input-processor-cells = <0>;
+            type = <INPUT_EV_REL>;
+            codes = <INPUT_REL_X INPUT_REL_Y>;
+            bindings = <&tog_on MOUSE &tog_on MOUSE>;
+        };
+    };
 
-input_processors {
-    /* Trigger &tog_on MOUSE on any movement event */
-    zip_motion_tog_on: zip_motion_tog_on {
-        compatible = "zmk,input-processor-behaviors";
-        #input-processor-cells = <0>;
-        type = <INPUT_EV_REL>;
-        codes = <INPUT_REL_X INPUT_REL_Y>;
-        bindings = <&tog_on MOUSE &tog_on MOUSE>;
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+        input-processors = <&zip_motion_tog_on>;
     };
 };
