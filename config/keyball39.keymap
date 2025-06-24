@@ -85,10 +85,10 @@
         mouse_layer {
             label = "MOUSE";
             bindings = <
+&trans           &trans          &trans          &trans         &trans                     &trans         &trans     &kp MCLK     &trans     &trans
+&lrlMo LSHFT A   &lrlMo LCTRL R  &lrlMo LALT S   &lrlMo LGUI T  &trans                     &trans         &mkp LCLK  &mo SCROLL   &mkp RCLK  &mo SNIPEN
 &trans           &trans          &trans          &trans         &trans                     &trans         &trans     &trans       &trans     &trans
-&lrlMo LSHFT A   &lrlMo LCTRL R  &lrlMo LALT S   &lrlMo LGUI T  &trans                     &trans         &mkp LCLK  &mo SCROLL   &mkp RCLK  &mkp MCLK
-&trans           &trans          &trans          &trans         &trans                     &trans         &mo SNIPE  &trans       &trans     &trans
-&trans           &trans          &trans          &trans         &trans  &trans     &trans  &mo 3                                             &tog_off MOUSE
+&trans           &trans          &trans          &trans         &trans  &trans     &trans  &trans                                            &tog_off MOUSE
             >;
         };
 
