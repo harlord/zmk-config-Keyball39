@@ -79,7 +79,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - SNIPE
-  - {t: BASE, h: toggle}
+  - '&tog_off 1'
   SCROLL:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
