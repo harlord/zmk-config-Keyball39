@@ -6,7 +6,6 @@
  
 #include "keyball39.dtsi"
 #include <input/processors.dtsi>
-#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 &default_transform {
     col-offset = <6>;
@@ -63,20 +62,10 @@
 };
 
 / {
-    /* Define input processor to toggle MOUSE layer on movement */
-    input_processors {
-        zip_motion_tog_on: zip_motion_tog_on {
-            compatible = "zmk,input-processor-behaviors";
-            #input-processor-cells = <0>;
-            type = <INPUT_EV_REL>;
-            codes = <INPUT_REL_X INPUT_REL_Y>;
-            bindings = <&tog_on 1 &tog_on 1>;
-        };
-    };
-
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        input-processors = <&zip_motion_tog_on>;
+        /* Activate layer 1 (MOUSE) while pointer moves; timeout 3000 ms */
+        input-processors = <&zip_temp_layer 1 3000>;
     };
 };
