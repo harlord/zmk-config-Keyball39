@@ -65,7 +65,7 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        /* Activate layer 1 (MOUSE) while pointer moves; timeout 3000 ms */
-        input-processors = <&zip_temp_layer 1 3000>;
+        /* Activate layer 1 (MOUSE) while pointer moves; timeout 10000 ms */
+        input-processors = <&zip_temp_layer 1 10000>;
     };
 };
