@@ -70,7 +70,7 @@
             #input-processor-cells = <0>;
             type = <INPUT_EV_REL>;
             codes = <INPUT_REL_X INPUT_REL_Y>;
-            bindings = <&tog_on MOUSE &tog_on MOUSE>;
+            bindings = <&tog_on 1 &tog_on 1>;
         };
     };
 
