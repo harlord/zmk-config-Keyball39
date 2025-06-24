@@ -85,20 +85,20 @@
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&trans           &trans          &trans          &trans         &trans                     &trans         &trans     &kp MCLK     &trans     &trans
-&lrlMo LSHFT A   &lrlMo LCTRL R  &lrlMo LALT S   &lrlMo LGUI T  &trans                     &trans         &mkp LCLK  &mo SCROLL   &mkp RCLK  &mo SNIPE
-&trans           &trans          &trans          &trans         &trans                     &trans         &trans     &trans       &trans     &trans
-&trans           &trans          &trans          &trans         &trans  &trans     &trans  &trans                                            &tog_off MOUSE
+&trans           &trans          &trans          &trans                 &trans                     &trans         &trans             &kp MCLK     &trans     &trans
+&lrlMo LSHFT A   &lrlMo LCTRL R  &lrlMo LALT S   &lrlMo LGUI T          &trans                     &trans         &mkp LCLK          &mo SCROLL   &mkp RCLK  &mo SNIPE
+&trans           &trans          &trans          &tog_off MOUSE         &trans                     &trans         &tog_off MOUSE     &trans       &trans     &trans
+&trans           &trans          &trans          &trans                 &trans  &trans     &trans  &trans                                            &tog_off MOUSE
             >;
         };
 
          scroll_layer {
             label = "SCROLL";
             bindings = <
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans
+&trans     &trans     &trans    &trans    &trans                  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans                  &trans  &trans  &trans  &trans  &trans
+&trans     &trans     &trans    &trans    &trans                  &trans  &trans  &trans  &trans  &trans
+&trans     &trans     &trans    &trans    &trans  &trans  &trans  &trans                          &trans
             >;
         };
 
