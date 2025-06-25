@@ -50,6 +50,7 @@
 #define FUNC 22
 #define ADJ  23
 #define NUMBERS 24
+#define WARP 25
 
 &lt {
     tapping-term-ms = <240>;
@@ -64,7 +65,7 @@
 };
 
 &caps_word { continue-list = <UNDERSCORE MINUS>; };
-
+#include "mouse.dtsi"
 / {
 
     #include "macros/macros_general.dtsi"
@@ -320,6 +321,16 @@ layer_kdl_slh_30 {
                   &kp LSHFT          &kp LCTRL          &kp LALT                &kp LGUI                  &kp COMMA                       &kp DOT            &kp N4                    &kp N5                   &kp N6           &kp N0
                   &kp BSLH           &kp LBKT           &kp RBKT                &kp GRAVE                 &kp MINUS                       &kp PLUS           &kp N1                    &kp N2                   &kp N3           &kp SLASH       
                   &trans  &trans  &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space NAVOVERR SPACE  &trans
+            >;
+        };
+
+        warp_layer {
+            label = "WARP";
+            bindings = <
+&trans  &trans  &trans  &trans  &bootloader                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans                          &trans
             >;
         };
 
