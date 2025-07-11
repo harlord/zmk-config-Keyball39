@@ -97,7 +97,7 @@ west build -p \
             bindings = <
                                &kp Q    &kp W    &kp F    &kp P   &kp B                  &kp J    &kp L    &kp U          &kp Y       &kp SQT
                                &kp A    &kp R    &kp S    &kp T   &kp G                  &kp M    &kp N    &kp E          &kp I       &kp O
-                               &kp Z    &kp X    &kp C    &kp D   &kp V                  &kp K    &kp H    &kp COMMA      &kp DOT     &lrDl LCTRL SLASH        
+                        &lrDl LALT Z    &kp X    &kp C    &kp D   &kp V                  &kp K    &kp H    &kp COMMA      &kp DOT     &lrDl LCTRL SLASH        
 &trans  &trans  &trans &trans &lm_homerow_short LSHFT BACKSPACE  &lm_homerow_short LGUI TAB                &lm_homerow_short LALT ENTER  &spacelm NAVOVERR SPACE  &trans
             >;
         };
@@ -105,40 +105,40 @@ west build -p \
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&trans           &trans          &trans          &trans                 &trans                     &trans         &trans             &kp MCLK     &trans     &trans
-&lrlMo LSHFT A   &lrlMo LCTRL R  &lrlMo LALT S   &lrlMo LGUI T          &trans                     &trans         &mkp LCLK          &mo SCROLL   &mkp RCLK  &mo SNIPE
-&trans           &trans          &trans          &tog_off MOUSE         &trans                     &trans         &tog_off MOUSE     &trans       &trans     &trans
-&trans &trans &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_kp_kp_hp LALT ENTER   &space NAVOVERR SPACE  &trans
+&kp Q           &kp W           &kp F            &kp P         &kp B                     &trans         &trans             &kp MCLK     &trans     &trans
+&lrhr LSHFT A   &lrhr LCTRL R   &lrhr LALT S    &lrhr LGUI T   &kp G                     &trans         &mkp LCLK          &mo SCROLL   &mkp RCLK  &mo SNIPE
+&lrDl LALT Z    &kp X           &kp C           &kp D          &kp V                     &trans         &tog_off MOUSE     &trans       &trans     &lrDl LCTRL SLASH 
+&trans &trans &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_kp_kp_hp LALT ENTER   &space NAVOVERR SPACE   &tog_off MOUSE
             >;
         };
 
          scroll_layer {
             label = "SCROLL";
             bindings = <
-&trans     &trans     &trans    &trans    &trans                  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans     &trans     &trans    &trans    &trans                  &trans  &trans  &trans  &trans  &trans
-&trans &trans &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_kp_kp_hp LALT ENTER   &space NAVOVERR SPACE  &trans
+&kp Q           &kp W           &kp F            &kp P         &kp B                     &trans         &trans             &kp MCLK     &trans     &trans
+&lrhr LSHFT A   &lrhr LCTRL R   &lrhr LALT S    &lrhr LGUI T   &kp G                     &trans         &mkp LCLK          &mo SCROLL   &mkp RCLK  &kp LGUI
+&lrDl LALT Z           &kp X           &kp C           &kp D          &kp V                     &trans         &tog_off MOUSE     &trans       &trans     &lrDl LCTRL SLASH 
+&trans &trans &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_kp_kp_hp LALT ENTER   &space NAVOVERR SPACE   &tog_off MOUSE
             >;
         };
 
         snipe_layer {
             label = "SNIPE";
             bindings = <
-&trans  &trans  &trans  &trans  &bootloader                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
-&trans &trans &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_kp_kp_hp LALT ENTER   &space NAVOVERR SPACE  &trans
+&kp Q           &kp W           &kp F            &kp P         &kp B                     &trans         &trans             &kp MCLK     &trans     &trans
+&lrhr LSHFT A   &lrhr LCTRL R   &lrhr LALT S    &lrhr LGUI T   &kp G                     &trans         &mkp LCLK          &mo SCROLL   &mkp RCLK  &mo SNIPE
+&lrDl LALT Z           &kp X           &kp C           &kp D          &kp V                     &trans         &tog_off MOUSE     &trans       &trans     &lrDl LCTRL SLASH
+&trans &trans &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_kp_kp_hp LALT ENTER   &space NAVOVERR SPACE   &tog_off MOUSE
             >;
         };
 
         warp_layer {
             label = "WARP";
             bindings = <
-&trans  &trans  &trans  &trans  &bootloader                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
-&trans &trans &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_kp_kp_hp LALT ENTER   &space NAVOVERR SPACE  &trans
+&kp Q           &kp W           &kp F            &kp P         &kp B                     &trans         &trans             &kp MCLK     &trans     &trans
+&lrhr LSHFT A   &lrhr LCTRL R   &lrhr LALT S    &lrhr LGUI T   &kp G                     &trans         &mkp LCLK          &mo SCROLL   &mkp RCLK  &mo SNIPE
+&lrDl LALT Z           &kp X           &kp C           &kp D          &kp V                     &trans         &tog_off MOUSE     &trans       &trans     &lrDl LCTRL SLASH
+&trans &trans &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_kp_kp_hp LALT ENTER   &space NAVOVERR SPACE   &tog_off MOUSE
             >;
         };
 
@@ -147,7 +147,7 @@ west build -p \
             bindings = <
                   &kp N1     &kp N2     &kp N3                  &kp N4                    &kp N5                          &kp N6              &kp N7                     &kp N8                    &kp N9     &kp N0
                   &kp LSHFT  &kp LCTRL  &kp LALT                &kp LGUI                  &kp UNDER                       &kp PLUS            &kp RGUI                   &kp UP                    &kp RCTRL  &kp RSHFT
-                  &kp BSLH   &kp LBKT   &kp RBKT                &kp GRAVE                 &kp MINUS                       &kp EQUAL           &kp LEFT                   &kp DOWN                  &kp RIGHT  &lrrMo RALT SLASH  
+                  &kp BSLH   &kp LBKT   &kp RBKT                &kp GRAVE                 &kp MINUS                       &kp EQUAL           &kp LEFT                   &kp DOWN                  &kp RIGHT  &kp SLASH  
 &trans &trans &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_kp_kp_hp LALT ENTER   &space NAVOVERR SPACE  &trans  
             >;
         };
@@ -165,10 +165,10 @@ west build -p \
         layer_homerow {
             label = "HOMEROW";
             bindings = <
-                  &kp Q           &kp W           &kp F                   &kp P                     &kp B                           &kp J               &kp L                      &kp U                     &kp Y           &kp SQT
-                  &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S           &lrlMo LGUI T             &kp G                           &kp M               &lrrMo RGUI N              &lrrMo RALT E             &lrrMo RCTRL I  &lrrMo RSHFT O
-                  &kp Z           &kp X           &kp C                   &kp D                     &kp V                           &kp K               &kp H                      &kp COMMA                 &kp DOT         &lrrMo RALT FSLH  
-&trans &trans &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_kp_kp_hp LALT ENTER   &space NAVOVERR SPACE  &trans
+                  &kp Q           &kp W           &kp F            &kp P         &kp B                &kp J       &kp L                 &kp U            &kp Y             &kp SQT
+                  &lrhr LSHFT A   &lrhr LCTRL R   &lrhr LALT S    &lrhr LGUI T   &kp G                &kp M       &lrhr RGUI N          &lrhr RALT E     &lrhr RCTRL I     &lrhr RSHFT O
+                  &lrDl LALT Z    &kp X           &kp C           &kp D          &kp V                &kp K       &kp H                 &kp COMMA        &kp DOT           &lrDl LCTRL SLASH  
+&trans       &trans &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_kp_kp_hp LALT ENTER   &space NAVOVERR SPACE  &trans
             >;
         };
 
@@ -177,7 +177,7 @@ west build -p \
             bindings = <
                   &kp N1          &kp N2          &kp N3                  &kp N4                         &kp N5                          &kp N6              &kp N7                     &kp N8                    &kp N9          &kp N0
                   &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S           &lrlMo LGUI T                  &kp F11                         &kp F12             &lrrMo RGUI N              &kp UP                    &lrrMo RCTRL I  &kp RSHFT
-                  &none          &none            &none                   &none                          &caps_word                      &kp CAPS            &kp LEFT                   &kp DOWN                  &kp RIGHT       &kp RALT   
+                  &lrDl LALT Z    &kp X           &kp C                   &kp D                          &kp V                           &kp CAPS            &kp LEFT                   &kp DOWN                  &kp RIGHT       &kp LCTRL   
 &trans &trans &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_kp_kp_hp LALT ENTER   &space NAVOVERR SPACE  &trans
             >;
         };
@@ -197,7 +197,7 @@ west build -p \
             bindings = <
                   &kp F1     &kp F2     &kp F3                  &kp F4                    &kp F5                          &kp F6              &kp F7                     &kp F8                    &kp F9    &kp F10
                   &sk LSHFT  &sk LCTRL  &sk LALT                &sk LGUI                  &kp F11                         &kp F12             &sk RGUI                   &sk RALT                  &sk RGUI  &sk RSHFT
-                  &none      &none      &none                   &none                     &kp F11                         &kp F12             &none                      &none                     &none     &none      
+                  &sk LALT   &none      &none                   &none                     &kp F11                         &kp F12             &sk LCTRL                     &none                     &none     &none      
 &trans &trans &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_kp_kp_hp LALT ENTER   &space NAVOVERR SPACE  &trans
             >;
         };
@@ -217,7 +217,7 @@ west build -p \
             bindings = <
                   &kp EXCL           &kp AT             &kp HASH                &kp DLLR                  &kp PRCNT                       &kp EQUAL          &kp N7                    &kp N8                   &kp N9           &kp STAR
                   &kp LSHFT          &kp LCTRL          &kp LALT                &kp LGUI                  &kp COMMA                       &kp DOT            &kp N4                    &kp N5                   &kp N6           &kp N0
-                  &kp BSLH           &kp LBKT           &kp RBKT                &kp GRAVE                 &kp MINUS                       &kp PLUS           &kp N1                    &kp N2                   &kp N3           &kp SLASH       
+                  &lrDl LALT BSLH    &kp LBKT           &kp RBKT                &kp GRAVE                 &kp MINUS                       &kp PLUS           &kp N1                    &kp N2                   &kp N3           &lrDl LCTRL SLASH       
 &trans &trans &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_kp_kp_hp LALT ENTER   &space NAVOVERR SPACE  &trans
             >;
         };
