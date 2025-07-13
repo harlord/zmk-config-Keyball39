@@ -29,12 +29,37 @@
                          
 
 
-#define LEFT_THUMB_KEYS  30 31 32 33 34 35          
+#define LEFT_THUMB_KEYS   30 31 32 33 34 35    
+
+#define RIGHT_THUMB_KEYS   36 37 38
 
 #define INV_RIGHT_THUMB_KEYS  36           38 
 
    
    behaviors {
+          hml: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <320>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <250>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS LEFT_THUMB_KEYS RIGHT_THUMB_KEYS>;
+            hold-trigger-on-release;
+        };
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <320>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <250>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <LEFT_HAND_KEYS LEFT_THUMB_KEYS RIGHT_THUMB_KEYS>;
+            hold-trigger-on-release;
+        };
+
         bt_0: bt_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "BT_0";
@@ -89,33 +114,6 @@
             toggle-mode = "off";
         };
 
-        //  Copy Find
-
-        pfind: pfind {
-            label = "&PFIND";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LG(F)>,
-                <&macro_wait_time 10>,
-                <&macro_tap>,
-                <&kp LG(V)>;
-        };
-
-        // Global Find Paste
-
-        gpfind: gpfind {
-            label = "&GPFIND";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LG(LS(F))>,
-                <&macro_wait_time 10>,
-                <&macro_tap>,
-                <&kp LG(V)>;
-        };
 
         tdSelectCoppingLR: tdSelectCoppingLR {
             compatible = "zmk,behavior-hold-tap";
@@ -130,25 +128,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LRLMO";
             bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <THUMB_HOLDING_TIME>;
-            quick-tap-ms = <175>;
-        };
 
-        lrrMo: lrrMo {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LRRMO";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <THUMB_HOLDING_TIME>;
-            quick-tap-ms = <175>;
-        };
-
-        lrhr: lrhr {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LRHR";
-            bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <THUMB_HOLDING_TIME>;
@@ -159,11 +139,32 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LRDL";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             flavor = "balanced";
             require-prior-idle-ms = <120>;
             tapping-term-ms = <THUMB_HOLDING_TIME>;
             quick-tap-ms = <175>;
+        };
+
+        lrrMo: lrrMo {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LRRMO";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <THUMB_HOLDING_TIME>;
+            quick-tap-ms = <175>;
+        };
+
+        base_th_mo_kp_hp: base_th_mo_kp_hp {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
+            tapping-term-ms = <THUMB_HOLDING_TIME>;
+            //quick-tap-ms = <THUMB_REPEAT_DECAY_BASE>; // enable repeat
+            hold-trigger-on-release; // wait for other home row mods
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
         };
 
         th_mo_kp_hp: th_mo_kp_hp {

@@ -28,7 +28,7 @@
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     slow-release; \
-    layers = <BASE NAVOVERR DIRECTACC HOMEROW RAISE LOWER FUNC MOUSE SNIPE WARP SCROLL>; \
+    layers = <BASE NAVOVERR DIRECTACC HOMEROW RAISE FUNC MOUSE SNIPE WARP SCROLL>; \
   };
 #define RCOMBO(NAME, BINDINGS, KEYPOS) \
   rcombo_##NAME { \
@@ -36,7 +36,7 @@
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     require-prior-idle-ms = <100>; \
-    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
   };
 #define RCOMBOMOUSE(NAME, BINDINGS, KEYPOS) \
   rcombomouse_##NAME { \
@@ -96,7 +96,17 @@
     key-positions = <KEYPOS 34>; \
     key-positions-leader = <KEYPOS>; \
     key-positions-first-exclude = <34>; \
-    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
+  };
+#define CBKDA(BINDINGS, KEYPOS) \
+  cbkl_##KEYPOS { \
+    timeout-ms = <2000>; \
+    bindings = <&mo DIRECTACC>, <BINDINGS>; \
+    key-positions = <KEYPOS 34>; \
+    key-positions-leader = <KEYPOS>; \
+    key-positions-first-exclude = <34>; \
+    slow-release; \
+    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
   };
 #define CBKL(BINDINGS, KEYPOS) \
   cbkl_##KEYPOS { \
@@ -106,7 +116,7 @@
     key-positions-leader = <KEYPOS>; \
     key-positions-first-exclude = <34>; \
     slow-release; \
-    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
   };
 #define CBKNUM(BINDINGS, KEYPOS) \
   cbknum_##KEYPOS { \
@@ -116,7 +126,7 @@
     key-positions-first-exclude = <34>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
   };
 #define CTKSPA(BINDINGS, KEYPOS) \
   ctkspa_##KEYPOS { \
@@ -126,7 +136,7 @@
     key-positions-first-exclude = <34>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
   };
 #define CTKSLW(BINDINGS, KEYPOS) \
   ctkspa_##KEYPOS { \
@@ -136,7 +146,7 @@
     key-positions-first-exclude = <34>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
   };
 
 #define CTAB(BINDINGS, KEYPOS) \
@@ -147,7 +157,7 @@
     key-positions-first-exclude = <35>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
   };
 #define CTABD(BINDINGS, KEYPOS) \
   ctabd_##KEYPOS { \
@@ -157,7 +167,7 @@
     key-positions-first-exclude = <35>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
   };
 #define CTABS(BINDINGS, KEYPOS) \
   ctabs_##KEYPOS { \
@@ -166,7 +176,7 @@
     key-positions = <KEYPOS 35>; \
     key-positions-first-exclude = <35>; \
     key-positions-leader = <KEYPOS>; \
-    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
   };
 #define CTABDA(BINDINGS, KEYPOS) \
   ctabda_##KEYPOS { \
@@ -176,7 +186,7 @@
     key-positions-first-exclude = <35>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
   };
 #define CENT(BINDINGS, KEYPOS) \
   cent_##KEYPOS { \
@@ -186,7 +196,7 @@
     key-positions-first-exclude = <36>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
   };
 #define CSPC(BINDINGS, KEYPOS) \
   cspc_##KEYPOS { \
@@ -197,7 +207,7 @@
     key-positions-leader = <KEYPOS>; \
     slow-release; \
     require-prior-idle-ms = <1000>; \
-    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
   };
 #define CSPCS(BINDINGS, KEYPOS) \
   cspcs_##KEYPOS { \
@@ -206,7 +216,7 @@
     key-positions = <KEYPOS 37>; \
     key-positions-first-exclude = <37>; \
     key-positions-leader = <KEYPOS>; \
-    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC>; \
+    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
   };
 
     combos {
@@ -249,13 +259,15 @@
 
         //NavOverR
 
-        NAVBACOMBO(pg_0, &kp HOME, 26 27)// H , 
-        NAVBACOMBO(pg_1, &kp END, 27 28)// , .
-        NAVBACOMBO(pg_4, &kp PG_UP, 26 17)// , H 
-        NAVBACOMBO(pg_5, &kp PG_DN, 17 28)// H .
+        //NAVBACOMBO(pg_0, &kp HOME, 26 27)// H , 
+        //NAVBACOMBO(pg_1, &kp END, 27 28)// , .
+        //NAVBACOMBO(pg_4, &kp PG_UP, 26 17)// , H 
+        //NAVBACOMBO(pg_5, &kp PG_DN, 17 28)// H .
 
         //MOUSE
         RCOMBOMOUSE(offmouse, &tog_off MOUSE, 6 7 8)
+        RCOMBOMOUSE(offmouse2, &tog_off MOUSE, 6 15)
+        RCOMBOMOUSE(offmouse3, &tog_off MOUSE, 7 8)
 
         //NAVBACOMBOINV(pg_0_inv, &kp HOME, 22 23 33)//  
         //NAVBACOMBOINV(pg_1_inv, &kp END, 23 24 33)// 
@@ -270,7 +282,7 @@
         //START Dragmod//
         /////////////////
 
-        c-hr-thumb-ar {
+        c-hr-thumb-arl {
             bindings = <&kp LS(LCTRL)>;
             key-positions = <35 10 11>;
             layers = <BASE>;
@@ -279,7 +291,7 @@
             timeout-ms = <2000>;
         };
 
-        c-hr-thumb-ars {
+        c-hr-thumb-arsl {
             bindings = <&kp LS(LA(LCTRL))>;
             key-positions = <35 10 11 12>;
             layers = <BASE>;
@@ -288,7 +300,7 @@
             timeout-ms = <2000>;
         };
 
-        c-hr-thumb-arst {
+        c-hr-thumb-arstl {
             bindings = <&kp LS(LA(LG(LCTRL)))>;
             key-positions = <35 10 11 12 13>;
             layers = <BASE>;
@@ -297,7 +309,7 @@
             timeout-ms = <2000>;
         };
 
-        c-hr-thumb-art {
+        c-hr-thumb-artl {
             bindings = <&kp LS(LC(LCMD))>;
             key-positions = <35 10 11 13>;
             layers = <BASE>;
@@ -306,7 +318,7 @@
             timeout-ms = <2000>;
         };
 
-        c-hr-thumb-ast {
+        c-hr-thumb-astl {
             bindings = <&kp LS(LA(LCMD))>;
             key-positions = <35 10 13 12>;
             layers = <BASE>;
@@ -315,7 +327,7 @@
             timeout-ms = <2000>;
         };
 
-        c-hr-thumb-rst {
+        c-hr-thumb-rstl {
             bindings = <&kp LA(LC(LCMD))>;
             key-positions = <35 13 12 11>;
             layers = <BASE>;
@@ -324,7 +336,7 @@
             timeout-ms = <2000>;
         };
 
-        c-hr-thumb-at {
+        c-hr-thumb-atl {
             bindings = <&kp LS(LCMD)>;
             key-positions = <35 13 10>;
             layers = <BASE>;
@@ -333,7 +345,7 @@
             timeout-ms = <2000>;
         };
 
-        c-hr-thumb-st {
+        c-hr-thumb-stl {
             bindings = <&kp LA(LCMD)>;
             key-positions = <35 12 13>;
             layers = <BASE>;
@@ -342,7 +354,7 @@
             timeout-ms = <2000>;
         };
 
-        c-hr-thumb-rs {
+        c-hr-thumb-rsl {
             bindings = <&kp LC(LALT)>;
             key-positions = <35 12 11>;
             layers = <BASE>;
@@ -351,7 +363,7 @@
             timeout-ms = <2000>;
         };
 
-        c-hr-thumb-rt {
+        c-hr-thumb-rtl {
             bindings = <&kp LC(LCMD)>;
             key-positions = <35 13 11>;
             layers = <BASE>;
@@ -360,9 +372,112 @@
             timeout-ms = <2000>;
         };
 
-        c-hr-thumb-as {
+        c-hr-thumb-asl {
             bindings = <&kp LS(LALT)>;
             key-positions = <35 10 12>;
+            layers = <BASE>;
+            slow-release;
+            key-positions-first-exclude = <35>; 
+            timeout-ms = <2000>;
+        };
+
+        ///////////////////////
+        //START Dragmod RIGHT//
+        ///////////////////////
+
+       c-hr-thumb-arr {
+            bindings = <&kp LS(LCTRL)>;
+            key-positions = <35 19 18>;
+            layers = <BASE>;
+            slow-release;
+            key-positions-first-exclude = <35>;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-arsr {
+            bindings = <&kp LS(LA(LCTRL))>;
+            key-positions = <35 19 18 17>;
+            layers = <BASE>;
+            slow-release;
+            key-positions-first-exclude = <35>;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-arstr {
+            bindings = <&kp LS(LA(LG(LCTRL)))>;
+            key-positions = <35 19 18 17 16>;
+            layers = <BASE>;
+            slow-release;
+            key-positions-first-exclude = <35>;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-artr {
+            bindings = <&kp LS(LC(LCMD))>;
+            key-positions = <35 19 18 16>;
+            layers = <BASE>;
+            slow-release;
+            key-positions-first-exclude = <35>;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-astr {
+            bindings = <&kp LS(LA(LCMD))>;
+            key-positions = <35 19 16 17>;
+            layers = <BASE>;
+            slow-release;
+            key-positions-first-exclude = <35>;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-rstr {
+            bindings = <&kp LA(LC(LCMD))>;
+            key-positions = <35 16 17 18>;
+            layers = <BASE>;
+            slow-release;
+            key-positions-first-exclude = <35>;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-atr {
+            bindings = <&kp LS(LCMD)>;
+            key-positions = <35 16 19>;
+            layers = <BASE>;
+            slow-release;
+            key-positions-first-exclude = <35>;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-str {
+            bindings = <&kp LA(LCMD)>;
+            key-positions = <35 17 16>;
+            layers = <BASE>;
+            slow-release;
+            key-positions-first-exclude = <35>;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-rsr {
+            bindings = <&kp LC(LALT)>;
+            key-positions = <35 17 18>;
+            layers = <BASE>;
+            slow-release;
+            key-positions-first-exclude = <35>;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-rtr {
+            bindings = <&kp LC(LCMD)>;
+            key-positions = <35 16 18>;
+            layers = <BASE>;
+            slow-release;
+            key-positions-first-exclude = <35>;
+            timeout-ms = <2000>;
+        };
+
+        c-hr-thumb-asr {
+            bindings = <&kp LS(LALT)>;
+            key-positions = <35 19 17>;
             layers = <BASE>;
             slow-release;
             key-positions-first-exclude = <35>; 
@@ -374,9 +489,9 @@
         ///////////////
 
 //shift+BKSPACE<>TILDE 
-CBKS(&kp LA(N1), 0)                              CBKL(&mo FUNC, 2)     CBKL(&mo NUMBERS, 3)   CBKL(&mo DIRECTACC, 4)                                                                      CBKS(&mc_bkctilde U, 7) 
-CBKS(&mc_bkctilde A, 10)   CBKNUM(&kp HOME, 11)  CBKNUM(&kp UP, 12)    CBKNUM(&kp END, 13)    CBKNUM(&kp PG_UP, 14)                                               CBKS(&mc_ennesd N, 16)  CBKS(&mc_bkctilde E, 17)  CBKS(&mc_bkctilde I, 18)  CBKS(&mc_bkctilde O, 19)
-                           CBKNUM(&kp LEFT, 21)  CBKNUM(&kp DOWN, 22)  CBKNUM(&kp RIGHT, 23)  CBKNUM(&kp PG_DN, 24)                                                                                                                           CBKS(&kp LS(LA(SLASH)), 30)    
+CBKS(&kp LA(N1), 0)                 CBKL(&mo FUNC, 2)                     CBKL(&mo NUMBERS, 3)                     CBKL(&mo DIRECTACC, 4)                                                                              CBKS(&mc_bkctilde U, 7) 
+CBKS(&mc_bkctilde A, 10)                                                                                           CBKS(&caps_word, 14)                                                        CBKS(&mc_ennesd N, 16)  CBKS(&mc_bkctilde E, 17)  CBKS(&mc_bkctilde I, 18)  CBKS(&mc_bkctilde O, 19)
+CBKDA(&td_find_s_ht A LG(F), 20)    CBKDA(&td_find_g_ht A LG(LS(F)), 21)  CBKDA(&lrlMo LA(LS(H)) LA(LS(F12)), 22)  CBKDA(&kp LC(LS(MINUS)), 23)  CBKDA(&kp LC(MINUS), 24)                                                                                                  CBKS(&kp LS(LA(SLASH)), 29)       
 
 //cmd+TAB<>DRAGTHUMB(inverted LOWER and DIRECTACC in low row only when DRAGTHUMB not activated)    
 CTAB(&kp N1, 0)                    CTAB(&kp N2, 1)                        CTAB(&kp N3, 2)                            CTAB(&kp N4, 3)                CTAB(&kp N5, 4)                         CTAB(&kp N6, 5)  CTAB(&kp N7, 6)  CTAB(&kp N8, 7)  CTAB(&kp N9, 8)  CTAB(&kp N0, 9)
@@ -384,9 +499,14 @@ CTABD(&mhr LSHFT, 10)              CTABD(&mhr LCTRL, 11)                  CTABD(
 CTABDA(&td_find_s_ht A LG(F), 20)  CTABDA(&td_find_g_ht A LG(LS(F)), 21)  CTABDA(&lrlMo LA(LS(H)) LA(LS(F12)), 22)   CTABDA(&kp LC(LS(MINUS)), 23)  CTABDA(&kp LC(MINUS), 24)        
 
 //alt+ENT<>RAISE
-CENT(&kp EXCL, 0)  CENT(&kp AT, 1)    CENT(&kp HASH, 2)  CENT(&kp DLLR, 3)   CENT(&kp PRCNT, 4)          CENT(&kp CARET, 5)   CENT(&kp AMPS, 6)    CENT(&kp STAR, 7)    CENT(&kp LPAR, 8)  CENT(&kp RPAR, 9)
-CENT(&kp PIPE, 10) CENT(&kp LBRC, 11) CENT(&kp RBRC, 12) CENT(&kp TILDE, 13) CENT(&kp UNDER, 14)         CENT(&kp PLUS, 15)   CENT(&kp COLON, 16)  CENT(&kp LT, 17)     CENT(&kp GT, 18)   CENT(&kp QUESTION, 19)
-CENT(&kp BSLH, 20) CENT(&kp LBKT, 21) CENT(&kp RBKT, 22) CENT(&kp GRAVE, 23) CENT(&kp MINUS, 24)         CENT(&kp EQUAL, 25)  CENT(&kp SEMI, 26)   CENT(&kp COMMA, 27)  CENT(&kp DOT, 28)  CENT(&kp SLASH, 29)
+CENT(LA(Q), 0)    CENT(LA(W), 1)    CENT(LA(F), 2)    CENT(LA(P), 3)    CENT(LA(B), 4)                  CENT(LA(J), 5)   CENT(LA(L), 6)   CENT(LA(U), 7)       CENT(LA(Y), 8)     CENT(LA(SQT), 9)
+CENT(LA(A), 10)   CENT(LA(R), 11)   CENT(LA(S), 12)   CENT(LA(T), 13)   CENT(LA(G), 14)                 CENT(LA(M), 15)  CENT(LA(N), 16)  CENT(LA(E), 17)      CENT(LA(I), 18)    CENT(LA(O), 19)
+CENT(LA(Z), 20)   CENT(LA(X), 21)   CENT(LA(C), 22)   CENT(LA(D), 23)   CENT(LA(V), 24)                 CENT(LA(K), 25)  CENT(LA(H), 26)  CENT(LA(COMMA), 27)  CENT(LA(DOT), 28)  CENT(LA(SLASH), 29)
+
+
+//CENT(&kp EXCL, 0)  CENT(&kp AT, 1)    CENT(&kp HASH, 2)  CENT(&kp DLLR, 3)   CENT(&kp PRCNT, 4)          CENT(&kp CARET, 5)   CENT(&kp AMPS, 6)    CENT(&kp STAR, 7)    CENT(&kp LPAR, 8)  CENT(&kp RPAR, 9)
+//CENT(&kp PIPE, 10) CENT(&kp LBRC, 11) CENT(&kp RBRC, 12) CENT(&kp TILDE, 13) CENT(&kp UNDER, 14)         CENT(&kp PLUS, 15)   CENT(&kp COLON, 16)  CENT(&kp LT, 17)     CENT(&kp GT, 18)   CENT(&kp QUESTION, 19)
+//CENT(&kp BSLH, 20) CENT(&kp LBKT, 21) CENT(&kp RBKT, 22) CENT(&kp GRAVE, 23) CENT(&kp MINUS, 24)         CENT(&kp EQUAL, 25)  CENT(&kp SEMI, 26)   CENT(&kp COMMA, 27)  CENT(&kp DOT, 28)  CENT(&kp SLASH, 29)
 
 //NAVOVERR+SPC<>NUMBERS
 //CSPC(&kp EXCL, 0)   CSPC(&kp AT, 1)     CSPC(&kp HASH, 2)  CSPC(&kp DLLR, 3)   CSPC(&kp PRCNT, 4)         CSPC(&kp EQUAL, 5)  CSPC(&kp N7, 6)    CSPC(&kp N6, 7)   CSPC(&kp N8, 8)   CSPC(&kp STAR, 9)
