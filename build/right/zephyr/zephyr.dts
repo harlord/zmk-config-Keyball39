@@ -655,7 +655,7 @@
 		type = < 0x2 >;
 		codes = < 0x0 0x1 >;
 		track-remainders;
-		phandle = < 0x24 >;
+		phandle = < 0x26 >;
 	};
 	zip_scroll_scaler: zip_scroll_scaler {
 		compatible = "zmk,input-processor-scaler";
@@ -663,7 +663,7 @@
 		type = < 0x2 >;
 		codes = < 0x8 0x6 >;
 		track-remainders;
-		phandle = < 0x26 >;
+		phandle = < 0x28 >;
 	};
 	zip_button_behaviors: zip_button_behaviors {
 		compatible = "zmk,input-processor-behaviors";
@@ -680,7 +680,7 @@
 			compatible = "zmk,behavior-mouse-key-press";
 			#binding-cells = < 0x1 >;
 			display-name = "Mouse Key Press";
-			phandle = < 0x22 >;
+			phandle = < 0x24 >;
 		};
 		mmv: mouse_move {
 			compatible = "zmk,behavior-input-two-axis";
@@ -690,7 +690,7 @@
 			time-to-max-speed-ms = < 0x1f4 >;
 			acceleration-exponent = < 0x1 >;
 			delay-ms = < 0x0 >;
-			phandle = < 0x23 >;
+			phandle = < 0x25 >;
 		};
 		msc: mouse_scroll {
 			compatible = "zmk,behavior-input-two-axis";
@@ -700,7 +700,7 @@
 			time-to-max-speed-ms = < 0x12c >;
 			acceleration-exponent = < 0x0 >;
 			delay-ms = < 0x0 >;
-			phandle = < 0x25 >;
+			phandle = < 0x27 >;
 		};
 		kp: key_press {
 			compatible = "zmk,behavior-key-press";
@@ -717,7 +717,7 @@
 			compatible = "zmk,behavior-transparent";
 			#binding-cells = < 0x0 >;
 			display-name = "Transparent";
-			phandle = < 0x43 >;
+			phandle = < 0x49 >;
 		};
 		none: none {
 			compatible = "zmk,behavior-none";
@@ -757,16 +757,16 @@
 			bindings = < &kp >;
 			ignore-modifiers;
 			display-name = "Sticky Key";
-			phandle = < 0x2d >;
+			phandle = < 0x33 >;
 		};
 		sl: sticky_layer {
 			compatible = "zmk,behavior-sticky-key";
 			#binding-cells = < 0x1 >;
-			release-after-ms = < 0x3e8 >;
+			release-after-ms = < 0xfa0 >;
 			bindings = < &mo >;
 			quick-release;
 			display-name = "Sticky Layer";
-			phandle = < 0x1c >;
+			phandle = < 0x1f >;
 		};
 		mo: momentary_layer {
 			compatible = "zmk,behavior-momentary-layer";
@@ -788,7 +788,7 @@
 			compatible = "zmk,behavior-reset";
 			#binding-cells = < 0x0 >;
 			display-name = "Reset";
-			phandle = < 0x51 >;
+			phandle = < 0x58 >;
 		};
 		bootloader: bootload {
 			compatible = "zmk,behavior-reset";
@@ -805,7 +805,7 @@
 			compatible = "zmk,behavior-bluetooth";
 			#binding-cells = < 0x2 >;
 			display-name = "Bluetooth";
-			phandle = < 0x31 >;
+			phandle = < 0x35 >;
 		};
 		ext_power: extpower {
 			compatible = "zmk,behavior-ext-power";
@@ -816,14 +816,14 @@
 			compatible = "zmk,behavior-outputs";
 			#binding-cells = < 0x1 >;
 			display-name = "Output Selection";
-			phandle = < 0x14 >;
+			phandle = < 0x16 >;
 		};
 		caps_word: caps_word {
 			compatible = "zmk,behavior-caps-word";
 			#binding-cells = < 0x0 >;
 			continue-list = < 0x207002d 0x7002d >;
 			display-name = "Caps Word";
-			phandle = < 0x3c >;
+			phandle = < 0x42 >;
 		};
 		key_repeat: key_repeat {
 			compatible = "zmk,behavior-key-repeat";
@@ -839,47 +839,47 @@
 		macro_tap: macro_tap {
 			compatible = "zmk,macro-control-mode-tap";
 			#binding-cells = < 0x0 >;
-			phandle = < 0x28 >;
+			phandle = < 0x2e >;
 		};
 		macro_press: macro_press {
 			compatible = "zmk,macro-control-mode-press";
 			#binding-cells = < 0x0 >;
-			phandle = < 0x2c >;
+			phandle = < 0x2a >;
 		};
 		macro_release: macro_release {
 			compatible = "zmk,macro-control-mode-release";
 			#binding-cells = < 0x0 >;
-			phandle = < 0x2f >;
+			phandle = < 0x2d >;
 		};
 		macro_tap_time: macro_tap_time {
 			compatible = "zmk,macro-control-tap-time";
 			#binding-cells = < 0x1 >;
-			phandle = < 0x27 >;
+			phandle = < 0x29 >;
 		};
 		macro_wait_time: macro_wait_time {
 			compatible = "zmk,macro-control-wait-time";
 			#binding-cells = < 0x1 >;
-			phandle = < 0x30 >;
+			phandle = < 0x34 >;
 		};
 		macro_pause_for_release: macro_pause_for_release {
 			compatible = "zmk,macro-pause-for-release";
 			#binding-cells = < 0x0 >;
-			phandle = < 0x2e >;
+			phandle = < 0x2c >;
 		};
 		macro_param_1to1: macro_param_1to1 {
 			compatible = "zmk,macro-param-1to1";
 			#binding-cells = < 0x0 >;
-			phandle = < 0x29 >;
+			phandle = < 0x2b >;
 		};
 		macro_param_1to2: macro_param_1to2 {
 			compatible = "zmk,macro-param-1to2";
 			#binding-cells = < 0x0 >;
-			phandle = < 0x38 >;
+			phandle = < 0x3c >;
 		};
 		macro_param_2to1: macro_param_2to1 {
 			compatible = "zmk,macro-param-2to1";
 			#binding-cells = < 0x0 >;
-			phandle = < 0x2a >;
+			phandle = < 0x31 >;
 		};
 		macro_param_2to2: macro_param_2to2 {
 			compatible = "zmk,macro-param-2to2";
@@ -895,29 +895,91 @@
 			#binding-cells = < 0x0 >;
 			display-name = "Studio Unlock";
 		};
-		hml: home_row_mod_left {
+		kt_on: key_toggle_on_only {
+			compatible = "zmk,behavior-key-toggle";
+			#binding-cells = < 0x1 >;
+			display-name = "Key Toggle On";
+			toggle-mode = "on";
+			phandle = < 0x2f >;
+		};
+		kt_off: key_toggle_off_only {
+			compatible = "zmk,behavior-key-toggle";
+			#binding-cells = < 0x1 >;
+			display-name = "Key Toggle Off";
+			toggle-mode = "off";
+			phandle = < 0x30 >;
+		};
+		skq: sticky_key_quick_release {
+			compatible = "zmk,behavior-sticky-key";
+			#binding-cells = < 0x1 >;
+			bindings = < &kp >;
+			release-after-ms = < 0x7d0 >;
+			ignore-modifiers;
+		};
+		hml_hr: hml_hr {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = < 0x2 >;
-			flavor = "balanced";
+			flavor = "hold-preferred";
 			tapping-term-ms = < 0x140 >;
 			quick-tap-ms = < 0xaf >;
 			require-prior-idle-ms = < 0xfa >;
-			bindings = < &kp >, < &kp >;
+			bindings = < &mhr >, < &kp >;
 			hold-trigger-key-positions = < 0x5 0x6 0x7 0x8 0x9 0xf 0x10 0x11 0x12 0x13 0x19 0x1a 0x1b 0x1c 0x1d 0x1e 0x1f 0x20 0x21 0x22 0x23 0x24 0x25 0x26 >;
 			hold-trigger-on-release;
-			phandle = < 0x41 >;
+			phandle = < 0x46 >;
 		};
-		hmr: home_row_mod_right {
+		hmr_hr: hmr_hr {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = < 0x2 >;
-			flavor = "balanced";
-			tapping-term-ms = < 0x140 >;
+			flavor = "hold-preferred";
+			tapping-term-ms = < 0xdc >;
 			quick-tap-ms = < 0xaf >;
-			require-prior-idle-ms = < 0xfa >;
-			bindings = < &kp >, < &kp >;
+			require-prior-idle-ms = < 0x96 >;
+			bindings = < &mhr >, < &kp >;
 			hold-trigger-key-positions = < 0x0 0x1 0x2 0x3 0x4 0xa 0xb 0xc 0xd 0xe 0x14 0x15 0x16 0x17 0x18 0x1e 0x1f 0x20 0x21 0x22 0x23 0x24 0x25 0x26 >;
 			hold-trigger-on-release;
-			phandle = < 0x42 >;
+			phandle = < 0x47 >;
+		};
+		lm_homerow_short: lm_homerow_short {
+			compatible = "zmk,behavior-hold-tap";
+			flavor = "hold-preferred";
+			tapping-term-ms = < 0x96 >;
+			#binding-cells = < 0x2 >;
+			hold-trigger-on-release;
+			bindings = < &mhr >, < &kp >;
+			phandle = < 0x48 >;
+		};
+		lrlMo: lrlMo {
+			compatible = "zmk,behavior-hold-tap";
+			label = "LRLMO";
+			bindings = < &kp >, < &kpo >;
+			#binding-cells = < 0x2 >;
+			flavor = "balanced";
+			tapping-term-ms = < 0xdc >;
+			quick-tap-ms = < 0xaf >;
+			hold-trigger-on-release;
+			phandle = < 0x45 >;
+		};
+		lrrMo: lrrMo {
+			compatible = "zmk,behavior-hold-tap";
+			label = "LRRMO";
+			bindings = < &kp >, < &kpo >;
+			#binding-cells = < 0x2 >;
+			tapping-term-ms = < 0xdc >;
+			quick-tap-ms = < 0xaf >;
+			hold-trigger-on-release;
+			phandle = < 0x50 >;
+		};
+		lrDl: lrDl {
+			compatible = "zmk,behavior-hold-tap";
+			label = "LRDL";
+			bindings = < &kp >, < &kpo >;
+			#binding-cells = < 0x2 >;
+			flavor = "balanced";
+			require-prior-idle-ms = < 0x78 >;
+			tapping-term-ms = < 0xdc >;
+			quick-tap-ms = < 0xaf >;
+			hold-trigger-on-release;
 		};
 		bt_0: bt_0 {
 			compatible = "zmk,behavior-tap-dance";
@@ -925,7 +987,7 @@
 			#binding-cells = < 0x0 >;
 			tapping-term-ms = < 0x3e8 >;
 			bindings = < &bt_select_disc_0 >, < &out 0x1 >, < &bt_pairing_c 0x0 >;
-			phandle = < 0x4c >;
+			phandle = < 0x53 >;
 		};
 		bt_1: bt_1 {
 			compatible = "zmk,behavior-tap-dance";
@@ -933,7 +995,7 @@
 			#binding-cells = < 0x0 >;
 			tapping-term-ms = < 0x3e8 >;
 			bindings = < &bt_select_disc_1 >, < &out 0x1 >, < &bt_pairing_c 0x1 >;
-			phandle = < 0x4d >;
+			phandle = < 0x54 >;
 		};
 		bt_2: bt_2 {
 			compatible = "zmk,behavior-tap-dance";
@@ -941,7 +1003,7 @@
 			#binding-cells = < 0x0 >;
 			tapping-term-ms = < 0x3e8 >;
 			bindings = < &bt_select_disc_2 >, < &out 0x1 >, < &bt_pairing_c 0x2 >;
-			phandle = < 0x4e >;
+			phandle = < 0x55 >;
 		};
 		bt_3: bt_3 {
 			compatible = "zmk,behavior-tap-dance";
@@ -949,7 +1011,7 @@
 			#binding-cells = < 0x0 >;
 			tapping-term-ms = < 0x3e8 >;
 			bindings = < &bt_select_disc_3 >, < &out 0x1 >, < &bt_pairing_c 0x3 >;
-			phandle = < 0x4f >;
+			phandle = < 0x56 >;
 		};
 		bt_4: bt_4 {
 			compatible = "zmk,behavior-tap-dance";
@@ -957,21 +1019,21 @@
 			#binding-cells = < 0x0 >;
 			tapping-term-ms = < 0x3e8 >;
 			bindings = < &bt_select_disc_4 >, < &out 0x1 >, < &bt_pairing_c 0x4 >;
-			phandle = < 0x50 >;
+			phandle = < 0x57 >;
 		};
 		tog_on: toggle_layer_on_only {
 			compatible = "zmk,behavior-toggle-layer";
 			#binding-cells = < 0x1 >;
 			display-name = "Toggle Layer On";
 			toggle-mode = "on";
-			phandle = < 0x3a >;
+			phandle = < 0x3e >;
 		};
 		tog_off: toggle_layer_off_only {
 			compatible = "zmk,behavior-toggle-layer";
 			#binding-cells = < 0x1 >;
 			display-name = "Toggle Layer Off";
 			toggle-mode = "off";
-			phandle = < 0x39 >;
+			phandle = < 0x3d >;
 		};
 		tdSelectCoppingLR: tdSelectCoppingLR {
 			compatible = "zmk,behavior-hold-tap";
@@ -980,36 +1042,7 @@
 			quick_tap_ms = < 0x0 >;
 			flavor = "tap-preferred";
 			bindings = < &scl_l_to_r >, < &scw_l_to_r >;
-			phandle = < 0x4b >;
-		};
-		lrlMo: lrlMo {
-			compatible = "zmk,behavior-hold-tap";
-			label = "LRLMO";
-			bindings = < &kp >, < &kp >;
-			#binding-cells = < 0x2 >;
-			flavor = "balanced";
-			tapping-term-ms = < 0xdc >;
-			quick-tap-ms = < 0xaf >;
-			phandle = < 0x40 >;
-		};
-		lrDl: lrDl {
-			compatible = "zmk,behavior-hold-tap";
-			label = "LRDL";
-			bindings = < &kp >, < &kp >;
-			#binding-cells = < 0x2 >;
-			flavor = "balanced";
-			require-prior-idle-ms = < 0x78 >;
-			tapping-term-ms = < 0xdc >;
-			quick-tap-ms = < 0xaf >;
-		};
-		lrrMo: lrrMo {
-			compatible = "zmk,behavior-hold-tap";
-			label = "LRRMO";
-			bindings = < &kp >, < &kp >;
-			#binding-cells = < 0x2 >;
-			tapping-term-ms = < 0xdc >;
-			quick-tap-ms = < 0xaf >;
-			phandle = < 0x4a >;
+			phandle = < 0x52 >;
 		};
 		base_th_mo_kp_hp: base_th_mo_kp_hp {
 			compatible = "zmk,behavior-hold-tap";
@@ -1018,7 +1051,7 @@
 			hold-trigger-on-release;
 			#binding-cells = < 0x2 >;
 			bindings = < &mo >, < &kp >;
-			phandle = < 0x45 >;
+			phandle = < 0x4a >;
 		};
 		th_mo_kp_hp: th_mo_kp_hp {
 			compatible = "zmk,behavior-hold-tap";
@@ -1027,8 +1060,8 @@
 			quick-tap-ms = < 0xbe >;
 			hold-trigger-on-release;
 			#binding-cells = < 0x2 >;
-			bindings = < &mo >, < &kp >;
-			phandle = < 0x48 >;
+			bindings = < &mcTogOff >, < &kp >;
+			phandle = < 0x4e >;
 		};
 		th_kp_kp_hp: th_kp_kp_hp {
 			compatible = "zmk,behavior-hold-tap";
@@ -1037,8 +1070,8 @@
 			quick-tap-ms = < 0xbe >;
 			#binding-cells = < 0x2 >;
 			hold-trigger-on-release;
-			bindings = < &kp >, < &kp >;
-			phandle = < 0x47 >;
+			bindings = < &kp >, < &kpo >;
+			phandle = < 0x4d >;
 		};
 		space: space {
 			compatible = "zmk,behavior-hold-tap";
@@ -1046,8 +1079,8 @@
 			tapping-term-ms = < 0xdc >;
 			#binding-cells = < 0x2 >;
 			require-prior-idle-ms = < 0x50 >;
-			bindings = < &mo >, < &kp >;
-			phandle = < 0x49 >;
+			bindings = < &mcTogOff >, < &kp >;
+			phandle = < 0x4f >;
 		};
 		spacelm: thumb_layer_access_spacebarlm {
 			compatible = "zmk,behavior-hold-tap";
@@ -1056,13 +1089,14 @@
 			#binding-cells = < 0x2 >;
 			require-prior-idle-ms = < 0x50 >;
 			bindings = < &mo >, < &kp >;
-			phandle = < 0x46 >;
+			phandle = < 0x4b >;
 		};
 		th_kp_sl_hp: th_kp_sl_hp {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = < 0x2 >;
 			tapping-term-ms = < 0xc8 >;
 			flavor = "hold-preferred";
+			hold-trigger-on-release;
 			bindings = < &kp >, < &sl >;
 		};
 		lm_homerow: lm_homerow {
@@ -1070,15 +1104,9 @@
 			flavor = "hold-preferred";
 			tapping-term-ms = < 0xdc >;
 			#binding-cells = < 0x2 >;
+			hold-trigger-on-release;
 			bindings = < &mhr >, < &kp >;
-		};
-		lm_homerow_short: lm_homerow_short {
-			compatible = "zmk,behavior-hold-tap";
-			flavor = "hold-preferred";
-			tapping-term-ms = < 0x96 >;
-			#binding-cells = < 0x2 >;
-			bindings = < &mhr >, < &kp >;
-			phandle = < 0x44 >;
+			phandle = < 0x4c >;
 		};
 		tdSelectCoppingRL: tdSelectCoppingRL {
 			compatible = "zmk,behavior-hold-tap";
@@ -1095,7 +1123,7 @@
 			quick_tap_ms = < 0x0 >;
 			flavor = "tap-preferred";
 			bindings = < &pfind >, < &kp >;
-			phandle = < 0x3e >;
+			phandle = < 0x51 >;
 		};
 		td_find_g_ht: td_find_g_ht {
 			compatible = "zmk,behavior-hold-tap";
@@ -1104,7 +1132,7 @@
 			quick_tap_ms = < 0x0 >;
 			flavor = "tap-preferred";
 			bindings = < &gpfind >, < &kp >;
-			phandle = < 0x3f >;
+			phandle = < 0x44 >;
 		};
 		nav_esc: nav_esc {
 			compatible = "zmk,behavior-tap-dance";
@@ -1148,12 +1176,24 @@
 			#binding-cells = < 0x0 >;
 			bindings = < &macro_tap_time 0x3e8 >, < &kp 0x9070014 >, < &macro_tap_time 0x14 >, < &kp 0x70029 >;
 		};
+		mshon: mshon {
+			compatible = "zmk,behavior-macro-one-param";
+			#binding-cells = < 0x1 >;
+			bindings = < &macro_press >, < &macro_param_1to1 >, < &kp 0x0 >, < &macro_pause_for_release >, < &macro_param_1to1 >, < &macro_release >, < &kp 0x0 >, < &macro_tap >, < &kt_on 0x700e1 >;
+			phandle = < 0x40 >;
+		};
+		mshoff: mshoff {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = < 0x0 >;
+			bindings = < &macro_press >, < &macro_pause_for_release >, < &macro_release >, < &macro_tap >, < &kt_off 0x700e1 >;
+			phandle = < 0x3f >;
+		};
 		mc_bkctilde: mc_bkctilde {
 			label = "&TILDE";
 			compatible = "zmk,behavior-macro-one-param";
 			#binding-cells = < 0x1 >;
 			bindings = < &kp 0x4070008 >, < &macro_tap >, < &macro_param_1to1 &kp 0x0 >;
-			phandle = < 0x3b >;
+			phandle = < 0x41 >;
 		};
 		mc_tilde: mc_tilde {
 			compatible = "zmk,behavior-macro-two-param";
@@ -1167,7 +1207,7 @@
 			compatible = "zmk,behavior-macro-one-param";
 			#binding-cells = < 0x1 >;
 			bindings = < &macro_tap >, < &kp 0x4070011 &macro_param_1to1 &kp 0x0 >;
-			phandle = < 0x2b >;
+			phandle = < 0x32 >;
 		};
 		mc_ennesd: mac_enne_shift_delete {
 			compatible = "zmk,behavior-macro-one-param";
@@ -1175,7 +1215,7 @@
 			tap-ms = < 0x0 >;
 			#binding-cells = < 0x1 >;
 			bindings = < &macro_tap >, < &macro_param_1to1 &mc_enne 0x0 >;
-			phandle = < 0x3d >;
+			phandle = < 0x43 >;
 		};
 		mc_quesd: mc_quesd {
 			compatible = "zmk,behavior-macro";
@@ -1190,35 +1230,35 @@
 			tap-ms = < 0x0 >;
 			#binding-cells = < 0x1 >;
 			bindings = < &macro_press >, < &mo 0x7 &macro_param_1to1 >, < &macro_press >, < &kp 0x0 >, < &macro_pause_for_release >, < &macro_param_1to1 >, < &macro_release >, < &kp 0x0 >, < &macro_release >, < &mo 0x7 >;
-			phandle = < 0x1d >;
+			phandle = < 0x13 >;
 		};
 		scl_l_to_r: scl_l_to_r {
 			label = "&SCL_L_TO_R";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = < 0x0 >;
 			bindings = < &macro_tap >, < &kp 0x8070050 >, < &macro_wait_time 0x5 >, < &macro_tap >, < &kp 0xa07004f >, < &macro_wait_time 0x5 >, < &macro_tap >, < &kp 0x8070006 >;
-			phandle = < 0x1a >;
+			phandle = < 0x1c >;
 		};
 		scl_r_to_l: scl_r_to_l {
 			label = "&SCL_R_TO_L";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = < 0x0 >;
 			bindings = < &macro_tap >, < &kp 0x807004f >, < &macro_wait_time 0x5 >, < &macro_tap >, < &kp 0xa070050 >, < &macro_wait_time 0x5 >, < &macro_tap >, < &kp 0x8070006 >;
-			phandle = < 0x1e >;
+			phandle = < 0x20 >;
 		};
 		scw_r_to_l: scw_r_to_l {
 			label = "&SCW_R_TO_L";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = < 0x0 >;
 			bindings = < &macro_tap >, < &kp 0x407004f >, < &macro_wait_time 0x5 >, < &macro_tap >, < &kp 0x6070050 >, < &macro_wait_time 0x5 >, < &macro_tap >, < &kp 0x8070006 >;
-			phandle = < 0x1f >;
+			phandle = < 0x21 >;
 		};
 		scw_l_to_r: scw_l_to_r {
 			label = "&SCW_L_TO_R";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = < 0x0 >;
 			bindings = < &macro_tap >, < &kp 0x4070050 >, < &macro_wait_time 0x5 >, < &macro_tap >, < &kp 0x607004f >, < &macro_wait_time 0x5 >, < &macro_tap >, < &kp 0x8070006 >;
-			phandle = < 0x1b >;
+			phandle = < 0x1d >;
 		};
 		scfw_r_to_l: scfw_r_to_l {
 			label = "&SCFW_R_TO_L";
@@ -1237,157 +1277,173 @@
 			compatible = "zmk,behavior-macro";
 			#binding-cells = < 0x0 >;
 			bindings = < &macro_tap >, < &bt 0x5 0x1 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt 0x5 0x2 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt 0x5 0x3 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt 0x5 0x4 >;
-			phandle = < 0x33 >;
+			phandle = < 0x37 >;
 		};
 		bt_disc_1: bt_disc_1 {
 			label = "BT_DISC_1";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = < 0x0 >;
 			bindings = < &macro_tap >, < &bt 0x5 0x0 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt 0x5 0x2 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt 0x5 0x3 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt 0x5 0x4 >;
-			phandle = < 0x34 >;
+			phandle = < 0x38 >;
 		};
 		bt_disc_2: bt_disc_2 {
 			label = "BT_DISC_2";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = < 0x0 >;
 			bindings = < &macro_tap >, < &bt 0x5 0x0 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt 0x5 0x1 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt 0x5 0x3 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt 0x5 0x4 >;
-			phandle = < 0x35 >;
+			phandle = < 0x39 >;
 		};
 		bt_disc_3: bt_disc_3 {
 			label = "BT_DISC_3";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = < 0x0 >;
 			bindings = < &macro_tap >, < &bt 0x5 0x0 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt 0x5 0x1 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt 0x5 0x2 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt 0x5 0x4 >;
-			phandle = < 0x36 >;
+			phandle = < 0x3a >;
 		};
 		bt_disc_4: bt_disc_4 {
 			label = "BT_DISC_4";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = < 0x0 >;
 			bindings = < &macro_tap >, < &bt 0x5 0x0 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt 0x5 0x1 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt 0x5 0x2 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt 0x5 0x3 >;
-			phandle = < 0x37 >;
+			phandle = < 0x3b >;
 		};
 		bt_select_disc_0: bt_select_disc_0 {
 			label = "BT_SELECT_DISC_0";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = < 0x0 >;
 			bindings = < &macro_tap >, < &bt_select_c 0x0 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt_disc_0 >;
-			phandle = < 0x13 >;
+			phandle = < 0x15 >;
 		};
 		bt_select_disc_1: bt_select_disc_1 {
 			label = "BT_SELECT_DISC_1";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = < 0x0 >;
 			bindings = < &macro_tap >, < &bt_select_c 0x1 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt_disc_1 >;
-			phandle = < 0x16 >;
+			phandle = < 0x18 >;
 		};
 		bt_select_disc_2: bt_select_disc_2 {
 			label = "BT_SELECT_DISC_2";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = < 0x0 >;
 			bindings = < &macro_tap >, < &bt_select_c 0x2 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt_disc_2 >;
-			phandle = < 0x17 >;
+			phandle = < 0x19 >;
 		};
 		bt_select_disc_3: bt_select_disc_3 {
 			label = "BT_SELECT_DISC_3";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = < 0x0 >;
 			bindings = < &macro_tap >, < &bt_select_c 0x3 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt_disc_3 >;
-			phandle = < 0x18 >;
+			phandle = < 0x1a >;
 		};
 		bt_select_disc_4: bt_select_disc_4 {
 			label = "BT_SELECT_DISC_4";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = < 0x0 >;
 			bindings = < &macro_tap >, < &bt_select_c 0x4 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt_disc_4 >;
-			phandle = < 0x19 >;
+			phandle = < 0x1b >;
 		};
 		bt_select_c: bt_select_c {
 			label = "BT_SELECT_C";
 			compatible = "zmk,behavior-macro-one-param";
 			#binding-cells = < 0x1 >;
 			bindings = < &macro_tap >, < &out 0x2 &macro_param_1to2 >, < &macro_wait_time 0xc8 >, < &macro_tap >, < &bt 0x3 0x0 >;
-			phandle = < 0x32 >;
+			phandle = < 0x36 >;
 		};
 		bt_pairing_c: bt_pairing_c {
 			label = "BT_PAIRING_C";
 			compatible = "zmk,behavior-macro-one-param";
 			#binding-cells = < 0x1 >;
 			bindings = < &macro_param_1to1 >, < &macro_tap >, < &bt_select_c 0x0 >, < &macro_wait_time 0x14 >, < &macro_tap >, < &bt 0x0 0x0 >;
-			phandle = < 0x15 >;
+			phandle = < 0x17 >;
 		};
 		pfind: pfind {
 			label = "&PFIND";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = < 0x0 >;
 			bindings = < &macro_tap >, < &kp 0x8070009 >, < &macro_wait_time 0xa >, < &macro_tap >, < &kp 0x8070019 >;
-			phandle = < 0x20 >;
+			phandle = < 0x22 >;
 		};
 		gpfind: gpfind {
 			label = "&GPFIND";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = < 0x0 >;
 			bindings = < &macro_tap >, < &kp 0xa070009 >, < &macro_wait_time 0xa >, < &macro_tap >, < &kp 0x8070019 >;
-			phandle = < 0x21 >;
+			phandle = < 0x23 >;
+		};
+		mcTogOff: mcTogOff {
+			compatible = "zmk,behavior-macro-one-param";
+			wait-ms = < 0x0 >;
+			tap-ms = < 0x0 >;
+			#binding-cells = < 0x1 >;
+			bindings = < &macro_tap >, < &tog_off 0x1 >, < &macro_press >, < &macro_param_1to1 >, < &macro_press >, < &mo 0x0 >, < &macro_pause_for_release >, < &macro_param_1to1 >, < &macro_release >, < &mo 0x0 >;
+			phandle = < 0x1e >;
+		};
+		kpo: kpo {
+			compatible = "zmk,behavior-macro-one-param";
+			wait-ms = < 0x0 >;
+			tap-ms = < 0x0 >;
+			#binding-cells = < 0x1 >;
+			bindings = < &macro_tap >, < &tog_off 0x1 >, < &macro_press >, < &macro_param_1to1 >, < &macro_press >, < &kp 0x0 >, < &macro_pause_for_release >, < &macro_param_1to1 >, < &macro_release >, < &kp 0x0 >;
+			phandle = < 0x14 >;
 		};
 	};
 	combos {
 		compatible = "zmk,combos";
-		rcomboact_comb_wf {
+		LCOMBOACT_comb_wf {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &kp 0x70029 >;
 			key-positions = < 0x0 0x1 0x2 >;
 			slow-release;
-			layers = < 0x0 0x8 0x9 0x7 0x6 0xa 0x1 0x3 0x4 0x2 >;
+			layers = < 0x0 0x8 0x9 0x7 0x6 0x5 0xa 0x1 0x3 0x4 0x2 >;
 		};
-		rcomboact_comb_fp {
+		LCOMBOACT_comb_fp {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &kp 0x7002c >;
 			key-positions = < 0x1 0x2 0x3 >;
 			slow-release;
-			layers = < 0x0 0x8 0x9 0x7 0x6 0xa 0x1 0x3 0x4 0x2 >;
+			layers = < 0x0 0x8 0x9 0x7 0x6 0x5 0xa 0x1 0x3 0x4 0x2 >;
 		};
-		rcomboact_comb_pb {
+		LCOMBOACT_comb_pb {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &kp 0x70028 >;
 			key-positions = < 0x3 0x4 >;
 			slow-release;
-			layers = < 0x0 0x8 0x9 0x7 0x6 0xa 0x1 0x3 0x4 0x2 >;
+			layers = < 0x0 0x8 0x9 0x7 0x6 0x5 0xa 0x1 0x3 0x4 0x2 >;
 		};
-		rcomboact_comb_pb_2 {
+		LCOMBOACT_comb_pb_2 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &kp 0x70028 >;
 			key-positions = < 0xc 0x3 0xd >;
 			slow-release;
-			layers = < 0x0 0x8 0x9 0x7 0x6 0xa 0x1 0x3 0x4 0x2 >;
+			layers = < 0x0 0x8 0x9 0x7 0x6 0x5 0xa 0x1 0x3 0x4 0x2 >;
 		};
-		rcomboact_comb_tg_2 {
+		LCOMBOACT_comb_tg_2 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &kp 0x7002b >;
 			key-positions = < 0x16 0xd 0x17 >;
 			slow-release;
-			layers = < 0x0 0x8 0x9 0x7 0x6 0xa 0x1 0x3 0x4 0x2 >;
+			layers = < 0x0 0x8 0x9 0x7 0x6 0x5 0xa 0x1 0x3 0x4 0x2 >;
 		};
-		rcomboact_comb_tg {
+		LCOMBOACT_comb_tg {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &kp 0x7002b >;
 			key-positions = < 0x17 0x18 >;
 			slow-release;
-			layers = < 0x0 0x8 0x9 0x7 0x6 0xa 0x1 0x3 0x4 0x2 >;
+			layers = < 0x0 0x8 0x9 0x7 0x6 0x5 0xa 0x1 0x3 0x4 0x2 >;
 		};
-		rcomboact_comb_cd {
+		LCOMBOACT_comb_cd {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &kp 0x7002a >;
 			key-positions = < 0x15 0x16 0x17 >;
 			slow-release;
-			layers = < 0x0 0x8 0x9 0x7 0x6 0xa 0x1 0x3 0x4 0x2 >;
+			layers = < 0x0 0x8 0x9 0x7 0x6 0x5 0xa 0x1 0x3 0x4 0x2 >;
 		};
-		rcomboact_comb_xc {
+		LCOMBOACT_comb_xc {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &kp 0x7004c >;
 			key-positions = < 0x14 0x15 0x16 >;
 			slow-release;
-			layers = < 0x0 0x8 0x9 0x7 0x6 0xa 0x1 0x3 0x4 0x2 >;
+			layers = < 0x0 0x8 0x9 0x7 0x6 0x5 0xa 0x1 0x3 0x4 0x2 >;
 		};
 		lcombo_comb_gv {
 			timeout-ms = < 0x1f4 >;
@@ -1556,10 +1612,22 @@
 			key-positions = < 0x0 0x1 0x2 0x3 >;
 			layers = < 0xb >;
 		};
+		c-seniply-l {
+			bindings = < &sl 0x7 >;
+			key-positions = < 0xb 0xc 0xd >;
+			layers = < 0x0 >;
+			timeout-ms = < 0x1f4 >;
+		};
+		c-seniply-r {
+			bindings = < &sl 0x7 >;
+			key-positions = < 0x10 0x11 0x12 >;
+			layers = < 0x0 >;
+			timeout-ms = < 0x1f4 >;
+		};
 		c-hr-thumb-arl {
 			bindings = < &kp 0x20700e0 >;
 			key-positions = < 0x23 0xa 0xb >;
-			layers = < 0x0 >;
+			layers = < 0x0 0x1 0x3 0x4 0x2 >;
 			slow-release;
 			key-positions-first-exclude = < 0x23 >;
 			timeout-ms = < 0x7d0 >;
@@ -1567,7 +1635,7 @@
 		c-hr-thumb-arsl {
 			bindings = < &kp 0x60700e0 >;
 			key-positions = < 0x23 0xa 0xb 0xc >;
-			layers = < 0x0 >;
+			layers = < 0x0 0x1 0x3 0x4 0x2 >;
 			slow-release;
 			key-positions-first-exclude = < 0x23 >;
 			timeout-ms = < 0x7d0 >;
@@ -1575,7 +1643,7 @@
 		c-hr-thumb-arstl {
 			bindings = < &kp 0xe0700e0 >;
 			key-positions = < 0x23 0xa 0xb 0xc 0xd >;
-			layers = < 0x0 >;
+			layers = < 0x0 0x1 0x3 0x4 0x2 >;
 			slow-release;
 			key-positions-first-exclude = < 0x23 >;
 			timeout-ms = < 0x7d0 >;
@@ -1583,7 +1651,7 @@
 		c-hr-thumb-artl {
 			bindings = < &kp 0x30700e3 >;
 			key-positions = < 0x23 0xa 0xb 0xd >;
-			layers = < 0x0 >;
+			layers = < 0x0 0x1 0x3 0x4 0x2 >;
 			slow-release;
 			key-positions-first-exclude = < 0x23 >;
 			timeout-ms = < 0x7d0 >;
@@ -1591,7 +1659,7 @@
 		c-hr-thumb-astl {
 			bindings = < &kp 0x60700e3 >;
 			key-positions = < 0x23 0xa 0xd 0xc >;
-			layers = < 0x0 >;
+			layers = < 0x0 0x1 0x3 0x4 0x2 >;
 			slow-release;
 			key-positions-first-exclude = < 0x23 >;
 			timeout-ms = < 0x7d0 >;
@@ -1599,7 +1667,7 @@
 		c-hr-thumb-rstl {
 			bindings = < &kp 0x50700e3 >;
 			key-positions = < 0x23 0xd 0xc 0xb >;
-			layers = < 0x0 >;
+			layers = < 0x0 0x1 0x3 0x4 0x2 >;
 			slow-release;
 			key-positions-first-exclude = < 0x23 >;
 			timeout-ms = < 0x7d0 >;
@@ -1607,7 +1675,7 @@
 		c-hr-thumb-atl {
 			bindings = < &kp 0x20700e3 >;
 			key-positions = < 0x23 0xd 0xa >;
-			layers = < 0x0 >;
+			layers = < 0x0 0x1 0x3 0x4 0x2 >;
 			slow-release;
 			key-positions-first-exclude = < 0x23 >;
 			timeout-ms = < 0x7d0 >;
@@ -1615,7 +1683,7 @@
 		c-hr-thumb-stl {
 			bindings = < &kp 0x40700e3 >;
 			key-positions = < 0x23 0xc 0xd >;
-			layers = < 0x0 >;
+			layers = < 0x0 0x1 0x3 0x4 0x2 >;
 			slow-release;
 			key-positions-first-exclude = < 0x23 >;
 			timeout-ms = < 0x7d0 >;
@@ -1623,7 +1691,7 @@
 		c-hr-thumb-rsl {
 			bindings = < &kp 0x10700e2 >;
 			key-positions = < 0x23 0xc 0xb >;
-			layers = < 0x0 >;
+			layers = < 0x0 0x1 0x3 0x4 0x2 >;
 			slow-release;
 			key-positions-first-exclude = < 0x23 >;
 			timeout-ms = < 0x7d0 >;
@@ -1631,7 +1699,7 @@
 		c-hr-thumb-rtl {
 			bindings = < &kp 0x10700e3 >;
 			key-positions = < 0x23 0xd 0xb >;
-			layers = < 0x0 >;
+			layers = < 0x0 0x1 0x3 0x4 0x2 >;
 			slow-release;
 			key-positions-first-exclude = < 0x23 >;
 			timeout-ms = < 0x7d0 >;
@@ -1639,7 +1707,7 @@
 		c-hr-thumb-asl {
 			bindings = < &kp 0x20700e2 >;
 			key-positions = < 0x23 0xa 0xc >;
-			layers = < 0x0 >;
+			layers = < 0x0 0x1 0x3 0x4 0x2 >;
 			slow-release;
 			key-positions-first-exclude = < 0x23 >;
 			timeout-ms = < 0x7d0 >;
@@ -1732,40 +1800,41 @@
 			key-positions-first-exclude = < 0x23 >;
 			timeout-ms = < 0x7d0 >;
 		};
-		cbks_0 {
+		cbkshift_0 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x407001e >;
+			bindings = < &mshoff >, < &mshon 0x407001e >;
 			key-positions = < 0x0 0x22 >;
 			key-positions-leader = < 0x0 >;
 			key-positions-first-exclude = < 0x22 >;
+			slow-release;
 			layers = < 0x0 0x9 0x7 0x6 0xa >;
 		};
-		cbkl_2 {
+		cbklleft_2 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &mo 0xa >;
 			key-positions = < 0x2 0x22 >;
 			key-positions-leader = < 0x2 >;
 			key-positions-first-exclude = < 0x22 >;
 			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
+			layers = < 0x0 0x1 0x9 0x7 0x6 0xa >;
 		};
-		cbkl_3 {
+		cbklleft_3 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &mo 0xc >;
 			key-positions = < 0x3 0x22 >;
 			key-positions-leader = < 0x3 >;
 			key-positions-first-exclude = < 0x22 >;
 			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
+			layers = < 0x0 0x1 0x9 0x7 0x6 0xa >;
 		};
-		cbkl_4 {
+		cbklleft_4 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &mo 0x9 >;
 			key-positions = < 0x4 0x22 >;
 			key-positions-leader = < 0x4 >;
 			key-positions-first-exclude = < 0x22 >;
 			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
+			layers = < 0x0 0x1 0x9 0x7 0x6 0xa >;
 		};
 		cbks_7 {
 			timeout-ms = < 0x7d0 >;
@@ -1823,506 +1892,138 @@
 			key-positions-first-exclude = < 0x22 >;
 			layers = < 0x0 0x9 0x7 0x6 0xa >;
 		};
-		cbkl_20 {
+		cbkdaleft_21 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x9 >, < &td_find_s_ht 0x70004 0x8070009 >;
-			key-positions = < 0x14 0x22 >;
-			key-positions-leader = < 0x14 >;
-			key-positions-first-exclude = < 0x22 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cbkl_21 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x9 >, < &td_find_g_ht 0x70004 0xa070009 >;
+			bindings = < &mo 0x9 >, < &td_find_g_ht 0x8070009 0xa070009 >;
 			key-positions = < 0x15 0x22 >;
 			key-positions-leader = < 0x15 >;
 			key-positions-first-exclude = < 0x22 >;
 			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
+			layers = < 0x0 0x1 0x9 0x7 0x6 0xa >;
 		};
-		cbkl_22 {
+		cbkdaleft_22 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &mo 0x9 >, < &lrlMo 0x607000b 0x6070045 >;
 			key-positions = < 0x16 0x22 >;
 			key-positions-leader = < 0x16 >;
 			key-positions-first-exclude = < 0x22 >;
 			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
+			layers = < 0x0 0x1 0x9 0x7 0x6 0xa >;
 		};
-		cbkl_23 {
+		cbkdaleft_23 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &mo 0x9 >, < &kp 0x307002d >;
 			key-positions = < 0x17 0x22 >;
 			key-positions-leader = < 0x17 >;
 			key-positions-first-exclude = < 0x22 >;
 			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
+			layers = < 0x0 0x1 0x9 0x7 0x6 0xa >;
 		};
-		cbkl_24 {
+		cbkdaleft_24 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &mo 0x9 >, < &kp 0x107002d >;
 			key-positions = < 0x18 0x22 >;
 			key-positions-leader = < 0x18 >;
 			key-positions-first-exclude = < 0x22 >;
 			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
+			layers = < 0x0 0x1 0x9 0x7 0x6 0xa >;
 		};
-		cbks_29 {
+		cbkshift_29 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &kp 0x6070038 >;
+			bindings = < &mshoff >, < &mshon 0x6070038 >;
 			key-positions = < 0x1d 0x22 >;
 			key-positions-leader = < 0x1d >;
 			key-positions-first-exclude = < 0x22 >;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		ctab_0 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x5 >, < &kp 0x7001e >;
-			key-positions = < 0x0 0x23 >;
-			key-positions-first-exclude = < 0x23 >;
-			key-positions-leader = < 0x0 >;
 			slow-release;
 			layers = < 0x0 0x9 0x7 0x6 0xa >;
 		};
-		ctab_1 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x5 >, < &kp 0x7001f >;
-			key-positions = < 0x1 0x23 >;
-			key-positions-first-exclude = < 0x23 >;
-			key-positions-leader = < 0x1 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		ctab_2 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x5 >, < &kp 0x70020 >;
-			key-positions = < 0x2 0x23 >;
-			key-positions-first-exclude = < 0x23 >;
-			key-positions-leader = < 0x2 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		ctab_3 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x5 >, < &kp 0x70021 >;
-			key-positions = < 0x3 0x23 >;
-			key-positions-first-exclude = < 0x23 >;
-			key-positions-leader = < 0x3 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		ctab_4 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x5 >, < &kp 0x70022 >;
-			key-positions = < 0x4 0x23 >;
-			key-positions-first-exclude = < 0x23 >;
-			key-positions-leader = < 0x4 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		ctab_5 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x5 >, < &kp 0x70023 >;
-			key-positions = < 0x5 0x23 >;
-			key-positions-first-exclude = < 0x23 >;
-			key-positions-leader = < 0x5 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		ctab_6 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x5 >, < &kp 0x70024 >;
-			key-positions = < 0x6 0x23 >;
-			key-positions-first-exclude = < 0x23 >;
-			key-positions-leader = < 0x6 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		ctab_7 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x5 >, < &kp 0x70025 >;
-			key-positions = < 0x7 0x23 >;
-			key-positions-first-exclude = < 0x23 >;
-			key-positions-leader = < 0x7 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		ctab_8 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x5 >, < &kp 0x70026 >;
-			key-positions = < 0x8 0x23 >;
-			key-positions-first-exclude = < 0x23 >;
-			key-positions-leader = < 0x8 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		ctab_9 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x5 >, < &kp 0x70027 >;
-			key-positions = < 0x9 0x23 >;
-			key-positions-first-exclude = < 0x23 >;
-			key-positions-leader = < 0x9 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		ctabd_10 {
+		ctabdleft_10 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &mhr 0x700e1 >;
 			key-positions = < 0xa 0x23 >;
 			key-positions-first-exclude = < 0x23 >;
 			key-positions-leader = < 0xa >;
 			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
+			layers = < 0x0 0x9 0x7 0x6 0xa 0x1 0x3 0x4 0x2 >;
 		};
-		ctabd_11 {
+		ctabdleft_11 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &mhr 0x700e0 >;
 			key-positions = < 0xb 0x23 >;
 			key-positions-first-exclude = < 0x23 >;
 			key-positions-leader = < 0xb >;
 			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
+			layers = < 0x0 0x9 0x7 0x6 0xa 0x1 0x3 0x4 0x2 >;
 		};
-		ctabd_12 {
+		ctabdleft_12 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &mhr 0x700e2 >;
 			key-positions = < 0xc 0x23 >;
 			key-positions-first-exclude = < 0x23 >;
 			key-positions-leader = < 0xc >;
 			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
+			layers = < 0x0 0x9 0x7 0x6 0xa 0x1 0x3 0x4 0x2 >;
 		};
-		ctabd_13 {
+		ctabdleft_13 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &mhr 0x700e3 >;
 			key-positions = < 0xd 0x23 >;
 			key-positions-first-exclude = < 0x23 >;
 			key-positions-leader = < 0xd >;
 			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
+			layers = < 0x0 0x9 0x7 0x6 0xa 0x1 0x3 0x4 0x2 >;
 		};
-		ctabd_14 {
+		ctabdleft_14 {
 			timeout-ms = < 0x7d0 >;
 			bindings = < &kp 0x70039 >;
 			key-positions = < 0xe 0x23 >;
 			key-positions-first-exclude = < 0x23 >;
 			key-positions-leader = < 0xe >;
 			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
+			layers = < 0x0 0x9 0x7 0x6 0xa 0x1 0x3 0x4 0x2 >;
 		};
-		ctabda_20 {
+		ctabd_15 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x9 >, < &td_find_s_ht 0x70004 0x8070009 >;
-			key-positions = < 0x14 0x23 >;
+			bindings = < &kp 0x70039 >;
+			key-positions = < 0xf 0x23 >;
 			key-positions-first-exclude = < 0x23 >;
-			key-positions-leader = < 0x14 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		ctabda_21 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x9 >, < &td_find_g_ht 0x70004 0xa070009 >;
-			key-positions = < 0x15 0x23 >;
-			key-positions-first-exclude = < 0x23 >;
-			key-positions-leader = < 0x15 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		ctabda_22 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x9 >, < &lrlMo 0x607000b 0x6070045 >;
-			key-positions = < 0x16 0x23 >;
-			key-positions-first-exclude = < 0x23 >;
-			key-positions-leader = < 0x16 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		ctabda_23 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x9 >, < &kp 0x307002d >;
-			key-positions = < 0x17 0x23 >;
-			key-positions-first-exclude = < 0x23 >;
-			key-positions-leader = < 0x17 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		ctabda_24 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x9 >, < &kp 0x107002d >;
-			key-positions = < 0x18 0x23 >;
-			key-positions-first-exclude = < 0x23 >;
-			key-positions-leader = < 0x18 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_0 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070014 >;
-			key-positions = < 0x0 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x0 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_1 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x407001a >;
-			key-positions = < 0x1 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x1 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_2 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070009 >;
-			key-positions = < 0x2 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x2 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_3 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070013 >;
-			key-positions = < 0x3 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x3 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_4 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070005 >;
-			key-positions = < 0x4 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x4 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_5 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x407000d >;
-			key-positions = < 0x5 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x5 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_6 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x407000f >;
-			key-positions = < 0x6 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x6 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_7 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070018 >;
-			key-positions = < 0x7 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x7 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_8 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x407001c >;
-			key-positions = < 0x8 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x8 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_9 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070034 >;
-			key-positions = < 0x9 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x9 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_10 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070004 >;
-			key-positions = < 0xa 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0xa >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_11 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070015 >;
-			key-positions = < 0xb 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0xb >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_12 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070016 >;
-			key-positions = < 0xc 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0xc >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_13 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070017 >;
-			key-positions = < 0xd 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0xd >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_14 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x407000a >;
-			key-positions = < 0xe 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0xe >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_15 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070010 >;
-			key-positions = < 0xf 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
 			key-positions-leader = < 0xf >;
 			slow-release;
 			layers = < 0x0 0x9 0x7 0x6 0xa >;
 		};
-		cent_16 {
+		ctabd_16 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070011 >;
-			key-positions = < 0x10 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
+			bindings = < &mhr 0x700e3 >;
+			key-positions = < 0x10 0x23 >;
+			key-positions-first-exclude = < 0x23 >;
 			key-positions-leader = < 0x10 >;
 			slow-release;
 			layers = < 0x0 0x9 0x7 0x6 0xa >;
 		};
-		cent_17 {
+		ctabd_17 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070008 >;
-			key-positions = < 0x11 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
+			bindings = < &mhr 0x700e2 >;
+			key-positions = < 0x11 0x23 >;
+			key-positions-first-exclude = < 0x23 >;
 			key-positions-leader = < 0x11 >;
 			slow-release;
 			layers = < 0x0 0x9 0x7 0x6 0xa >;
 		};
-		cent_18 {
+		ctabd_18 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x407000c >;
-			key-positions = < 0x12 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
+			bindings = < &mhr 0x700e0 >;
+			key-positions = < 0x12 0x23 >;
+			key-positions-first-exclude = < 0x23 >;
 			key-positions-leader = < 0x12 >;
 			slow-release;
 			layers = < 0x0 0x9 0x7 0x6 0xa >;
 		};
-		cent_19 {
+		ctabd_19 {
 			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070012 >;
-			key-positions = < 0x13 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
+			bindings = < &mhr 0x700e1 >;
+			key-positions = < 0x13 0x23 >;
+			key-positions-first-exclude = < 0x23 >;
 			key-positions-leader = < 0x13 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_20 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x407001d >;
-			key-positions = < 0x14 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x14 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_21 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x407001b >;
-			key-positions = < 0x15 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x15 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_22 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070006 >;
-			key-positions = < 0x16 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x16 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_23 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070007 >;
-			key-positions = < 0x17 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x17 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_24 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070019 >;
-			key-positions = < 0x18 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x18 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_25 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x407000e >;
-			key-positions = < 0x19 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x19 >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_26 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x407000b >;
-			key-positions = < 0x1a 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x1a >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_27 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070036 >;
-			key-positions = < 0x1b 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x1b >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_28 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070037 >;
-			key-positions = < 0x1c 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x1c >;
-			slow-release;
-			layers = < 0x0 0x9 0x7 0x6 0xa >;
-		};
-		cent_29 {
-			timeout-ms = < 0x7d0 >;
-			bindings = < &mo 0x6 >, < 0x4070038 >;
-			key-positions = < 0x1d 0x24 >;
-			key-positions-first-exclude = < 0x24 >;
-			key-positions-leader = < 0x1d >;
 			slow-release;
 			layers = < 0x0 0x9 0x7 0x6 0xa >;
 		};
@@ -2331,55 +2032,55 @@
 		compatible = "zmk,keymap";
 		base_layer {
 			label = "BASE";
-			bindings = < &kp 0x70014 &kp 0x7001a &kp 0x70009 &kp 0x70013 &kp 0x70005 &kp 0x7000d &kp 0x7000f &kp 0x70018 &kp 0x7001c &kp 0x70034 &hml 0x700e1 0x70004 &hml 0x700e0 0x70015 &hml 0x700e2 0x70016 &hml 0x700e3 0x70017 &kp 0x7000a &kp 0x70010 &hmr 0x700e7 0x70011 &hmr 0x700e6 0x70008 &hmr 0x700e4 0x7000c &hmr 0x700e5 0x70012 &kp 0x7001d &kp 0x7001b &kp 0x70006 &kp 0x70007 &kp 0x70019 &kp 0x7000e &kp 0x7000b &kp 0x70036 &kp 0x70037 &kp 0x70038 &kp 0x700e0 &trans &trans &trans &lm_homerow_short 0x700e1 0x7002a &lm_homerow_short 0x700e3 0x7002b &base_th_mo_kp_hp 0x6 0x70028 &spacelm 0x5 0x7002c &kp 0x700e0 >;
+			bindings = < &kp 0x70014 &kp 0x7001a &kp 0x70009 &kp 0x70013 &kp 0x70005 &kp 0x7000d &kp 0x7000f &kp 0x70018 &kp 0x7001c &kp 0x70034 &kp 0x70004 &kp 0x70015 &kp 0x70016 &kp 0x70017 &kp 0x7000a &kp 0x70010 &kp 0x70011 &kp 0x70008 &kp 0x7000c &kp 0x70012 &hml_hr 0x700e2 0x7001d &kp 0x7001b &kp 0x70006 &kp 0x70007 &kp 0x70019 &kp 0x7000e &kp 0x7000b &kp 0x70036 &kp 0x70037 &hmr_hr 0x700e2 0x70038 &lm_homerow_short 0x700e0 0x70029 &trans &trans &lm_homerow_short 0x700e0 0x7004c &lm_homerow_short 0x700e1 0x7002a &lm_homerow_short 0x700e3 0x7002b &base_th_mo_kp_hp 0x6 0x70028 &spacelm 0x5 0x7002c &lm_homerow 0x700e0 0x7002a >;
 		};
 		mouse_layer {
 			label = "MOUSE";
-			bindings = < &kp 0x70014 &kp 0x7001a &kp 0x70009 &kp 0x70013 &kp 0x70005 &trans &trans &kp 0x4 &trans &trans &lrlMo 0x700e1 0x70004 &lrlMo 0x700e0 0x70015 &lrlMo 0x700e2 0x70016 &lrlMo 0x700e3 0x70017 &kp 0x7000a &trans &mkp 0x1 &mo 0x2 &mkp 0x2 &mo 0x3 &kp 0x7001d &kp 0x7001b &kp 0x70006 &kp 0x70007 &kp 0x70019 &trans &tog_off 0x1 &trans &trans &kp 0x70038 &kp 0x700e0 &trans &trans &trans &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &kp 0x700e0 >;
+			bindings = < &kpo 0x70014 &kpo 0x7001a &kpo 0x70009 &kpo 0x70013 &kpo 0x70005 &kpo 0x7000d &kpo 0x7000f &kpo 0x70018 &kpo 0x7001c &kpo 0x70034 &lrlMo 0x700e1 0x70004 &lrlMo 0x700e0 0x70015 &lrlMo 0x700e2 0x70016 &lrlMo 0x700e3 0x70017 &kpo 0x7000a &kpo 0x70010 &mkp 0x1 &mo 0x2 &mkp 0x2 &mo 0x3 &lrlMo 0x700e2 0x7001d &kpo 0x7001b &kpo 0x70006 &kpo 0x70007 &kpo 0x70019 &kpo 0x7000e &kp 0x7000b &kp 0x70036 &kp 0x70037 &hmr_hr 0x700e2 0x70038 &lrlMo 0x700e0 0x70029 &trans &trans &th_kp_kp_hp 0x700e0 0x7004c &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &lrrMo 0x700e0 0x7002a >;
 		};
 		scroll_layer {
 			label = "SCROLL";
-			bindings = < &kp 0x70014 &kp 0x7001a &kp 0x70009 &kp 0x70013 &kp 0x70005 &trans &trans &kp 0x4 &trans &trans &lrlMo 0x700e1 0x70004 &lrlMo 0x700e0 0x70015 &lrlMo 0x700e2 0x70016 &lrlMo 0x700e3 0x70017 &kp 0x7000a &trans &mkp 0x1 &mo 0x2 &mkp 0x2 &kp 0x700e3 &kp 0x7001d &kp 0x7001b &kp 0x70006 &kp 0x70007 &kp 0x70019 &trans &tog_off 0x1 &trans &trans &kp 0x70038 &kp 0x700e0 &trans &trans &trans &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &kp 0x700e0 >;
+			bindings = < &kpo 0x70014 &kpo 0x7001a &kpo 0x70009 &kpo 0x70013 &kpo 0x70005 &kpo 0x7000d &kpo 0x7000f &kpo 0x70018 &kpo 0x7001c &kpo 0x70034 &lrlMo 0x700e1 0x70004 &lrlMo 0x700e0 0x70015 &lrlMo 0x700e2 0x70016 &lrlMo 0x700e3 0x70017 &kpo 0x7000a &kpo 0x70010 &mkp 0x1 &mo 0x2 &mkp 0x2 &kp 0x700e3 &lrlMo 0x700e2 0x7001d &kpo 0x7001b &kpo 0x70006 &kpo 0x70007 &kpo 0x70019 &kpo 0x7000e &kp 0x7000b &kp 0x70036 &kp 0x70037 &hmr_hr 0x700e2 0x70038 &lrlMo 0x700e0 0x70029 &trans &trans &th_kp_kp_hp 0x700e0 0x7004c &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &lrrMo 0x700e0 0x7002a >;
 		};
 		snipe_layer {
 			label = "SNIPE";
-			bindings = < &kp 0x70014 &kp 0x7001a &kp 0x70009 &kp 0x70013 &kp 0x70005 &trans &trans &kp 0x4 &trans &trans &lrlMo 0x700e1 0x70004 &lrlMo 0x700e0 0x70015 &lrlMo 0x700e2 0x70016 &lrlMo 0x700e3 0x70017 &kp 0x7000a &trans &mkp 0x1 &mo 0x2 &mkp 0x2 &mo 0x3 &kp 0x7001d &kp 0x7001b &kp 0x70006 &kp 0x70007 &kp 0x70019 &trans &tog_off 0x1 &trans &trans &kp 0x70038 &kp 0x700e0 &trans &trans &trans &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &kp 0x700e0 >;
+			bindings = < &kpo 0x70014 &kpo 0x7001a &kpo 0x70009 &kpo 0x70013 &kpo 0x70005 &kpo 0x7000d &kpo 0x7000f &kpo 0x70018 &kpo 0x7001c &kpo 0x70034 &lrlMo 0x700e1 0x70004 &lrlMo 0x700e0 0x70015 &lrlMo 0x700e2 0x70016 &lrlMo 0x700e3 0x70017 &kpo 0x7000a &kpo 0x70010 &mkp 0x1 &mo 0x2 &mkp 0x2 &mo 0x3 &lrlMo 0x700e2 0x7001d &kpo 0x7001b &kpo 0x70006 &kpo 0x70007 &kpo 0x70019 &kpo 0x7000e &kp 0x7000b &kp 0x70036 &kp 0x70037 &hmr_hr 0x700e2 0x70038 &lrlMo 0x700e0 0x70029 &trans &trans &th_kp_kp_hp 0x700e0 0x7004c &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &lrrMo 0x700e0 0x7002a >;
 		};
 		warp_layer {
 			label = "WARP";
-			bindings = < &kp 0x70014 &kp 0x7001a &kp 0x70009 &kp 0x70013 &kp 0x70005 &trans &trans &kp 0x4 &trans &trans &lrlMo 0x700e1 0x70004 &lrlMo 0x700e0 0x70015 &lrlMo 0x700e2 0x70016 &lrlMo 0x700e3 0x70017 &kp 0x7000a &trans &mkp 0x1 &mo 0x2 &mkp 0x2 &mo 0x3 &kp 0x7001d &kp 0x7001b &kp 0x70006 &kp 0x70007 &kp 0x70019 &trans &tog_off 0x1 &trans &trans &kp 0x70038 &kp 0x700e0 &trans &trans &trans &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &kp 0x700e0 >;
+			bindings = < &kpo 0x70014 &kpo 0x7001a &kpo 0x70009 &kpo 0x70013 &kpo 0x70005 &kpo 0x7000d &kpo 0x7000f &kpo 0x70018 &kpo 0x7001c &kpo 0x70034 &lrlMo 0x700e1 0x70004 &lrlMo 0x700e0 0x70015 &lrlMo 0x700e2 0x70016 &lrlMo 0x700e3 0x70017 &kpo 0x7000a &kpo 0x70010 &mkp 0x1 &mo 0x2 &mkp 0x2 &mo 0x3 &lrlMo 0x700e2 0x7001d &kpo 0x7001b &kpo 0x70006 &kpo 0x70007 &kpo 0x70019 &kpo 0x7000e &kp 0x7000b &kp 0x70036 &kp 0x70037 &hmr_hr 0x700e2 0x70038 &lrlMo 0x700e0 0x70029 &trans &trans &th_kp_kp_hp 0x700e0 0x7004c &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &lrrMo 0x700e0 0x7002a >;
 		};
 		lower_layer {
 			label = "LOWER";
-			bindings = < &kp 0x7001e &kp 0x7001f &kp 0x70020 &kp 0x70021 &kp 0x70022 &kp 0x70023 &kp 0x70024 &kp 0x70025 &kp 0x70026 &kp 0x70027 &lrlMo 0x700e1 0x70004 &lrlMo 0x700e0 0x70015 &lrlMo 0x700e2 0x70016 &lrlMo 0x700e3 0x70017 &kp 0x7000a &kp 0x70010 &kp 0x7004a &kp 0x70052 &kp 0x7004d &kp 0x7004b &kp 0x7001d &kp 0x7001b &kp 0x70006 &kp 0x70007 &kp 0x70019 &kp 0x7002e &kp 0x70050 &kp 0x70051 &kp 0x7004f &kp 0x7004e &kp 0x700e0 &trans &trans &trans &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &kp 0x700e0 >;
+			bindings = < &kp 0x7001e &kp 0x7001f &kp 0x70020 &kp 0x70021 &kp 0x70022 &kp 0x70023 &kp 0x70024 &kp 0x70025 &kp 0x70026 &kp 0x70027 &lrlMo 0x700e1 0x70004 &lrlMo 0x700e0 0x70015 &lrlMo 0x700e2 0x70016 &lrlMo 0x700e3 0x70017 &kp 0x7000a &kp 0x70010 &kp 0x7004a &kp 0x70052 &kp 0x7004d &kp 0x7004b &lrlMo 0x700e2 0x7001d &kp 0x7001b &kp 0x70006 &kp 0x70007 &kp 0x70019 &kp 0x7002e &kp 0x70050 &kp 0x70051 &kp 0x7004f &kp 0x7004e &lrlMo 0x700e0 0x70029 &trans &trans &th_kp_kp_hp 0x700e0 0x7004c &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &lrrMo 0x700e0 0x7002a >;
 		};
 		raise_layer {
 			label = "RAISE";
-			bindings = < &kp 0x207001e &kp 0x207001f &kp 0x2070020 &kp 0x2070021 &kp 0x2070022 &kp 0x2070023 &kp 0x2070024 &kp 0x2070025 &kp 0x2070026 &kp 0x2070027 &lrlMo 0x700e1 0x2070031 &lrlMo 0x700e0 0x207002f &lrlMo 0x700e2 0x2070030 &lrlMo 0x700e0 0x2070035 &kp 0x207002d &kp 0x207002e &lrrMo 0x700e7 0x2070033 &lrrMo 0x700e6 0x2070036 &lrrMo 0x700e4 0x2070037 &lrrMo 0x700e5 0x2070038 &kp 0x70031 &kp 0x7002f &kp 0x70030 &kp 0x70035 &kp 0x7002d &kp 0x7002e &kp 0x70033 &kp 0x70036 &kp 0x70037 &kp 0x70038 &kp 0x700e0 &trans &trans &trans &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &kp 0x700e0 >;
+			bindings = < &kp 0x207001e &kp 0x207001f &kp 0x2070020 &kp 0x2070021 &kp 0x2070022 &kp 0x2070023 &kp 0x2070024 &kp 0x2070025 &kp 0x2070026 &kp 0x2070027 &lrlMo 0x700e1 0x2070031 &lrlMo 0x700e0 0x207002f &lrlMo 0x700e2 0x2070030 &lrlMo 0x700e0 0x2070035 &kp 0x207002d &kp 0x207002e &lrrMo 0x700e7 0x2070033 &lrrMo 0x700e6 0x2070036 &lrrMo 0x700e4 0x2070037 &lrrMo 0x700e5 0x2070038 &lrlMo 0x700e2 0x70031 &kp 0x7002f &kp 0x70030 &kp 0x70035 &kp 0x7002d &kp 0x7002e &kp 0x70033 &kp 0x70036 &kp 0x70037 &lrrMo 0x700e6 0x70038 &lrlMo 0x700e0 0x70029 &trans &trans &th_kp_kp_hp 0x700e0 0x7004c &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &lrrMo 0x700e0 0x7002a >;
 		};
 		layer_homerow {
 			label = "HOMEROW";
-			bindings = < &kp 0x70014 &kp 0x7001a &kp 0x70009 &kp 0x70013 &kp 0x70005 &kp 0x7000d &kp 0x7000f &kp 0x70018 &kp 0x7001c &kp 0x70034 &lrlMo 0x700e1 0x70004 &lrlMo 0x700e0 0x70015 &lrlMo 0x700e2 0x70016 &lrlMo 0x700e3 0x70017 &kp 0x7000a &kp 0x70010 &lrrMo 0x700e7 0x70011 &lrrMo 0x700e6 0x70008 &lrrMo 0x700e4 0x7000c &lrrMo 0x700e5 0x70012 &kp 0x7001d &kp 0x7001b &kp 0x70006 &kp 0x70007 &kp 0x70019 &kp 0x7000e &kp 0x7000b &kp 0x70036 &kp 0x70037 &kp 0x70038 &kp 0x700e0 &trans &trans &trans &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &kp 0x700e0 >;
+			bindings = < &kp 0x70014 &kp 0x7001a &kp 0x70009 &kp 0x70013 &kp 0x70005 &kp 0x7000d &kp 0x7000f &kp 0x70018 &kp 0x7001c &kp 0x70034 &lrlMo 0x700e1 0x70004 &lrlMo 0x700e0 0x70015 &lrlMo 0x700e2 0x70016 &lrlMo 0x700e3 0x70017 &kp 0x7000a &kp 0x70010 &lrrMo 0x700e7 0x70011 &lrrMo 0x700e6 0x70008 &lrrMo 0x700e4 0x7000c &lrrMo 0x700e5 0x70012 &lrlMo 0x700e2 0x7001d &kp 0x7001b &kp 0x70006 &kp 0x70007 &kp 0x70019 &kp 0x7000e &kp 0x7000b &kp 0x70036 &kp 0x70037 &lrrMo 0x700e6 0x70038 &lrlMo 0x700e0 0x70029 &trans &trans &th_kp_kp_hp 0x700e0 0x7004c &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &lrrMo 0x700e0 0x7002a >;
 		};
 		layer_navoverr {
 			label = "NAVOVERR";
-			bindings = < &kp 0x7001e &kp 0x7001f &kp 0x70020 &kp 0x70021 &kp 0x70022 &kp 0x70023 &kp 0x70024 &kp 0x70025 &kp 0x70026 &kp 0x70027 &lrlMo 0x700e1 0x70004 &lrlMo 0x700e0 0x70015 &lrlMo 0x700e2 0x70016 &lrlMo 0x700e3 0x70017 &kp 0x70044 &kp 0x207002e &kp 0x7004a &kp 0x70052 &kp 0x7004d &kp 0x7004b &kp 0x70031 &kp 0x7002f &kp 0x70030 &kp 0x70035 &kp 0x7002d &kp 0x7002e &kp 0x70050 &kp 0x70051 &kp 0x7004f &kp 0x7004e &kp 0x700e0 &trans &trans &trans &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &kp 0x700e0 >;
+			bindings = < &kp 0x7001e &kp 0x7001f &kp 0x70020 &kp 0x70021 &kp 0x70022 &kp 0x70023 &kp 0x70024 &kp 0x70025 &kp 0x70026 &kp 0x70027 &lrlMo 0x700e1 0x70004 &lrlMo 0x700e0 0x70015 &lrlMo 0x700e2 0x70016 &lrlMo 0x700e3 0x70017 &kp 0x70044 &kp 0x207002e &kp 0x7004a &kp 0x70052 &kp 0x7004d &kp 0x7004b &lrlMo 0x700e2 0x70031 &kp 0x7002f &kp 0x70030 &kp 0x70035 &kp 0x7002d &kp 0x7002e &kp 0x70050 &kp 0x70051 &kp 0x7004f &kp 0x7004e &lrlMo 0x700e0 0x70029 &trans &trans &th_kp_kp_hp 0x700e0 0x7004c &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &lrrMo 0x700e0 0x7002a >;
 		};
 		layer_direcaacc {
 			label = "DIRECTACC";
-			bindings = < &td_find_s_ht 0x70004 0x8070009 &td_find_g_ht 0x70004 0xa070009 &lrlMo 0x607000b 0x6070045 &kp 0x307002d &kp 0x307002d &kp 0xc00e9 &kp 0xc00b6 &kp 0xc00cd &kp 0xc00b5 &trans &kp 0x700e1 &kp 0x700e0 &kp 0x700e2 &kp 0x700e3 &tdSelectCoppingLR 0x70004 0x70004 &kp 0xc00ea &sk 0x700e7 &sk 0x700e6 &sk 0x700e4 &sk 0x700e5 &td_find_s_ht 0x70004 0x8070009 &td_find_g_ht 0x70004 0xa070009 &lrlMo 0x607000b 0x6070045 &kp 0x307002d &kp 0x107002d &kp 0xc00e2 &kp 0xc0070 &kp 0xc006f &bt_0 &bt_1 &kp 0x700e0 &trans &trans &trans &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &kp 0x700e0 >;
+			bindings = < &td_find_s_ht 0x70004 0x8070009 &td_find_g_ht 0x70004 0xa070009 &lrlMo 0x607000b 0x6070045 &kp 0x307002d &kp 0x307002d &kp 0xc00e9 &kp 0xc00b6 &kp 0xc00cd &kp 0xc00b5 &trans &kp 0x700e1 &kp 0x700e0 &kp 0x700e2 &kp 0x700e3 &tdSelectCoppingLR 0x70004 0x70004 &kp 0xc00ea &kp 0x700e7 &kp 0x700e6 &kp 0x700e4 &kp 0x700e5 &td_find_s_ht 0x70004 0x8070009 &td_find_g_ht 0x70004 0xa070009 &lrlMo 0x607000b 0x6070045 &kp 0x307002d &kp 0x107002d &kp 0xc00e2 &kp 0xc0070 &kp 0xc006f &bt_0 &bt_1 &lrlMo 0x700e0 0x70029 &trans &trans &th_kp_kp_hp 0x700e0 0x7004c &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &lrrMo 0x700e0 0x7002a >;
 		};
 		layer_func {
 			label = "FUNC";
-			bindings = < &kp 0x7003a &kp 0x7003b &kp 0x7003c &kp 0x7003d &kp 0x7003e &kp 0x7003f &kp 0x70040 &kp 0x70041 &kp 0x70042 &kp 0x70043 &sk 0x700e1 &sk 0x700e0 &sk 0x700e2 &sk 0x700e3 &kp 0x70044 &kp 0x70045 &sk 0x700e7 &sk 0x700e6 &sk 0x700e7 &sk 0x700e5 &sk 0x700e2 &none &none &none &kp 0x70044 &kp 0x70045 &sk 0x700e0 &none &none &none &kp 0x700e0 &trans &trans &trans &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &kp 0x700e0 >;
+			bindings = < &kp 0x7003a &kp 0x7003b &kp 0x7003c &kp 0x7003d &kp 0x7003e &kp 0x7003f &kp 0x70040 &kp 0x70041 &kp 0x70042 &kp 0x70043 &kp 0x700e1 &kp 0x700e0 &kp 0x700e2 &kp 0x700e3 &kp 0x70044 &kp 0x70045 &kp 0x700e7 &kp 0x700e6 &kp 0x700e7 &kp 0x700e5 &kp 0x700e2 &none &none &none &kp 0x70044 &kp 0x70045 &kp 0x700e0 &none &none &kp 0x700e6 &lrlMo 0x700e0 0x70029 &trans &trans &th_kp_kp_hp 0x700e0 0x7004c &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &lrrMo 0x700e0 0x7002a >;
 		};
 		adjust_layer {
 			label = "ADJ";
-			bindings = < &bt_0 &bt_1 &bt_2 &bt_3 &bt_4 &trans &trans &trans &trans &trans &out 0x1 &trans &trans &trans &trans &trans &trans &trans &trans &trans &sys_reset &trans &trans &trans &trans &trans &trans &trans &trans &sys_reset &kp 0x700e0 &trans &trans &trans &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &kp 0x700e0 >;
+			bindings = < &bt_0 &bt_1 &bt_2 &bt_3 &bt_4 &trans &trans &trans &trans &trans &out 0x1 &trans &trans &trans &trans &trans &trans &trans &trans &trans &sys_reset &trans &trans &trans &trans &trans &trans &trans &trans &sys_reset &lrlMo 0x700e0 0x70029 &trans &trans &th_kp_kp_hp 0x700e0 0x7004c &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &lrrMo 0x700e0 0x7002a >;
 		};
 		layer_numbers {
 			label = "NUMBERS";
-			bindings = < &kp 0x207001e &kp 0x207001f &kp 0x2070020 &kp 0x2070021 &kp 0x2070022 &kp 0x7002e &kp 0x70024 &kp 0x70025 &kp 0x70026 &kp 0x2070025 &kp 0x700e1 &kp 0x700e0 &kp 0x700e2 &kp 0x700e3 &kp 0x70036 &kp 0x70037 &kp 0x70021 &kp 0x70022 &kp 0x70023 &kp 0x70027 &kp 0x70031 &kp 0x7002f &kp 0x70030 &kp 0x70035 &kp 0x7002d &kp 0x207002e &kp 0x7001e &kp 0x7001f &kp 0x70020 &kp 0x70038 &kp 0x700e0 &trans &trans &trans &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &kp 0x700e0 >;
+			bindings = < &kp 0x207001e &kp 0x207001f &kp 0x2070020 &kp 0x2070021 &kp 0x2070022 &kp 0x7002e &kp 0x70024 &kp 0x70025 &kp 0x70026 &kp 0x2070025 &kp 0x700e1 &kp 0x700e0 &kp 0x700e2 &kp 0x700e3 &kp 0x70036 &kp 0x70037 &kp 0x70021 &kp 0x70022 &kp 0x70023 &kp 0x70027 &lrlMo 0x700e2 0x70031 &kp 0x7002f &kp 0x70030 &kp 0x70035 &kp 0x7002d &kp 0x207002e &kp 0x7001e &kp 0x7001f &kp 0x70020 &lrrMo 0x700e6 0x70038 &lrlMo 0x700e0 0x70029 &trans &trans &th_kp_kp_hp 0x700e0 0x7004c &th_kp_kp_hp 0x700e1 0x7002a &th_kp_kp_hp 0x700e3 0x7002b &th_mo_kp_hp 0x6 0x70028 &space 0x5 0x7002c &lrrMo 0x700e0 0x7002a >;
 		};
 	};
 };

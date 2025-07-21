@@ -1,4 +1,4 @@
-// git add . && git commit -m 'adjust keymap controls' && git push
+// git add . && git commit -m 'home rows' && git push
 
 
 /*
@@ -68,7 +68,6 @@ west build -p \
 #define FUNC 10
 #define ADJ  11
 #define NUMBERS 12
-#define NAVOVERRLEFT 13
 
 &lt {
     tapping-term-ms = <240>;
@@ -81,6 +80,11 @@ west build -p \
     flavor = "tap-preferred";
     quick-tap-ms = <150>;
 };
+
+&sl {
+    release-after-ms = <4000>;
+};
+
 
 &caps_word { continue-list = <UNDERSCORE MINUS>; };
 #include "mouse.dtsi"
@@ -95,90 +99,90 @@ west build -p \
  base_layer {
             label = "BASE";
             bindings = <
-                               &kp Q         &kp W         &kp F        &kp P        &kp B                           &kp J    &kp L        &kp U        &kp Y         &kp SQT
-                               &hml LSHFT A  &hml LCTRL R  &hml LALT S  &hml LGUI T  &kp G                           &kp M    &hmr RGUI N  &hmr RALT E  &hmr RCTRL I  &hmr RSHFT O
-                               &kp Z         &kp X         &kp C        &kp D        &kp V                           &kp K    &kp H        &kp COMMA    &kp DOT       &kp SLASH        
-&kp LCTRL  &trans  &trans &trans  &lm_homerow_short LSHFT BACKSPACE  &lm_homerow_short LGUI TAB                &base_th_mo_kp_hp RAISE ENTER  &spacelm LOWER SPACE  &kp LCTRL
+                               &kp Q                  &kp W         &kp F        &kp P        &kp B                           &kp J    &kp L        &kp U        &kp Y         &kp SQT
+                               &kp A                  &kp R         &kp S        &kp T        &kp G                           &kp M    &kp N        &kp E        &kp I         &kp O
+                               &hml_hr LALT Z         &kp X         &kp C        &kp D        &kp V                           &kp K    &kp H        &kp COMMA    &kp DOT       &hmr_hr LALT SLASH        
+&lm_homerow_short LCTRL ESC  &trans  &trans &lm_homerow_short LCTRL DEL  &lm_homerow_short LSHFT BACKSPACE  &lm_homerow_short LGUI TAB                &base_th_mo_kp_hp RAISE ENTER  &spacelm LOWER SPACE  &lm_homerow LCTRL BACKSPACE
             >;
         };
 
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&kp Q            &kp W            &kp F            &kp P           &kp B                     &trans         &trans             &kp MCLK     &trans     &trans
-&lrlMo LSHFT A   &lrlMo LCTRL R   &lrlMo LALT S    &lrlMo LGUI T   &kp G                     &trans         &mkp LCLK          &mo SCROLL   &mkp RCLK  &mo SNIPE
-&kp Z            &kp X            &kp C            &kp D           &kp V                     &trans         &tog_off MOUSE     &trans       &trans     &kp SLASH 
-&kp LCTRL  &trans  &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &kp LCTRL
+&kpo Q                   &kpo W           &kpo F           &kpo P          &kpo B                    &kpo J          &kpo L             &kpo U        &kpo Y       &kpo SQT
+&lrlMo LSHFT A           &lrlMo LCTRL R   &lrlMo LALT S    &lrlMo LGUI T   &kpo G                    &kpo M          &mkp LCLK          &mo SCROLL    &mkp RCLK    &mo SNIPE
+&lrlMo LALT Z            &kpo X           &kpo C           &kpo D          &kpo V                    &kpo K          &kp H              &kp COMMA     &kp DOT      &hmr_hr LALT SLASH 
+&lrlMo LCTRL ESC  &trans  &trans &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &lrrMo LCTRL BACKSPACE
             >;
         };
 
          scroll_layer {
             label = "SCROLL";
             bindings = <
-&kp Q            &kp W            &kp F            &kp P           &kp B                     &trans         &trans             &kp MCLK     &trans     &trans
-&lrlMo LSHFT A   &lrlMo LCTRL R   &lrlMo LALT S    &lrlMo LGUI T   &kp G                     &trans         &mkp LCLK          &mo SCROLL   &mkp RCLK  &kp LGUI
-&kp Z            &kp X            &kp C            &kp D           &kp V                     &trans         &tog_off MOUSE     &trans       &trans     &kp SLASH 
-&kp LCTRL  &trans  &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &kp LCTRL
+&kpo Q                   &kpo W           &kpo F           &kpo P          &kpo B                     &kpo J         &kpo L             &kpo U        &kpo Y       &kpo SQT
+&lrlMo LSHFT A           &lrlMo LCTRL R   &lrlMo LALT S    &lrlMo LGUI T   &kpo G                     &kpo M         &mkp LCLK          &mo SCROLL    &mkp RCLK    &kp LGUI
+&lrlMo LALT Z            &kpo X           &kpo C           &kpo D          &kpo V                     &kpo K         &kp H              &kp COMMA     &kp DOT      &hmr_hr LALT SLASH 
+&lrlMo LCTRL ESC  &trans  &trans &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &lrrMo LCTRL BACKSPACE
             >;
         };
 
         snipe_layer {
             label = "SNIPE";
             bindings = <
-&kp Q            &kp W           &kp F            &kp P         &kp B                     &trans         &trans             &kp MCLK     &trans     &trans
-&lrlMo LSHFT A   &lrlMo LCTRL R   &lrlMo LALT S    &lrlMo LGUI T   &kp G                     &trans         &mkp LCLK          &mo SCROLL   &mkp RCLK  &mo SNIPE
-&kp Z            &kp X           &kp C           &kp D          &kp V                     &trans         &tog_off MOUSE     &trans       &trans     &kp SLASH
-&kp LCTRL  &trans  &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &kp LCTRL
+&kpo Q                   &kpo W           &kpo F           &kpo P          &kpo B                    &kpo J          &kpo L             &kpo U        &kpo Y       &kpo SQT
+&lrlMo LSHFT A           &lrlMo LCTRL R   &lrlMo LALT S    &lrlMo LGUI T   &kpo G                    &kpo M          &mkp LCLK          &mo SCROLL    &mkp RCLK    &mo SNIPE
+&lrlMo LALT Z            &kpo X           &kpo C           &kpo D          &kpo V                    &kpo K          &kp H              &kp COMMA     &kp DOT      &hmr_hr LALT SLASH 
+&lrlMo LCTRL ESC  &trans  &trans &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &lrrMo LCTRL BACKSPACE
             >;
         };
 
         warp_layer {
             label = "WARP";
             bindings = <
-&kp Q           &kp W           &kp F            &kp P         &kp B                     &trans         &trans             &kp MCLK     &trans     &trans
-&lrlMo LSHFT A   &lrlMo LCTRL R   &lrlMo LALT S    &lrlMo LGUI T   &kp G                     &trans         &mkp LCLK          &mo SCROLL   &mkp RCLK  &mo SNIPE
-&kp Z           &kp X           &kp C           &kp D          &kp V                     &trans         &tog_off MOUSE     &trans       &trans     &kp SLASH
-&kp LCTRL  &trans  &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &kp LCTRL
+&kpo Q                   &kpo W           &kpo F           &kpo P          &kpo B                    &kpo J          &kpo L             &kpo U        &kpo Y       &kpo SQT
+&lrlMo LSHFT A           &lrlMo LCTRL R   &lrlMo LALT S    &lrlMo LGUI T   &kpo G                    &kpo M          &mkp LCLK          &mo SCROLL    &mkp RCLK    &mo SNIPE
+&lrlMo LALT Z            &kpo X           &kpo C           &kpo D          &kpo V                    &kpo K          &kp H              &kp COMMA     &kp DOT      &hmr_hr LALT SLASH 
+&lrlMo LCTRL ESC  &trans  &trans &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &lrrMo LCTRL BACKSPACE
             >;
         };
 
         lower_layer {
             label = "LOWER";
             bindings = <
-                  &kp N1          &kp N2          &kp N3                  &kp N4                         &kp N5                          &kp N6          &kp N7                &kp N8                    &kp N9          &kp N0
-                  &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S           &lrlMo LGUI T                  &kp G                           &kp M           &kp HOME              &kp UP                    &kp END         &kp PG_UP
-                  &kp Z           &kp X           &kp C                   &kp D                          &kp V                           &kp EQUAL       &kp LEFT              &kp DOWN                  &kp RIGHT       &kp PG_DN 
-&kp LCTRL  &trans  &trans &trans &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &kp LCTRL  
+                  &kp N1                  &kp N2          &kp N3                  &kp N4                         &kp N5                          &kp N6          &kp N7                &kp N8                    &kp N9          &kp N0
+                  &lrlMo LSHFT A          &lrlMo LCTRL R  &lrlMo LALT S           &lrlMo LGUI T                  &kp G                           &kp M           &kp HOME              &kp UP                    &kp END         &kp PG_UP
+                  &lrlMo LALT Z           &kp X           &kp C                   &kp D                          &kp V                           &kp EQUAL       &kp LEFT              &kp DOWN                  &kp RIGHT       &kp PG_DN 
+&lrlMo LCTRL ESC  &trans  &trans &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL BACKSPACE  
             >;
         };
 
         raise_layer {
             label = "RAISE";
             bindings = <
-                  &kp EXCL           &kp AT             &kp HASH                &kp DLLR                  &kp PRCNT                       &kp CARET           &kp AMPS                   &kp STAR                  &kp LPAR         &kp RPAR
-                  &lrlMo LSHFT PIPE  &lrlMo LCTRL LBRC  &lrlMo LALT RBRC        &lrlMo LCTRL TILDE        &kp UNDER                       &kp PLUS            &lrrMo RGUI COLON          &lrrMo RALT LT            &lrrMo RCTRL GT  &lrrMo RSHFT QUESTION
-                  &kp BSLH           &kp LBKT           &kp RBKT                &kp GRAVE                 &kp MINUS                       &kp EQUAL           &kp SEMI                   &kp COMMA                 &kp DOT          &kp SLASH              
-&kp LCTRL  &trans  &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &kp LCTRL
+                  &kp EXCL                   &kp AT             &kp HASH                &kp DLLR                  &kp PRCNT                       &kp CARET           &kp AMPS                   &kp STAR                  &kp LPAR         &kp RPAR
+                  &lrlMo LSHFT PIPE          &lrlMo LCTRL LBRC  &lrlMo LALT RBRC        &lrlMo LCTRL TILDE        &kp UNDER                       &kp PLUS            &lrrMo RGUI COLON          &lrrMo RALT LT            &lrrMo RCTRL GT  &lrrMo RSHFT QUESTION
+                  &lrlMo LALT BSLH           &kp LBKT           &kp RBKT                &kp GRAVE                 &kp MINUS                       &kp EQUAL           &kp SEMI                   &kp COMMA                 &kp DOT          &lrrMo RALT SLASH              
+&lrlMo LCTRL ESC  &trans  &trans &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL BACKSPACE
             >;
         };
 
         layer_homerow {
             label = "HOMEROW";
             bindings = <
-                  &kp Q           &kp W           &kp F            &kp P          &kp B                &kp J       &kp L                 &kp U            &kp Y             &kp SQT
-                  &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S    &lrlMo LGUI T  &kp G                &kp M       &lrrMo RGUI N         &lrrMo RALT E    &lrrMo RCTRL I    &lrrMo RSHFT O
-                  &kp Z           &kp X           &kp C            &kp D          &kp V                &kp K       &kp H                 &kp COMMA        &kp DOT           &kp SLASH  
-&kp LCTRL  &trans  &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &kp LCTRL
+                  &kp Q                   &kp W           &kp F            &kp P          &kp B                &kp J       &kp L                 &kp U            &kp Y             &kp SQT
+                  &lrlMo LSHFT A          &lrlMo LCTRL R  &lrlMo LALT S    &lrlMo LGUI T  &kp G                &kp M       &lrrMo RGUI N         &lrrMo RALT E    &lrrMo RCTRL I    &lrrMo RSHFT O
+                  &lrlMo LALT Z           &kp X           &kp C            &kp D          &kp V                &kp K       &kp H                 &kp COMMA        &kp DOT           &lrrMo RALT SLASH  
+&lrlMo LCTRL ESC  &trans  &trans &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL BACKSPACE
             >;
         };
 
         layer_navoverr {
             label = "NAVOVERR";
             bindings = <
-                  &kp N1          &kp N2          &kp N3                  &kp N4                         &kp N5                          &kp N6          &kp N7                &kp N8                    &kp N9          &kp N0
-                  &lrlMo LSHFT A  &lrlMo LCTRL R  &lrlMo LALT S           &lrlMo LGUI T                  &kp F11                         &kp PLUS        &kp HOME              &kp UP                    &kp END         &kp PG_UP
-                  &kp BSLH        &kp LBKT        &kp RBKT                &kp GRAVE                      &kp MINUS                       &kp EQUAL       &kp LEFT              &kp DOWN                  &kp RIGHT       &kp PG_DN   
-&kp LCTRL  &trans  &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &kp LCTRL
+                  &kp N1                  &kp N2          &kp N3                  &kp N4                         &kp N5                          &kp N6          &kp N7                &kp N8                    &kp N9          &kp N0
+                  &lrlMo LSHFT A          &lrlMo LCTRL R  &lrlMo LALT S           &lrlMo LGUI T                  &kp F11                         &kp PLUS        &kp HOME              &kp UP                    &kp END         &kp PG_UP
+                  &lrlMo LALT BSLH        &kp LBKT        &kp RBKT                &kp GRAVE                      &kp MINUS                       &kp EQUAL       &kp LEFT              &kp DOWN                  &kp RIGHT       &kp PG_DN   
+&lrlMo LCTRL ESC  &trans  &trans &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL BACKSPACE
             >;
         };
 
@@ -186,19 +190,19 @@ west build -p \
             label = "DIRECTACC";
             bindings = <
 &td_find_s_ht A LG(F)  &td_find_g_ht A LG(LS(F))  &lrlMo LA(LS(H)) LA(LS(F12))  &kp LC(LS(MINUS))  &kp LC(LS(MINUS))               &kp C_VOL_UP        &kp C_PREV                 &kp C_PP      &kp C_NEXT  &trans
-&kp LSHFT              &kp LCTRL                  &kp LALT                      &kp LGUI           &tdSelectCoppingLR A A          &kp C_VOL_DN        &sk RGUI                   &sk RALT      &sk RCTRL   &sk RSHFT
+&kp LSHFT              &kp LCTRL                  &kp LALT                      &kp LGUI           &tdSelectCoppingLR A A          &kp C_VOL_DN        &kp RGUI                   &kp RALT      &kp RCTRL   &kp RSHFT
 &td_find_s_ht A LG(F)  &td_find_g_ht A LG(LS(F))  &lrlMo LA(LS(H)) LA(LS(F12))  &kp LC(LS(MINUS))  &kp LC(MINUS)                   &kp C_MUTE          &kp C_BRI_DN               &kp C_BRI_UP  &bt_0       &bt_1     
-&kp LCTRL  &trans  &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &kp LCTRL
+&lrlMo LCTRL ESC  &trans  &trans &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL BACKSPACE
             >;
         };
 
         layer_func {
             label = "FUNC";
             bindings = <
-                  &kp F1     &kp F2     &kp F3                  &kp F4                    &kp F5                          &kp F6              &kp F7                     &kp F8                    &kp F9    &kp F10
-                  &sk LSHFT  &sk LCTRL  &sk LALT                &sk LGUI                  &kp F11                         &kp F12             &sk RGUI                   &sk RALT                  &sk RGUI  &sk RSHFT
-                  &sk LALT   &none      &none                   &none                     &kp F11                         &kp F12             &sk LCTRL                     &none                     &none     &none      
-&kp LCTRL  &trans  &trans &trans &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &kp LCTRL
+                  &kp F1     &kp F2     &kp F3                  &kp F4                    &kp F5                          &kp F6              &kp F7                     &kp F8                    &kp F9        &kp F10
+                  &kp LSHFT  &kp LCTRL  &kp LALT                &kp LGUI                  &kp F11                         &kp F12             &kp RGUI                   &kp RALT                  &kp RGUI      &kp RSHFT
+                  &kp LALT   &none      &none                   &none                     &kp F11                         &kp F12             &kp LCTRL                  &none                     &none         &kp RALT      
+&lrlMo LCTRL ESC  &trans  &trans &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL BACKSPACE
             >;
         };
 
@@ -208,19 +212,22 @@ west build -p \
              &bt_0         &bt_1   &bt_2                   &bt_3                     &bt_4                           &trans                 &trans                  &trans                    &trans  &trans
              &out OUT_USB  &trans  &trans                  &trans                    &trans                          &trans                 &trans                  &trans                    &trans  &trans
              &sys_reset    &trans  &trans                  &trans                    &trans                          &trans                 &trans                  &trans                    &trans  &sys_reset  
-&kp LCTRL  &trans  &trans &trans  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &kp LCTRL
+&lrlMo LCTRL ESC &trans  &trans &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL BACKSPACE
             >;
         };
 
         layer_numbers {
             label = "NUMBERS";
             bindings = <
-                  &kp EXCL           &kp AT             &kp HASH                &kp DLLR                  &kp PRCNT                       &kp EQUAL          &kp N7                    &kp N8                   &kp N9           &kp STAR
-                  &kp LSHFT          &kp LCTRL          &kp LALT                &kp LGUI                  &kp COMMA                       &kp DOT            &kp N4                    &kp N5                   &kp N6           &kp N0
-                  &kp BSLH           &kp LBKT           &kp RBKT                &kp GRAVE                 &kp MINUS                       &kp PLUS           &kp N1                    &kp N2                   &kp N3           &kp SLASH       
-&kp LCTRL  &trans  &trans &trans &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &kp LCTRL
+                  &kp EXCL                   &kp AT             &kp HASH                &kp DLLR                  &kp PRCNT                       &kp EQUAL          &kp N7                    &kp N8                   &kp N9           &kp STAR
+                  &kp LSHFT                  &kp LCTRL          &kp LALT                &kp LGUI                  &kp COMMA                       &kp DOT            &kp N4                    &kp N5                   &kp N6           &kp N0
+                  &lrlMo LALT BSLH           &kp LBKT           &kp RBKT                &kp GRAVE                 &kp MINUS                       &kp PLUS           &kp N1                    &kp N2                   &kp N3           &lrrMo RALT SLASH       
+&lrlMo LCTRL ESC  &trans  &trans &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL BACKSPACE
             >;
         };
+
+
+
 
     };
 
