@@ -81,5 +81,4 @@ empty_file.o: \
  /Users/haroldhernandez/keyball39/zmk-config-Keyball39/config/macros/macros_general.dtsi \
  /Users/haroldhernandez/keyball39/zmk-config-Keyball39/config/behaviors/behaviors_general.dtsi \
  /Users/haroldhernandez/keyball39/zmk-config-Keyball39/config/combos/combos_general.dtsi \
- /Users/haroldhernandez/keyball39/zmk-config-Keyball39/zmk/app/snippets/zmk-usb-logging/zmk-usb-logging.overlay \
  /Users/haroldhernandez/keyball39/zmk-config-Keyball39/zmk/app/snippets/studio-rpc-usb-uart/studio-rpc-usb-uart.overlay

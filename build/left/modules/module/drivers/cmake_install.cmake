@@ -43,7 +43,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/Users/haroldhernandez/keyball39/zmk-config-Keyball39/build/left/modules/module/drivers/kscan/cmake_install.cmake")
   include("/Users/haroldhernandez/keyball39/zmk-config-Keyball39/build/left/modules/module/drivers/sensor/cmake_install.cmake")
   include("/Users/haroldhernandez/keyball39/zmk-config-Keyball39/build/left/modules/module/drivers/display/cmake_install.cmake")
-  include("/Users/haroldhernandez/keyball39/zmk-config-Keyball39/build/left/modules/module/drivers/input/cmake_install.cmake")
 
 endif()
 

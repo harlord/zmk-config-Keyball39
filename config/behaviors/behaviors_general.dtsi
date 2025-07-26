@@ -210,7 +210,7 @@
             quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
             hold-trigger-on-release; // wait for other home row mods
             #binding-cells = <2>;
-            bindings = <&mcTogOff>, <&kp>;
+            bindings = <&mcTogOff>, <&kpo>;
         };
 
         th_kp_kp_hp: th_kp_kp_hp {
@@ -230,7 +230,7 @@
             //quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
             #binding-cells = <2>;
             require-prior-idle-ms = <80>;
-            bindings = <&mcTogOff>, <&kp>;
+            bindings = <&mcTogOff>, <&kpo>;
         };
 
         spacelm: thumb_layer_access_spacebarlm {

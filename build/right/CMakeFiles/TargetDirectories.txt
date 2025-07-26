@@ -201,9 +201,6 @@
 /Users/haroldhernandez/keyball39/zmk-config-Keyball39/build/right/zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir
 /Users/haroldhernandez/keyball39/zmk-config-Keyball39/build/right/zephyr/drivers/clock_control/CMakeFiles/edit_cache.dir
 /Users/haroldhernandez/keyball39/zmk-config-Keyball39/build/right/zephyr/drivers/clock_control/CMakeFiles/rebuild_cache.dir
-/Users/haroldhernandez/keyball39/zmk-config-Keyball39/build/right/zephyr/drivers/console/CMakeFiles/drivers__console.dir
-/Users/haroldhernandez/keyball39/zmk-config-Keyball39/build/right/zephyr/drivers/console/CMakeFiles/edit_cache.dir
-/Users/haroldhernandez/keyball39/zmk-config-Keyball39/build/right/zephyr/drivers/console/CMakeFiles/rebuild_cache.dir
 /Users/haroldhernandez/keyball39/zmk-config-Keyball39/build/right/zephyr/drivers/display/CMakeFiles/drivers__display.dir
 /Users/haroldhernandez/keyball39/zmk-config-Keyball39/build/right/zephyr/drivers/display/CMakeFiles/edit_cache.dir
 /Users/haroldhernandez/keyball39/zmk-config-Keyball39/build/right/zephyr/drivers/display/CMakeFiles/rebuild_cache.dir

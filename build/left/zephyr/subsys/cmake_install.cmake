@@ -60,7 +60,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/Users/haroldhernandez/keyball39/zmk-config-Keyball39/build/left/zephyr/subsys/tracing/cmake_install.cmake")
   include("/Users/haroldhernandez/keyball39/zmk-config-Keyball39/build/left/zephyr/subsys/usb/cmake_install.cmake")
   include("/Users/haroldhernandez/keyball39/zmk-config-Keyball39/build/left/zephyr/subsys/bluetooth/cmake_install.cmake")
-  include("/Users/haroldhernandez/keyball39/zmk-config-Keyball39/build/left/zephyr/subsys/input/cmake_install.cmake")
   include("/Users/haroldhernandez/keyball39/zmk-config-Keyball39/build/left/zephyr/subsys/net/cmake_install.cmake")
   include("/Users/haroldhernandez/keyball39/zmk-config-Keyball39/build/left/zephyr/subsys/settings/cmake_install.cmake")
 

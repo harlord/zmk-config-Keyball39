@@ -489,214 +489,6 @@
     ],
     [
         [
-            "int uart_err_check",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_poll_in",
-            "const struct device *dev, unsigned char *p_char"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_poll_in_u16",
-            "const struct device *dev, uint16_t *p_u16"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "void uart_poll_out",
-            "const struct device *dev,\n\t\t\t     unsigned char out_char"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "void uart_poll_out_u16",
-            "const struct device *dev, uint16_t out_u16"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_configure",
-            "const struct device *dev,\n\t\t\t     const struct uart_config *cfg"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_config_get",
-            "const struct device *dev,\n\t\t\t      struct uart_config *cfg"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "void uart_irq_tx_enable",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "void uart_irq_tx_disable",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "void uart_irq_rx_enable",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "void uart_irq_rx_disable",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "void uart_irq_err_enable",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "void uart_irq_err_disable",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_irq_is_pending",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_irq_update",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_tx",
-            "const struct device *dev, const uint8_t *buf,\n\t\t      size_t len,\n\t\t      int32_t timeout"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_tx_u16",
-            "const struct device *dev, const uint16_t *buf,\n\t\t\t  size_t len, int32_t timeout"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_tx_abort",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_rx_enable",
-            "const struct device *dev, uint8_t *buf,\n\t\t\t     size_t len,\n\t\t\t     int32_t timeout"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_rx_enable_u16",
-            "const struct device *dev, uint16_t *buf,\n\t\t\t\t size_t len, int32_t timeout"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_rx_disable",
-            "const struct device *dev"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_line_ctrl_set",
-            "const struct device *dev,\n\t\t\t\t uint32_t ctrl, uint32_t val"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_line_ctrl_get",
-            "const struct device *dev, uint32_t ctrl,\n\t\t\t\t uint32_t *val"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int uart_drv_cmd",
-            "const struct device *dev, uint32_t cmd, uint32_t p"
-        ],
-        "uart.h",
-        true
-    ],
-    [
-        [
-            "int spi_transceive",
-            "const struct device *dev,\n\t\t\t     const struct spi_config *config,\n\t\t\t     const struct spi_buf_set *tx_bufs,\n\t\t\t     const struct spi_buf_set *rx_bufs"
-        ],
-        "spi.h",
-        true
-    ],
-    [
-        [
-            "int spi_release",
-            "const struct device *dev,\n\t\t\t  const struct spi_config *config"
-        ],
-        "spi.h",
-        true
-    ],
-    [
-        [
             "const struct device *device_get_binding",
             "const char *name"
         ],
@@ -1469,6 +1261,102 @@
             "void"
         ],
         "time_units.h",
+        true
+    ],
+    [
+        [
+            "const struct device *behavior_get_binding",
+            "const char *name"
+        ],
+        "behavior.h",
+        true
+    ],
+    [
+        [
+            "int behavior_keymap_binding_convert_central_state_dependent_params",
+            "\n    struct zmk_behavior_binding *binding, struct zmk_behavior_binding_event event"
+        ],
+        "behavior.h",
+        true
+    ],
+    [
+        [
+            "int behavior_get_parameter_metadata",
+            "const struct device *behavior,\n                                              struct behavior_parameter_metadata *param_metadata"
+        ],
+        "behavior.h",
+        true
+    ],
+    [
+        [
+            "int behavior_get_locality",
+            "const struct device *behavior,\n                                    enum behavior_locality *locality"
+        ],
+        "behavior.h",
+        true
+    ],
+    [
+        [
+            "int behavior_keymap_binding_pressed",
+            "struct zmk_behavior_binding *binding,\n                                              struct zmk_behavior_binding_event event"
+        ],
+        "behavior.h",
+        true
+    ],
+    [
+        [
+            "int behavior_keymap_binding_released",
+            "struct zmk_behavior_binding *binding,\n                                               struct zmk_behavior_binding_event event"
+        ],
+        "behavior.h",
+        true
+    ],
+    [
+        [
+            "int behavior_sensor_keymap_binding_accept_data",
+            "\n    struct zmk_behavior_binding *binding, struct zmk_behavior_binding_event event,\n    const struct zmk_sensor_config *sensor_config, size_t channel_data_size,\n    const struct zmk_sensor_channel_data *channel_data"
+        ],
+        "behavior.h",
+        true
+    ],
+    [
+        [
+            "int behavior_sensor_keymap_binding_process",
+            "\n    struct zmk_behavior_binding *binding,\n    struct zmk_behavior_binding_event event,\n    enum behavior_sensor_binding_process_mode mode"
+        ],
+        "behavior.h",
+        true
+    ],
+    [
+        [
+            "int ext_power_enable",
+            "const struct device *dev"
+        ],
+        "ext_power.h",
+        true
+    ],
+    [
+        [
+            "int ext_power_disable",
+            "const struct device *dev"
+        ],
+        "ext_power.h",
+        true
+    ],
+    [
+        [
+            "int ext_power_get",
+            "const struct device *dev"
+        ],
+        "ext_power.h",
+        true
+    ],
+    [
+        [
+            "int zmk_input_processor_handle_event",
+            "const struct device *dev, struct input_event *event,\n                                               uint32_t param1, uint32_t param2,\n                                               struct zmk_input_processor_state *state"
+        ],
+        "input_processor.h",
         true
     ],
     [
@@ -3073,6 +2961,22 @@
     ],
     [
         [
+            "int spi_transceive",
+            "const struct device *dev,\n\t\t\t     const struct spi_config *config,\n\t\t\t     const struct spi_buf_set *tx_bufs,\n\t\t\t     const struct spi_buf_set *rx_bufs"
+        ],
+        "spi.h",
+        false
+    ],
+    [
+        [
+            "int spi_release",
+            "const struct device *dev,\n\t\t\t  const struct spi_config *config"
+        ],
+        "spi.h",
+        false
+    ],
+    [
+        [
             "int syscon_get_base",
             "const struct device *dev, uintptr_t *addr"
         ],
@@ -3101,6 +3005,198 @@
             "const struct device *dev, size_t *size"
         ],
         "syscon.h",
+        false
+    ],
+    [
+        [
+            "int uart_err_check",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_poll_in",
+            "const struct device *dev, unsigned char *p_char"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_poll_in_u16",
+            "const struct device *dev, uint16_t *p_u16"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "void uart_poll_out",
+            "const struct device *dev,\n\t\t\t     unsigned char out_char"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "void uart_poll_out_u16",
+            "const struct device *dev, uint16_t out_u16"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_configure",
+            "const struct device *dev,\n\t\t\t     const struct uart_config *cfg"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_config_get",
+            "const struct device *dev,\n\t\t\t      struct uart_config *cfg"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "void uart_irq_tx_enable",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "void uart_irq_tx_disable",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "void uart_irq_rx_enable",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "void uart_irq_rx_disable",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "void uart_irq_err_enable",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "void uart_irq_err_disable",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_irq_is_pending",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_irq_update",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_tx",
+            "const struct device *dev, const uint8_t *buf,\n\t\t      size_t len,\n\t\t      int32_t timeout"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_tx_u16",
+            "const struct device *dev, const uint16_t *buf,\n\t\t\t  size_t len, int32_t timeout"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_tx_abort",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_rx_enable",
+            "const struct device *dev, uint8_t *buf,\n\t\t\t     size_t len,\n\t\t\t     int32_t timeout"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_rx_enable_u16",
+            "const struct device *dev, uint16_t *buf,\n\t\t\t\t size_t len, int32_t timeout"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_rx_disable",
+            "const struct device *dev"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_line_ctrl_set",
+            "const struct device *dev,\n\t\t\t\t uint32_t ctrl, uint32_t val"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_line_ctrl_get",
+            "const struct device *dev, uint32_t ctrl,\n\t\t\t\t uint32_t *val"
+        ],
+        "uart.h",
+        false
+    ],
+    [
+        [
+            "int uart_drv_cmd",
+            "const struct device *dev, uint32_t cmd, uint32_t p"
+        ],
+        "uart.h",
         false
     ],
     [
@@ -4022,101 +4118,5 @@
         ],
         "mem_manage.h",
         false
-    ],
-    [
-        [
-            "const struct device *behavior_get_binding",
-            "const char *name"
-        ],
-        "behavior.h",
-        true
-    ],
-    [
-        [
-            "int behavior_keymap_binding_convert_central_state_dependent_params",
-            "\n    struct zmk_behavior_binding *binding, struct zmk_behavior_binding_event event"
-        ],
-        "behavior.h",
-        true
-    ],
-    [
-        [
-            "int behavior_get_parameter_metadata",
-            "const struct device *behavior,\n                                              struct behavior_parameter_metadata *param_metadata"
-        ],
-        "behavior.h",
-        true
-    ],
-    [
-        [
-            "int behavior_get_locality",
-            "const struct device *behavior,\n                                    enum behavior_locality *locality"
-        ],
-        "behavior.h",
-        true
-    ],
-    [
-        [
-            "int behavior_keymap_binding_pressed",
-            "struct zmk_behavior_binding *binding,\n                                              struct zmk_behavior_binding_event event"
-        ],
-        "behavior.h",
-        true
-    ],
-    [
-        [
-            "int behavior_keymap_binding_released",
-            "struct zmk_behavior_binding *binding,\n                                               struct zmk_behavior_binding_event event"
-        ],
-        "behavior.h",
-        true
-    ],
-    [
-        [
-            "int behavior_sensor_keymap_binding_accept_data",
-            "\n    struct zmk_behavior_binding *binding, struct zmk_behavior_binding_event event,\n    const struct zmk_sensor_config *sensor_config, size_t channel_data_size,\n    const struct zmk_sensor_channel_data *channel_data"
-        ],
-        "behavior.h",
-        true
-    ],
-    [
-        [
-            "int behavior_sensor_keymap_binding_process",
-            "\n    struct zmk_behavior_binding *binding,\n    struct zmk_behavior_binding_event event,\n    enum behavior_sensor_binding_process_mode mode"
-        ],
-        "behavior.h",
-        true
-    ],
-    [
-        [
-            "int ext_power_enable",
-            "const struct device *dev"
-        ],
-        "ext_power.h",
-        true
-    ],
-    [
-        [
-            "int ext_power_disable",
-            "const struct device *dev"
-        ],
-        "ext_power.h",
-        true
-    ],
-    [
-        [
-            "int ext_power_get",
-            "const struct device *dev"
-        ],
-        "ext_power.h",
-        true
-    ],
-    [
-        [
-            "int zmk_input_processor_handle_event",
-            "const struct device *dev, struct input_event *event,\n                                               uint32_t param1, uint32_t param2,\n                                               struct zmk_input_processor_state *state"
-        ],
-        "input_processor.h",
-        true
     ]
 ]

@@ -60,7 +60,7 @@ CACHED_CONF_FILE:STRING=/Users/haroldhernandez/keyball39/zmk-config-Keyball39/zm
 CACHED_SHIELD:STRING=keyball39_right
 
 //Selected snippet
-CACHED_SNIPPET:STRING=zmk-usb-logging;studio-rpc-usb-uart
+CACHED_SNIPPET:STRING=studio-rpc-usb-uart
 
 //Selected user ZMK config
 CACHED_ZMK_CONFIG:STRING=/Users/haroldhernandez/keyball39/zmk-config-Keyball39/config
@@ -382,7 +382,7 @@ Picolibc_SOURCE_DIR:STATIC=/Users/haroldhernandez/keyball39/zmk-config-Keyball39
 SHIELD:STRING=keyball39_right
 
 //Selected snippet
-SNIPPET:STRING=zmk-usb-logging;studio-rpc-usb-uart
+SNIPPET:STRING=studio-rpc-usb-uart
 
 //True if toolchain supports newlib
 TOOLCHAIN_HAS_NEWLIB:BOOL=ON
@@ -586,7 +586,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=155
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=154
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

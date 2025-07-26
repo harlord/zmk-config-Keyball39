@@ -1,12 +1,12 @@
 {
     "__net_socket": [
+        "modem_socket",
+        "net_context",
         "dispatcher_context",
         "spair",
         "net_mgmt_socket",
         "tls_context",
-        "websocket_context",
-        "modem_socket",
-        "net_context"
+        "websocket_context"
     ],
     "__subsystem": [
         "adc_driver_api",
@@ -16,8 +16,9 @@
         "i2c_driver_api",
         "kscan_driver_api",
         "sensor_driver_api",
-        "uart_driver_api",
-        "spi_driver_api",
+        "behavior_driver_api",
+        "ext_power_api",
+        "zmk_input_processor_driver_api",
         "crypto_driver_api",
         "auxdisplay_driver_api",
         "bbram_driver_api",
@@ -55,7 +56,9 @@
         "rtc_driver_api",
         "sdhc_driver_api",
         "smbus_driver_api",
+        "spi_driver_api",
         "syscon_driver_api",
+        "uart_driver_api",
         "w1_driver_api",
         "wdt_driver_api",
         "can_transceiver_driver_api",
@@ -69,9 +72,6 @@
         "tcpc_driver_api",
         "ivshmem_driver_api",
         "ec_host_cmd_backend_api",
-        "ethphy_driver_api",
-        "behavior_driver_api",
-        "ext_power_api",
-        "zmk_input_processor_driver_api"
+        "ethphy_driver_api"
     ]
 }

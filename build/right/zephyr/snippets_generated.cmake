@@ -19,13 +19,6 @@ set(SNIPPET_PATHS "/Users/haroldhernandez/keyball39/zmk-config-Keyball39/zephyr/
 zephyr_create_scope(snippets)
 
 ###############################################################################
-# Snippet 'zmk-usb-logging'
-
-# Common variable appends.
-zephyr_set(EXTRA_CONF_FILE "/Users/haroldhernandez/keyball39/zmk-config-Keyball39/zmk/app/snippets/zmk-usb-logging/zmk-usb-logging.conf" SCOPE snippets APPEND)
-zephyr_set(EXTRA_DTC_OVERLAY_FILE "/Users/haroldhernandez/keyball39/zmk-config-Keyball39/zmk/app/snippets/zmk-usb-logging/zmk-usb-logging.overlay" SCOPE snippets APPEND)
-
-###############################################################################
 # Snippet 'studio-rpc-usb-uart'
 
 # Common variable appends.

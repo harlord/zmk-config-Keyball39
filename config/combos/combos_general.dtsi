@@ -514,9 +514,10 @@
         ///////////////
 
 //shift+BKSPACE<>TILDE 
-CBKSHIFT(&mshon LA(N1), 0)                                                 CBKLLEFT(&mo FUNC, 2)                        CBKLLEFT(&mo NUMBERS, 3)          CBKLLEFT(&mo DIRECTACC, 4)                                                      CBKS(&mc_bkctilde U, 7) 
-CBKS(&mc_bkctilde A, 10)                                                                                                                                  CBKS(&caps_word, 14)                                    CBKS(&mc_ennesd N, 16)  CBKS(&mc_bkctilde E, 17)  CBKS(&mc_bkctilde I, 18)  CBKS(&mc_bkctilde O, 19)
-                             CBKDALEFT(&td_find_g_ht LG(F) LG(LS(F)), 21)  CBKDALEFT(&lrlMo LA(LS(H)) LA(LS(F12)), 22)  CBKDALEFT(&kp LC(LS(MINUS)), 23)  CBKDALEFT(&kp LC(MINUS), 24)                                                                                                        CBKSHIFT(&mshon LS(LA(SLASH)), 29)       
+CBKSHIFT(&mshon LA(N1), 0)                                                           CBKLLEFT(&mo FUNC, 2)                        CBKLLEFT(&mo NUMBERS, 3)          CBKLLEFT(&mo DIRECTACC, 4)                                                      CBKS(&mc_bkctilde U, 7) 
+CBKS(&mc_bkctilde A, 10)                                                                                                                                            CBKS(&caps_word, 14)                                    CBKS(&mc_ennesd N, 16)  CBKS(&mc_bkctilde E, 17)  CBKS(&mc_bkctilde I, 18)  CBKS(&mc_bkctilde O, 19)
+/*CBKDALEFT(&td_find_s_ht A LG(F), 20)*/ CBKDALEFT(&td_find_g_ht LG(F) LG(LS(F)), 21)  CBKDALEFT(&lrlMo LA(LS(H)) LA(LS(F12)), 22)  CBKDALEFT(&kp LC(LS(MINUS)), 23)  CBKDALEFT(&kp LC(MINUS), 24)                                                                                                        CBKSHIFT(&mshon LS(LA(SLASH)), 29)       
+//commented to avoid ALT conflict
 
 //cmd+TAB<>DRAGTHUMB(inverted LOWER and DIRECTACC in low row only when DRAGTHUMB not activated)    
 CTABDLEFT(&mhr LSHFT, 10)          CTABDLEFT(&mhr LCTRL, 11)                CTABDLEFT(&mhr LALT, 12)                   CTABDLEFT(&mhr LGUI, 13)       CTABDLEFT(&kp CAPS, 14)                 CTABD(&kp CAPS, 15)  CTABD(&mhr LGUI, 16)  CTABD(&mhr LALT, 17)  CTABD(&mhr LCTRL, 18)  CTABD(&mhr LSHFT, 19)
