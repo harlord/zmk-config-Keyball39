@@ -12341,7 +12341,7 @@ initlevel       0x000000000005d870      0x128
  .z_init_PRE_KERNEL_10_0_
                 0x000000000005d870        0x8 zephyr/soc/soc/arm/nordic_nrf/nrf52/libsoc__arm__nordic_nrf__nrf52.a(soc.c.obj)
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_PRE_KERNEL_1??_*)))
- .z_init_PRE_KERNEL_130_00236_
+ .z_init_PRE_KERNEL_130_00250_
                 0x000000000005d878        0x8 zephyr/drivers/clock_control/libdrivers__clock_control.a(clock_control_nrf.c.obj)
  .z_init_PRE_KERNEL_130_0_
                 0x000000000005d880        0x8 zephyr/kernel/libkernel.a(kheap.c.obj)
@@ -12353,7 +12353,7 @@ initlevel       0x000000000005d870      0x128
                 0x000000000005d898        0x8 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_nrfx.c.obj)
  .z_init_PRE_KERNEL_150_00008_
                 0x000000000005d8a0        0x8 zephyr/drivers/entropy/libdrivers__entropy.a(entropy_bt_hci.c.obj)
- .z_init_PRE_KERNEL_150_00261_
+ .z_init_PRE_KERNEL_150_00275_
                 0x000000000005d8a8        0x8 zephyr/drivers/entropy/libdrivers__entropy.a(entropy_nrf5.c.obj)
                 0x000000000005d8b0                __init_PRE_KERNEL_2_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_PRE_KERNEL_2?_*)))
@@ -12369,7 +12369,7 @@ initlevel       0x000000000005d870      0x128
                 0x000000000005d8c0        0x8 app/libapp.a(behavior_reset.c.obj)
  .z_init_POST_KERNEL40_00024_
                 0x000000000005d8c8        0x8 app/libapp.a(behavior_ext_power.c.obj)
- .z_init_POST_KERNEL40_00171_
+ .z_init_POST_KERNEL40_00181_
                 0x000000000005d8d0        0x8 app/libapp.a(behavior_reset.c.obj)
  .z_init_POST_KERNEL40_0_
                 0x000000000005d8d8        0x8 app/libapp.a(workqueue.c.obj)
@@ -12377,11 +12377,11 @@ initlevel       0x000000000005d870      0x128
                 0x000000000005d8e0        0x8 zephyr/lib/libc/common/liblib__libc__common.a(malloc.c.obj)
  .z_init_POST_KERNEL40_0_
                 0x000000000005d8e8        0x8 zephyr/kernel/libkernel.a(system_work_q.c.obj)
- .z_init_POST_KERNEL50_00234_
+ .z_init_POST_KERNEL50_00248_
                 0x000000000005d8f0        0x8 zephyr/drivers/adc/libdrivers__adc.a(adc_nrfx_saadc.c.obj)
- .z_init_POST_KERNEL50_00280_
+ .z_init_POST_KERNEL50_00294_
                 0x000000000005d8f8        0x8 zephyr/drivers/flash/libdrivers__flash.a(soc_flash_nrf.c.obj)
- .z_init_POST_KERNEL50_00287_
+ .z_init_POST_KERNEL50_00301_
                 0x000000000005d900        0x8 zephyr/drivers/i2c/libdrivers__i2c.a(i2c_nrfx_twi.c.obj)
  .z_init_POST_KERNEL50_0_
                 0x000000000005d908        0x8 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(long_wq.c.obj)
@@ -12391,13 +12391,13 @@ initlevel       0x000000000005d870      0x128
                 0x000000000005d918        0x8 zephyr/drivers/usb/device/libdrivers__usb__device.a(usb_dc_nrfx.c.obj)
  .z_init_POST_KERNEL81_00003_
                 0x000000000005d920        0x8 app/libapp.a(ext_power_generic.c.obj)
- .z_init_POST_KERNEL85_00288_
+ .z_init_POST_KERNEL85_00302_
                 0x000000000005d928        0x8 zephyr/drivers/display/libdrivers__display.a(ssd1306.c.obj)
  .z_init_POST_KERNEL90_00012_
                 0x000000000005d930        0x8 zephyr/drivers/kscan/libdrivers__kscan.a(kscan_gpio_matrix.c.obj)
  .z_init_POST_KERNEL90_00020_
                 0x000000000005d938        0x8 modules/module/drivers/sensor/battery/lib..__zmk__app__module__drivers__sensor__battery.a(battery_nrf_vddh.c.obj)
- .z_init_POST_KERNEL90_00269_
+ .z_init_POST_KERNEL90_00283_
                 0x000000000005d940        0x8 zephyr/drivers/sensor/nrf5/libdrivers__sensor__nrf5.a(temp_nrf5.c.obj)
  .z_init_POST_KERNEL90_0_
                 0x000000000005d948        0x8 zephyr/libzephyr.a(usb_device.c.obj)
@@ -12433,45 +12433,45 @@ device_area     0x000000000005d998      0x140
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._device.static.*_??_*)))
  ._device.static.1_30_
                 0x000000000005d998       0x14 zephyr/drivers/clock_control/libdrivers__clock_control.a(clock_control_nrf.c.obj)
-                0x000000000005d998                __device_dts_ord_236
+                0x000000000005d998                __device_dts_ord_250
  ._device.static.1_40_
                 0x000000000005d9ac       0x28 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_nrfx.c.obj)
                 0x000000000005d9ac                __device_dts_ord_11
                 0x000000000005d9c0                __device_dts_ord_2
  ._device.static.1_50_
                 0x000000000005d9d4       0x14 zephyr/drivers/entropy/libdrivers__entropy.a(entropy_nrf5.c.obj)
-                0x000000000005d9d4                __device_dts_ord_261
+                0x000000000005d9d4                __device_dts_ord_275
  ._device.static.1_50_
                 0x000000000005d9e8       0x14 zephyr/drivers/entropy/libdrivers__entropy.a(entropy_bt_hci.c.obj)
                 0x000000000005d9e8                __device_dts_ord_8
  ._device.static.3_40_
                 0x000000000005d9fc       0x28 app/libapp.a(behavior_reset.c.obj)
                 0x000000000005d9fc                __device_dts_ord_23
-                0x000000000005da10                __device_dts_ord_171
+                0x000000000005da10                __device_dts_ord_181
  ._device.static.3_40_
                 0x000000000005da24       0x14 app/libapp.a(behavior_ext_power.c.obj)
                 0x000000000005da24                __device_dts_ord_24
  ._device.static.3_50_
                 0x000000000005da38       0x14 zephyr/drivers/adc/libdrivers__adc.a(adc_nrfx_saadc.c.obj)
-                0x000000000005da38                __device_dts_ord_234
+                0x000000000005da38                __device_dts_ord_248
  ._device.static.3_50_
                 0x000000000005da4c       0x14 zephyr/drivers/flash/libdrivers__flash.a(soc_flash_nrf.c.obj)
-                0x000000000005da4c                __device_dts_ord_280
+                0x000000000005da4c                __device_dts_ord_294
  ._device.static.3_50_
                 0x000000000005da60       0x14 zephyr/drivers/i2c/libdrivers__i2c.a(i2c_nrfx_twi.c.obj)
-                0x000000000005da60                __device_dts_ord_287
+                0x000000000005da60                __device_dts_ord_301
  ._device.static.3_81_
                 0x000000000005da74       0x14 app/libapp.a(ext_power_generic.c.obj)
                 0x000000000005da74                __device_dts_ord_3
  ._device.static.3_85_
                 0x000000000005da88       0x14 zephyr/drivers/display/libdrivers__display.a(ssd1306.c.obj)
-                0x000000000005da88                __device_dts_ord_288
+                0x000000000005da88                __device_dts_ord_302
  ._device.static.3_90_
                 0x000000000005da9c       0x14 zephyr/drivers/kscan/libdrivers__kscan.a(kscan_gpio_matrix.c.obj)
                 0x000000000005da9c                __device_dts_ord_12
  ._device.static.3_90_
                 0x000000000005dab0       0x14 zephyr/drivers/sensor/nrf5/libdrivers__sensor__nrf5.a(temp_nrf5.c.obj)
-                0x000000000005dab0                __device_dts_ord_269
+                0x000000000005dab0                __device_dts_ord_283
  ._device.static.3_90_
                 0x000000000005dac4       0x14 modules/module/drivers/sensor/battery/lib..__zmk__app__module__drivers__sensor__battery.a(battery_nrf_vddh.c.obj)
                 0x000000000005dac4                __device_dts_ord_20
@@ -13172,11 +13172,11 @@ rodata          0x000000000005dd50     0x959c
                 0x000000000005f974       0x24 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_nrfx.c.obj)
  .rodata.twi_0z_config
                 0x000000000005f998       0x1c zephyr/drivers/i2c/libdrivers__i2c.a(i2c_nrfx_twi.c.obj)
- .rodata.__pinctrl_dev_config__device_dts_ord_287
+ .rodata.__pinctrl_dev_config__device_dts_ord_301
                 0x000000000005f9b4        0xc zephyr/drivers/i2c/libdrivers__i2c.a(i2c_nrfx_twi.c.obj)
- .rodata.__pinctrl_states__device_dts_ord_287
+ .rodata.__pinctrl_states__device_dts_ord_301
                 0x000000000005f9c0        0x8 zephyr/drivers/i2c/libdrivers__i2c.a(i2c_nrfx_twi.c.obj)
- .rodata.__pinctrl_state_pins_0__device_dts_ord_287
+ .rodata.__pinctrl_state_pins_0__device_dts_ord_301
                 0x000000000005f9c8        0x8 zephyr/drivers/i2c/libdrivers__i2c.a(i2c_nrfx_twi.c.obj)
  .rodata.i2c_nrfx_twi_driver_api
                 0x000000000005f9d0       0x18 zephyr/drivers/i2c/libdrivers__i2c.a(i2c_nrfx_twi.c.obj)
@@ -14735,7 +14735,7 @@ zmk_behavior_ref_area
                 0x00000000000685c4        0xc
                 0x00000000000685c4                _zmk_behavior_ref_list_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._zmk_behavior_ref.static.*)))
- ._zmk_behavior_ref.static.zmk_behavior___device_dts_ord_171_
+ ._zmk_behavior_ref.static.zmk_behavior___device_dts_ord_181_
                 0x00000000000685c4        0x4 app/libapp.a(behavior_reset.c.obj)
  ._zmk_behavior_ref.static.zmk_behavior___device_dts_ord_23_
                 0x00000000000685c8        0x4 app/libapp.a(behavior_reset.c.obj)
@@ -17207,7 +17207,7 @@ zmk_split_transport_peripheral_area
  .debug_str     0x0000000000038883       0x4d zephyr/kernel/libkernel.a(banner.c.obj)
                                         0x2ca (size before relaxing)
 
-.debug_loc      0x0000000000000000    0xd017c
+.debug_loc      0x0000000000000000    0xd017a
  *(SORT_BY_ALIGNMENT(.debug_loc))
  .debug_loc     0x0000000000000000      0x11d app/libapp.a(stdlib.c.obj)
  .debug_loc     0x000000000000011d       0xfd app/libapp.a(activity.c.obj)
@@ -17352,102 +17352,102 @@ zmk_split_transport_peripheral_area
  .debug_loc     0x000000000007e099       0x42 zephyr/drivers/pinctrl/libdrivers__pinctrl.a(common.c.obj)
  .debug_loc     0x000000000007e0db      0x4b8 zephyr/drivers/pinctrl/libdrivers__pinctrl.a(pinctrl_nrf.c.obj)
  .debug_loc     0x000000000007e593      0x45a zephyr/drivers/sensor/nrf5/libdrivers__sensor__nrf5.a(temp_nrf5.c.obj)
- .debug_loc     0x000000000007e9ed     0x1471 zephyr/drivers/timer/libdrivers__timer.a(nrf_rtc_timer.c.obj)
- .debug_loc     0x000000000007fe5e      0x10b modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(system_nrf52840.c.obj)
- .debug_loc     0x000000000007ff69      0x258 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_glue.c.obj)
- .debug_loc     0x00000000000801c1      0x221 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_flag32_allocator.c.obj)
- .debug_loc     0x00000000000803e2      0xcbe modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_clock.c.obj)
- .debug_loc     0x00000000000810a0     0x3ea8 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_gpiote.c.obj)
- .debug_loc     0x0000000000084f48      0xe80 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_nvmc.c.obj)
- .debug_loc     0x0000000000085dc8      0x5c6 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_power.c.obj)
- .debug_loc     0x000000000008638e     0x1ca4 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_twi.c.obj)
- .debug_loc     0x0000000000088032     0x23f5 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_usbd.c.obj)
- .debug_loc     0x000000000008a427      0x3e5 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_twi_twim.c.obj)
- .debug_loc     0x000000000008a80c      0xf70 modules/lvgl/libmodules__lvgl.a(lv_disp.c.obj)
- .debug_loc     0x000000000008b77c      0x9be modules/lvgl/libmodules__lvgl.a(lv_event.c.obj)
- .debug_loc     0x000000000008c13a      0xd3b modules/lvgl/libmodules__lvgl.a(lv_group.c.obj)
- .debug_loc     0x000000000008ce75      0xbe8 modules/lvgl/libmodules__lvgl.a(lv_indev.c.obj)
- .debug_loc     0x000000000008da5d     0x2039 modules/lvgl/libmodules__lvgl.a(lv_obj.c.obj)
- .debug_loc     0x000000000008fa96      0x369 modules/lvgl/libmodules__lvgl.a(lv_obj_class.c.obj)
- .debug_loc     0x000000000008fdff     0x1254 modules/lvgl/libmodules__lvgl.a(lv_obj_draw.c.obj)
- .debug_loc     0x0000000000091053     0x347b modules/lvgl/libmodules__lvgl.a(lv_obj_pos.c.obj)
- .debug_loc     0x00000000000944ce     0x2b44 modules/lvgl/libmodules__lvgl.a(lv_obj_scroll.c.obj)
- .debug_loc     0x0000000000097012     0x27fa modules/lvgl/libmodules__lvgl.a(lv_obj_style.c.obj)
- .debug_loc     0x000000000009980c     0x2885 modules/lvgl/libmodules__lvgl.a(lv_obj_style_gen.c.obj)
- .debug_loc     0x000000000009c091      0xd26 modules/lvgl/libmodules__lvgl.a(lv_obj_tree.c.obj)
- .debug_loc     0x000000000009cdb7     0x189b modules/lvgl/libmodules__lvgl.a(lv_refr.c.obj)
- .debug_loc     0x000000000009e652      0x2ff modules/lvgl/libmodules__lvgl.a(lv_theme.c.obj)
- .debug_loc     0x000000000009e951       0x32 modules/lvgl/libmodules__lvgl.a(lv_draw.c.obj)
- .debug_loc     0x000000000009e983      0xad6 modules/lvgl/libmodules__lvgl.a(lv_draw_img.c.obj)
- .debug_loc     0x000000000009f459      0xa24 modules/lvgl/libmodules__lvgl.a(lv_draw_label.c.obj)
- .debug_loc     0x000000000009fe7d      0x340 modules/lvgl/libmodules__lvgl.a(lv_draw_layer.c.obj)
- .debug_loc     0x00000000000a01bd      0x134 modules/lvgl/libmodules__lvgl.a(lv_draw_line.c.obj)
- .debug_loc     0x00000000000a02f1     0x3ee8 modules/lvgl/libmodules__lvgl.a(lv_draw_mask.c.obj)
- .debug_loc     0x00000000000a41d9      0x17a modules/lvgl/libmodules__lvgl.a(lv_draw_rect.c.obj)
- .debug_loc     0x00000000000a4353      0x21e modules/lvgl/libmodules__lvgl.a(lv_draw_transform.c.obj)
- .debug_loc     0x00000000000a4571     0x1599 modules/lvgl/libmodules__lvgl.a(lv_img_buf.c.obj)
- .debug_loc     0x00000000000a5b0a       0xf5 modules/lvgl/libmodules__lvgl.a(lv_img_cache.c.obj)
- .debug_loc     0x00000000000a5bff     0x16ca modules/lvgl/libmodules__lvgl.a(lv_img_decoder.c.obj)
- .debug_loc     0x00000000000a72c9      0x3e0 modules/lvgl/libmodules__lvgl.a(lv_draw_sw.c.obj)
- .debug_loc     0x00000000000a76a9      0xba2 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_arc.c.obj)
- .debug_loc     0x00000000000a824b     0x2342 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_blend.c.obj)
- .debug_loc     0x00000000000aa58d      0xb61 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_gradient.c.obj)
- .debug_loc     0x00000000000ab0ee      0xa4c modules/lvgl/libmodules__lvgl.a(lv_draw_sw_img.c.obj)
- .debug_loc     0x00000000000abb3a      0x4c0 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_layer.c.obj)
- .debug_loc     0x00000000000abffa      0x811 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_letter.c.obj)
- .debug_loc     0x00000000000ac80b     0x181c modules/lvgl/libmodules__lvgl.a(lv_draw_sw_line.c.obj)
- .debug_loc     0x00000000000ae027      0x583 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_polygon.c.obj)
- .debug_loc     0x00000000000ae5aa     0x314a modules/lvgl/libmodules__lvgl.a(lv_draw_sw_rect.c.obj)
- .debug_loc     0x00000000000b16f4     0x156d modules/lvgl/libmodules__lvgl.a(lv_draw_sw_transform.c.obj)
- .debug_loc     0x00000000000b2c61      0x464 modules/lvgl/libmodules__lvgl.a(lv_theme_mono.c.obj)
- .debug_loc     0x00000000000b30c5      0x1dc modules/lvgl/libmodules__lvgl.a(lv_font.c.obj)
- .debug_loc     0x00000000000b32a1      0x854 modules/lvgl/libmodules__lvgl.a(lv_font_fmt_txt.c.obj)
- .debug_loc     0x00000000000b3af5      0xfb6 modules/lvgl/libmodules__lvgl.a(lv_hal_disp.c.obj)
- .debug_loc     0x00000000000b4aab      0x30c modules/lvgl/libmodules__lvgl.a(lv_hal_indev.c.obj)
- .debug_loc     0x00000000000b4db7       0x32 modules/lvgl/libmodules__lvgl.a(lv_hal_tick.c.obj)
- .debug_loc     0x00000000000b4de9      0x9d7 modules/lvgl/libmodules__lvgl.a(lv_anim.c.obj)
- .debug_loc     0x00000000000b57c0     0x105b modules/lvgl/libmodules__lvgl.a(lv_area.c.obj)
- .debug_loc     0x00000000000b681b      0xb67 modules/lvgl/libmodules__lvgl.a(lv_color.c.obj)
- .debug_loc     0x00000000000b7382     0x1094 modules/lvgl/libmodules__lvgl.a(lv_fs.c.obj)
- .debug_loc     0x00000000000b8416      0x105 modules/lvgl/libmodules__lvgl.a(lv_gc.c.obj)
- .debug_loc     0x00000000000b851b      0xa63 modules/lvgl/libmodules__lvgl.a(lv_ll.c.obj)
- .debug_loc     0x00000000000b8f7e      0x807 modules/lvgl/libmodules__lvgl.a(lv_math.c.obj)
- .debug_loc     0x00000000000b9785      0x2cd modules/lvgl/libmodules__lvgl.a(lv_mem.c.obj)
- .debug_loc     0x00000000000b9a52      0xf2e modules/lvgl/libmodules__lvgl.a(lv_style.c.obj)
- .debug_loc     0x00000000000ba980     0x181d modules/lvgl/libmodules__lvgl.a(lv_style_gen.c.obj)
- .debug_loc     0x00000000000bc19d      0x3d3 modules/lvgl/libmodules__lvgl.a(lv_timer.c.obj)
- .debug_loc     0x00000000000bc570     0x1648 modules/lvgl/libmodules__lvgl.a(lv_txt.c.obj)
- .debug_loc     0x00000000000bdbb8      0x103 modules/lvgl/libmodules__lvgl.a(lv_utils.c.obj)
- .debug_loc     0x00000000000bdcbb     0x2d22 modules/lvgl/libmodules__lvgl.a(lv_label.c.obj)
- .debug_loc     0x00000000000c09dd      0x116 modules/lvgl/libmodules__lvgl.a(lvgl.c.obj)
- .debug_loc     0x00000000000c0af3      0x20c modules/lvgl/libmodules__lvgl.a(lvgl_display.c.obj)
- .debug_loc     0x00000000000c0cff      0x429 modules/lvgl/libmodules__lvgl.a(lvgl_display_mono.c.obj)
- .debug_loc     0x00000000000c1128      0x1cb modules/lvgl/libmodules__lvgl.a(lvgl_display_16bit.c.obj)
- .debug_loc     0x00000000000c12f3      0x176 modules/lvgl/libmodules__lvgl.a(lvgl_display_24bit.c.obj)
- .debug_loc     0x00000000000c1469      0x268 modules/lvgl/libmodules__lvgl.a(lvgl_display_32bit.c.obj)
- .debug_loc     0x00000000000c16d1      0x277 modules/lvgl/libmodules__lvgl.a(lvgl_mem.c.obj)
- .debug_loc     0x00000000000c1948      0x2a4 modules/lvgl/libmodules__lvgl.a(lvgl_common_input.c.obj)
- .debug_loc     0x00000000000c1bec       0xe0 modules/module/drivers/sensor/battery/lib..__zmk__app__module__drivers__sensor__battery.a(battery_common.c.obj)
- .debug_loc     0x00000000000c1ccc      0x38e modules/module/drivers/sensor/battery/lib..__zmk__app__module__drivers__sensor__battery.a(battery_nrf_vddh.c.obj)
- .debug_loc     0x00000000000c205a      0x1ea modules/module/lib/zmk_debounce/lib..__zmk__app__module__lib__zmk_debounce.a(debounce.c.obj)
- .debug_loc     0x00000000000c2244       0x32 zephyr/kernel/libkernel.a(busy_wait.c.obj)
- .debug_loc     0x00000000000c2276       0xd2 zephyr/kernel/libkernel.a(device.c.obj)
- .debug_loc     0x00000000000c2348      0x161 zephyr/kernel/libkernel.a(fatal.c.obj)
- .debug_loc     0x00000000000c24a9      0x7d4 zephyr/kernel/libkernel.a(init.c.obj)
- .debug_loc     0x00000000000c2c7d      0x41b zephyr/kernel/libkernel.a(kheap.c.obj)
- .debug_loc     0x00000000000c3098      0x45c zephyr/kernel/libkernel.a(mem_slab.c.obj)
- .debug_loc     0x00000000000c34f4      0xc03 zephyr/kernel/libkernel.a(thread.c.obj)
- .debug_loc     0x00000000000c40f7       0x6f zephyr/kernel/libkernel.a(idle.c.obj)
- .debug_loc     0x00000000000c4166      0xaa5 zephyr/kernel/libkernel.a(msg_q.c.obj)
- .debug_loc     0x00000000000c4c0b      0x583 zephyr/kernel/libkernel.a(mutex.c.obj)
- .debug_loc     0x00000000000c518e     0x14e7 zephyr/kernel/libkernel.a(queue.c.obj)
- .debug_loc     0x00000000000c6675      0x3d7 zephyr/kernel/libkernel.a(sem.c.obj)
- .debug_loc     0x00000000000c6a4c     0x3379 zephyr/kernel/libkernel.a(work.c.obj)
- .debug_loc     0x00000000000c9dc5     0x372c zephyr/kernel/libkernel.a(sched.c.obj)
- .debug_loc     0x00000000000cd4f1      0xc47 zephyr/kernel/libkernel.a(timeout.c.obj)
- .debug_loc     0x00000000000ce138      0x6d2 zephyr/kernel/libkernel.a(timer.c.obj)
- .debug_loc     0x00000000000ce80a     0x16b6 zephyr/kernel/libkernel.a(poll.c.obj)
- .debug_loc     0x00000000000cfec0      0x2bc zephyr/kernel/libkernel.a(mempool.c.obj)
+ .debug_loc     0x000000000007e9ed     0x146f zephyr/drivers/timer/libdrivers__timer.a(nrf_rtc_timer.c.obj)
+ .debug_loc     0x000000000007fe5c      0x10b modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(system_nrf52840.c.obj)
+ .debug_loc     0x000000000007ff67      0x258 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_glue.c.obj)
+ .debug_loc     0x00000000000801bf      0x221 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_flag32_allocator.c.obj)
+ .debug_loc     0x00000000000803e0      0xcbe modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_clock.c.obj)
+ .debug_loc     0x000000000008109e     0x3ea8 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_gpiote.c.obj)
+ .debug_loc     0x0000000000084f46      0xe80 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_nvmc.c.obj)
+ .debug_loc     0x0000000000085dc6      0x5c6 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_power.c.obj)
+ .debug_loc     0x000000000008638c     0x1ca4 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_twi.c.obj)
+ .debug_loc     0x0000000000088030     0x23f5 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_usbd.c.obj)
+ .debug_loc     0x000000000008a425      0x3e5 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_twi_twim.c.obj)
+ .debug_loc     0x000000000008a80a      0xf70 modules/lvgl/libmodules__lvgl.a(lv_disp.c.obj)
+ .debug_loc     0x000000000008b77a      0x9be modules/lvgl/libmodules__lvgl.a(lv_event.c.obj)
+ .debug_loc     0x000000000008c138      0xd3b modules/lvgl/libmodules__lvgl.a(lv_group.c.obj)
+ .debug_loc     0x000000000008ce73      0xbe8 modules/lvgl/libmodules__lvgl.a(lv_indev.c.obj)
+ .debug_loc     0x000000000008da5b     0x2039 modules/lvgl/libmodules__lvgl.a(lv_obj.c.obj)
+ .debug_loc     0x000000000008fa94      0x369 modules/lvgl/libmodules__lvgl.a(lv_obj_class.c.obj)
+ .debug_loc     0x000000000008fdfd     0x1254 modules/lvgl/libmodules__lvgl.a(lv_obj_draw.c.obj)
+ .debug_loc     0x0000000000091051     0x347b modules/lvgl/libmodules__lvgl.a(lv_obj_pos.c.obj)
+ .debug_loc     0x00000000000944cc     0x2b44 modules/lvgl/libmodules__lvgl.a(lv_obj_scroll.c.obj)
+ .debug_loc     0x0000000000097010     0x27fa modules/lvgl/libmodules__lvgl.a(lv_obj_style.c.obj)
+ .debug_loc     0x000000000009980a     0x2885 modules/lvgl/libmodules__lvgl.a(lv_obj_style_gen.c.obj)
+ .debug_loc     0x000000000009c08f      0xd26 modules/lvgl/libmodules__lvgl.a(lv_obj_tree.c.obj)
+ .debug_loc     0x000000000009cdb5     0x189b modules/lvgl/libmodules__lvgl.a(lv_refr.c.obj)
+ .debug_loc     0x000000000009e650      0x2ff modules/lvgl/libmodules__lvgl.a(lv_theme.c.obj)
+ .debug_loc     0x000000000009e94f       0x32 modules/lvgl/libmodules__lvgl.a(lv_draw.c.obj)
+ .debug_loc     0x000000000009e981      0xad6 modules/lvgl/libmodules__lvgl.a(lv_draw_img.c.obj)
+ .debug_loc     0x000000000009f457      0xa24 modules/lvgl/libmodules__lvgl.a(lv_draw_label.c.obj)
+ .debug_loc     0x000000000009fe7b      0x340 modules/lvgl/libmodules__lvgl.a(lv_draw_layer.c.obj)
+ .debug_loc     0x00000000000a01bb      0x134 modules/lvgl/libmodules__lvgl.a(lv_draw_line.c.obj)
+ .debug_loc     0x00000000000a02ef     0x3ee8 modules/lvgl/libmodules__lvgl.a(lv_draw_mask.c.obj)
+ .debug_loc     0x00000000000a41d7      0x17a modules/lvgl/libmodules__lvgl.a(lv_draw_rect.c.obj)
+ .debug_loc     0x00000000000a4351      0x21e modules/lvgl/libmodules__lvgl.a(lv_draw_transform.c.obj)
+ .debug_loc     0x00000000000a456f     0x1599 modules/lvgl/libmodules__lvgl.a(lv_img_buf.c.obj)
+ .debug_loc     0x00000000000a5b08       0xf5 modules/lvgl/libmodules__lvgl.a(lv_img_cache.c.obj)
+ .debug_loc     0x00000000000a5bfd     0x16ca modules/lvgl/libmodules__lvgl.a(lv_img_decoder.c.obj)
+ .debug_loc     0x00000000000a72c7      0x3e0 modules/lvgl/libmodules__lvgl.a(lv_draw_sw.c.obj)
+ .debug_loc     0x00000000000a76a7      0xba2 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_arc.c.obj)
+ .debug_loc     0x00000000000a8249     0x2342 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_blend.c.obj)
+ .debug_loc     0x00000000000aa58b      0xb61 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_gradient.c.obj)
+ .debug_loc     0x00000000000ab0ec      0xa4c modules/lvgl/libmodules__lvgl.a(lv_draw_sw_img.c.obj)
+ .debug_loc     0x00000000000abb38      0x4c0 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_layer.c.obj)
+ .debug_loc     0x00000000000abff8      0x811 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_letter.c.obj)
+ .debug_loc     0x00000000000ac809     0x181c modules/lvgl/libmodules__lvgl.a(lv_draw_sw_line.c.obj)
+ .debug_loc     0x00000000000ae025      0x583 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_polygon.c.obj)
+ .debug_loc     0x00000000000ae5a8     0x314a modules/lvgl/libmodules__lvgl.a(lv_draw_sw_rect.c.obj)
+ .debug_loc     0x00000000000b16f2     0x156d modules/lvgl/libmodules__lvgl.a(lv_draw_sw_transform.c.obj)
+ .debug_loc     0x00000000000b2c5f      0x464 modules/lvgl/libmodules__lvgl.a(lv_theme_mono.c.obj)
+ .debug_loc     0x00000000000b30c3      0x1dc modules/lvgl/libmodules__lvgl.a(lv_font.c.obj)
+ .debug_loc     0x00000000000b329f      0x854 modules/lvgl/libmodules__lvgl.a(lv_font_fmt_txt.c.obj)
+ .debug_loc     0x00000000000b3af3      0xfb6 modules/lvgl/libmodules__lvgl.a(lv_hal_disp.c.obj)
+ .debug_loc     0x00000000000b4aa9      0x30c modules/lvgl/libmodules__lvgl.a(lv_hal_indev.c.obj)
+ .debug_loc     0x00000000000b4db5       0x32 modules/lvgl/libmodules__lvgl.a(lv_hal_tick.c.obj)
+ .debug_loc     0x00000000000b4de7      0x9d7 modules/lvgl/libmodules__lvgl.a(lv_anim.c.obj)
+ .debug_loc     0x00000000000b57be     0x105b modules/lvgl/libmodules__lvgl.a(lv_area.c.obj)
+ .debug_loc     0x00000000000b6819      0xb67 modules/lvgl/libmodules__lvgl.a(lv_color.c.obj)
+ .debug_loc     0x00000000000b7380     0x1094 modules/lvgl/libmodules__lvgl.a(lv_fs.c.obj)
+ .debug_loc     0x00000000000b8414      0x105 modules/lvgl/libmodules__lvgl.a(lv_gc.c.obj)
+ .debug_loc     0x00000000000b8519      0xa63 modules/lvgl/libmodules__lvgl.a(lv_ll.c.obj)
+ .debug_loc     0x00000000000b8f7c      0x807 modules/lvgl/libmodules__lvgl.a(lv_math.c.obj)
+ .debug_loc     0x00000000000b9783      0x2cd modules/lvgl/libmodules__lvgl.a(lv_mem.c.obj)
+ .debug_loc     0x00000000000b9a50      0xf2e modules/lvgl/libmodules__lvgl.a(lv_style.c.obj)
+ .debug_loc     0x00000000000ba97e     0x181d modules/lvgl/libmodules__lvgl.a(lv_style_gen.c.obj)
+ .debug_loc     0x00000000000bc19b      0x3d3 modules/lvgl/libmodules__lvgl.a(lv_timer.c.obj)
+ .debug_loc     0x00000000000bc56e     0x1648 modules/lvgl/libmodules__lvgl.a(lv_txt.c.obj)
+ .debug_loc     0x00000000000bdbb6      0x103 modules/lvgl/libmodules__lvgl.a(lv_utils.c.obj)
+ .debug_loc     0x00000000000bdcb9     0x2d22 modules/lvgl/libmodules__lvgl.a(lv_label.c.obj)
+ .debug_loc     0x00000000000c09db      0x116 modules/lvgl/libmodules__lvgl.a(lvgl.c.obj)
+ .debug_loc     0x00000000000c0af1      0x20c modules/lvgl/libmodules__lvgl.a(lvgl_display.c.obj)
+ .debug_loc     0x00000000000c0cfd      0x429 modules/lvgl/libmodules__lvgl.a(lvgl_display_mono.c.obj)
+ .debug_loc     0x00000000000c1126      0x1cb modules/lvgl/libmodules__lvgl.a(lvgl_display_16bit.c.obj)
+ .debug_loc     0x00000000000c12f1      0x176 modules/lvgl/libmodules__lvgl.a(lvgl_display_24bit.c.obj)
+ .debug_loc     0x00000000000c1467      0x268 modules/lvgl/libmodules__lvgl.a(lvgl_display_32bit.c.obj)
+ .debug_loc     0x00000000000c16cf      0x277 modules/lvgl/libmodules__lvgl.a(lvgl_mem.c.obj)
+ .debug_loc     0x00000000000c1946      0x2a4 modules/lvgl/libmodules__lvgl.a(lvgl_common_input.c.obj)
+ .debug_loc     0x00000000000c1bea       0xe0 modules/module/drivers/sensor/battery/lib..__zmk__app__module__drivers__sensor__battery.a(battery_common.c.obj)
+ .debug_loc     0x00000000000c1cca      0x38e modules/module/drivers/sensor/battery/lib..__zmk__app__module__drivers__sensor__battery.a(battery_nrf_vddh.c.obj)
+ .debug_loc     0x00000000000c2058      0x1ea modules/module/lib/zmk_debounce/lib..__zmk__app__module__lib__zmk_debounce.a(debounce.c.obj)
+ .debug_loc     0x00000000000c2242       0x32 zephyr/kernel/libkernel.a(busy_wait.c.obj)
+ .debug_loc     0x00000000000c2274       0xd2 zephyr/kernel/libkernel.a(device.c.obj)
+ .debug_loc     0x00000000000c2346      0x161 zephyr/kernel/libkernel.a(fatal.c.obj)
+ .debug_loc     0x00000000000c24a7      0x7d4 zephyr/kernel/libkernel.a(init.c.obj)
+ .debug_loc     0x00000000000c2c7b      0x41b zephyr/kernel/libkernel.a(kheap.c.obj)
+ .debug_loc     0x00000000000c3096      0x45c zephyr/kernel/libkernel.a(mem_slab.c.obj)
+ .debug_loc     0x00000000000c34f2      0xc03 zephyr/kernel/libkernel.a(thread.c.obj)
+ .debug_loc     0x00000000000c40f5       0x6f zephyr/kernel/libkernel.a(idle.c.obj)
+ .debug_loc     0x00000000000c4164      0xaa5 zephyr/kernel/libkernel.a(msg_q.c.obj)
+ .debug_loc     0x00000000000c4c09      0x583 zephyr/kernel/libkernel.a(mutex.c.obj)
+ .debug_loc     0x00000000000c518c     0x14e7 zephyr/kernel/libkernel.a(queue.c.obj)
+ .debug_loc     0x00000000000c6673      0x3d7 zephyr/kernel/libkernel.a(sem.c.obj)
+ .debug_loc     0x00000000000c6a4a     0x3379 zephyr/kernel/libkernel.a(work.c.obj)
+ .debug_loc     0x00000000000c9dc3     0x372c zephyr/kernel/libkernel.a(sched.c.obj)
+ .debug_loc     0x00000000000cd4ef      0xc47 zephyr/kernel/libkernel.a(timeout.c.obj)
+ .debug_loc     0x00000000000ce136      0x6d2 zephyr/kernel/libkernel.a(timer.c.obj)
+ .debug_loc     0x00000000000ce808     0x16b6 zephyr/kernel/libkernel.a(poll.c.obj)
+ .debug_loc     0x00000000000cfebe      0x2bc zephyr/kernel/libkernel.a(mempool.c.obj)
 
 .debug_macinfo
  *(SORT_BY_ALIGNMENT(.debug_macinfo))

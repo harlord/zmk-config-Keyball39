@@ -28,6 +28,11 @@
                             25 26 27 28 29 
                          
 
+#define FAST_THUMB_KEYS   30 31 32 33 34 35 36 38
+
+#define SLOW_THUMB_KEYS  37 
+
+
 
 #define LEFT_THUMB_KEYS   30 31 32 33 34 35    
 
@@ -65,10 +70,10 @@
         hml_hr: hml_hr {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <320>;
+            flavor = SPACE_HOLDING_TYPE;
+            tapping-term-ms = <320>;                                 
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <250>;
+            require-prior-idle-ms = <150>;
             bindings = <&mhr>, <&kp>;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS LEFT_THUMB_KEYS RIGHT_THUMB_KEYS>;
             hold-trigger-on-release;
@@ -80,7 +85,7 @@
             flavor = "hold-preferred";
             tapping-term-ms = <220>;
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <100>;
             bindings = <&mhr>, <&kp>;
             hold-trigger-key-positions = <LEFT_HAND_KEYS LEFT_THUMB_KEYS RIGHT_THUMB_KEYS>;
             hold-trigger-on-release;

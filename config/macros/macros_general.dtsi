@@ -1,4 +1,5 @@
 macros {
+
         mc_sleep: mc_sleep {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;

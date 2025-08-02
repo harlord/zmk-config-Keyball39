@@ -209,6 +209,30 @@
     slow-release; \
     layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
   };
+
+
+#define CENTD(BINDINGS, KEYPOS) \
+  centd_##KEYPOS { \
+    timeout-ms = <2000>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS 36>; \
+    key-positions-first-exclude = <36>; \
+    key-positions-leader = <KEYPOS>; \
+    slow-release; \
+    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
+  };
+#define CENTDLEFT(BINDINGS, KEYPOS) \
+  centddleft_##KEYPOS { \
+    timeout-ms = <2000>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS 36>; \
+    key-positions-first-exclude = <36>; \
+    key-positions-leader = <KEYPOS>; \
+    slow-release; \
+    layers = <BASE DIRECTACC HOMEROW RAISE FUNC MOUSE SNIPE WARP SCROLL>; \
+  };
+
+
 #define CSPC(BINDINGS, KEYPOS) \
   cspc_##KEYPOS { \
     timeout-ms = <2000>; \
@@ -527,6 +551,8 @@ CTABDLEFT(&mhr LSHFT, 10)          CTABDLEFT(&mhr LCTRL, 11)                CTAB
 //CTABDA(&td_find_s_ht A LG(F), 20)  CTABDA(&td_find_g_ht A LG(LS(F)), 21)  CTABDA(&lrlMo LA(LS(H)) LA(LS(F12)), 22)   CTABDA(&kp LC(LS(MINUS)), 23)  CTABDA(&kp LC(MINUS), 24)        
 
 //alt+ENT<>RAISE
+CENTDLEFT(&mhr LSHFT, 10)          CENTDLEFT(&mhr LCTRL, 11)                CENTDLEFT(&mhr LALT, 12)                   CENTDLEFT(&mhr LGUI, 13)       CENTDLEFT(&kp CAPS, 14)                 CENTD(&kp CAPS, 15)  CENTD(&mhr LGUI, 16)  CENTD(&mhr LALT, 17)  CENTD(&mhr LCTRL, 18)  CENTD(&mhr LSHFT, 19)
+
 //CENT(LA(Q), 0)    CENT(LA(W), 1)    CENT(LA(F), 2)    CENT(LA(P), 3)    CENT(LA(B), 4)                  CENT(LA(J), 5)   CENT(LA(L), 6)   CENT(LA(U), 7)       CENT(LA(Y), 8)     CENT(LA(SQT), 9)
 //CENT(LA(A), 10)   CENT(LA(R), 11)   CENT(LA(S), 12)   CENT(LA(T), 13)   CENT(LA(G), 14)                 CENT(LA(M), 15)  CENT(LA(N), 16)  CENT(LA(E), 17)      CENT(LA(I), 18)    CENT(LA(O), 19)
 //CENT(LA(Z), 20)   CENT(LA(X), 21)   CENT(LA(C), 22)   CENT(LA(D), 23)   CENT(LA(V), 24)                 CENT(LA(K), 25)  CENT(LA(H), 26)  CENT(LA(COMMA), 27)  CENT(LA(DOT), 28)  CENT(LA(SLASH), 29)
