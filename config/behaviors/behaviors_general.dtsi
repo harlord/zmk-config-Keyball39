@@ -70,11 +70,11 @@
         hml_hr: hml_hr {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = SPACE_HOLDING_TYPE;
+            flavor = "balanced";
             tapping-term-ms = <320>;                                 
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
-            bindings = <&mhr>, <&kp>;
+            require-prior-idle-ms = <120>;
+            bindings = <&mhr>, <&kpo>;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS LEFT_THUMB_KEYS RIGHT_THUMB_KEYS>;
             hold-trigger-on-release;
         };
@@ -82,11 +82,11 @@
         hmr_hr: hmr_hr {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             tapping-term-ms = <220>;
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <100>;
-            bindings = <&mhr>, <&kp>;
+            require-prior-idle-ms = <120>;
+            bindings = <&mhr>, <&kpo>;
             hold-trigger-key-positions = <LEFT_HAND_KEYS LEFT_THUMB_KEYS RIGHT_THUMB_KEYS>;
             hold-trigger-on-release;
         };
@@ -116,7 +116,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LRRMO";
             bindings = <&kp>, <&kpo>;
-            #binding-cells = <2>;
+            #binding-cells = <2>; 
+            flavor = "balanced";
             tapping-term-ms = <THUMB_HOLDING_TIME>;
             quick-tap-ms = <175>;
             hold-trigger-on-release;
