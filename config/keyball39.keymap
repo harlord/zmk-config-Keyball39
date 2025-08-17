@@ -132,7 +132,7 @@ west build -p \
             bindings = <
 &kpo Q                   &kpo W           &kpo F           &kpo P          &kpo B                    &kpo J         &kpo L             &kpo U               &kpo Y               &kpo SQT
 &kpo A                   &kpo R           &kpo S           &kpo T          &kpo G                    &kpo M         &mkp LCLK          &mo SCROLL           &mo FAST             &mkp RCLK
-&lrlMo LSHFT Z           &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kpo V                    &kpo K          &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
+&lrlMo LSHFT Z           &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kpo V                    &kpo K         &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
 &lrlMo LCTRL DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &lrrMo LCTRL ESC
             >;
         };
@@ -161,7 +161,7 @@ west build -p \
             label = "SCROLLBASE";
             bindings = <
                                &kpo Q                 &kpo W           &kpo F           &kpo P          &kpo B                           &kpo J          &kpo L             &kpo U               &kpo Y               &kpo SQT
-                               &kpo A                 &kpo R           &kpo S           &kpo T          &kpo G                           &kpo M                           &kpo M          &kpo N             &kpo E               &kpo I               &kpo O
+                               &kpo A                 &kpo R           &kpo S           &kpo T          &kpo G                           &kpo M          &kpo N             &kpo E               &kpo I               &kpo O
                                &lrlMo LSHFT Z         &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kpo V                           &kpo K          &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
 &lm_homerow_short LCTRL DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS &lm_homerow_short LCTRL DEL  &lm_homerow_short LSHFT BACKSPACE  &lm_homerow_short LGUI TAB                &base_th_mo_kp_hp RAISE ENTER  &spacelm LOWER SPACE  &lm_homerow LCTRL ESC
             >;
@@ -192,7 +192,7 @@ west build -p \
             bindings = <
                   &kp EXCL                   &kp AT                      &kp HASH                         &kp DLLR                          &kp PRCNT                       &kp CARET           &kp AMPS                   &kp STAR                  &kp LPAR                  &kp RPAR
                   &kp PIPE                   &kp LBRC                    &kp RBRC                         &kp TILDE                         &kp UNDER                       &kp PLUS            &kp COLON                  &kp LT                    &kp GT                    &kp QUESTION
-                  &lrlMo LSHFT BSLH          &lrlMo LCTRL LBKT           &lrlMo LALT C RBKT               &lrlMo LGUI GRAVE                 &kp MINUS                       &kp EQUAL           &lrrMo LGUI SEMI           &lrrMo RALT COMMA         &lrrMo RCTRL DOT          &lrrMo RSHFT SLASH              
+                  &lrlMo LSHFT BSLH          &lrlMo LCTRL LBKT           &lrlMo LALT RBKT                 &lrlMo LGUI GRAVE                 &kp MINUS                       &kp EQUAL           &lrrMo LGUI SEMI           &lrrMo RALT COMMA         &lrrMo RCTRL DOT          &lrrMo RSHFT SLASH              
 &lrlMo LCTRL DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC
             >;
         };
@@ -200,9 +200,9 @@ west build -p \
         layer_homerow {
             label = "HOMEROW";
             bindings = <
-                  &kp Q                    &kp W                    &kp F                             &kp P                     &kp B                &kp J       &kp L                 &kp U                    &kp Y                      &kp SQT
-                  &kpo A                   &kpo R                   &kpo S                            &kpo T                    &kpo G               &kpo M      &lrrMo RGUI N         &lrrMo RALT E            &lrrMo RCTRL               &lrrMo RSHFT O
-                  &lrlMo LSHFT Z           &lrlMo LCTRL X           &lrlMo LALT C                     &lrlMo LGUI D             &kp V                &kp K       &lrrMo RGUI H         &lrrMo RALT COMMA        &lrrMo RCTRL DOT           &lrrMo RSHFT SLASH  
+                  &kpo Q                   &kpo W                   &kpo F                            &kpo P                    &kpo B               &kpo J      &kpo L                &kpo U                   &kpo Y                     &kpo SQT
+                  &kpo A                   &kpo R                   &kpo S                            &kpo T                    &kpo G               &kpo M      &kpo N                &kpo E                   &kpo I                     &kpo O
+                  &lrlMo LSHFT Z           &lrlMo LCTRL X           &lrlMo LALT C                     &lrlMo LGUI D             &kpo V               &kpo K      &lrrMo RGUI H         &lrrMo RALT COMMA        &lrrMo RCTRL DOT           &lrrMo RSHFT SLASH  
 &lrlMo LCTRL DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC
             >;
         };
