@@ -74,6 +74,17 @@
 
 
 / {
+  xy_boost_scaler: xy_boost_scaler {
+    compatible = "zmk,input-processor-scaler";
+    #input-processor-cells = <2>;
+    type = <INPUT_EV_REL>;
+    codes = <INPUT_REL_X INPUT_REL_Y>;
+    track-remainders;
+  };
+};
+
+
+/ {
   trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
@@ -85,6 +96,11 @@
         fast {                   /* active while FAST layer is held */
             layers = <FAST>;       /* FAST */
             input-processors = <&fast_scroll_scaler 8 1>;   
+        };
+
+        boost {                  /* active while MOUSE layer is active (automouse) */
+            layers = <MOUSE>;
+            input-processors = <&xy_boost_scaler 2 1>;
         };
   };
 };

@@ -113,7 +113,7 @@ west build -p \
                                &kp Q                  &kp W               &kp F             &kp P             &kp B                           &kp J    &kp L                 &kp U                 &kp Y                   &kp SQT
                                &kp A                  &kp R               &kp S             &kp T             &kp G                           &kp M    &kp N                 &kp E                 &kp I                   &kp O
                                &hml_hr LSHFT Z        &hml_hr LCTRL X     &hml_hr LALT C    &hml_hr LGUI D    &kp V                           &kp K    &hmr_hr LGUI H        &hmr_hr LALT COMMA    &hmr_hr LCTRL DOT       &hmr_hr LSHFT SLASH        
-&lm_homerow_short LCTRL DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS &lm_homerow_short LCTRL DEL  &lm_homerow_short LSHFT BACKSPACE  &lm_homerow_short LGUI TAB                &base_th_mo_kp_hp RAISE ENTER  &spacelm LOWER SPACE  &lm_homerow LCTRL ESC
+&lm_homerow_short LALT DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS &lm_homerow_short LALT DEL  &lm_homerow_short LSHFT BACKSPACE  &lm_homerow_short LGUI TAB                &base_th_mo_kp_hp RAISE ENTER  &spacelm LOWER SPACE  &lm_homerow LCTRL ESC
             >;
         };
 
@@ -123,7 +123,7 @@ west build -p \
 &kpo Q                   &kpo W           &kpo F           &kpo P          &kpo B                    &kpo J          &kpo L             &kpo U               &kpo Y               &kpo SQT
 &kpo A                   &kpo R           &kpo S           &kpo T          &kpo G                    &kpo M          &mkp LCLK          &mo SCROLL           &mo SNIPE            &mkp RCLK
 &lrlMo LSHFT Z           &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kpo V                    &kpo K          &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
-&lrlMo LCTRL DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &lrrMo LCTRL ESC
+&lrlMo LALT DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &lrrMo LCTRL ESC
             >;
         };
 
@@ -133,7 +133,7 @@ west build -p \
 &kpo Q                   &kpo W           &kpo F           &kpo P          &kpo B                    &kpo J         &kpo L             &kpo U               &kpo Y               &kpo SQT
 &kpo A                   &kpo R           &kpo S           &kpo T          &kpo G                    &kpo M         &mkp LCLK          &mo SCROLL           &mo FAST             &mkp RCLK
 &lrlMo LSHFT Z           &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kpo V                    &kpo K         &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
-&lrlMo LCTRL DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &lrrMo LCTRL ESC
+&lrlMo LALT DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &lrrMo LCTRL ESC
             >;
         };
 
@@ -143,7 +143,7 @@ west build -p \
 &kpo Q                   &kpo W           &kpo F           &kpo P          &kpo B                    &kpo J          &kpo L             &kpo U               &kpo Y               &kpo SQT
 &kpo A                   &kpo R           &kpo S           &kpo T          &kpo G                    &kpo M          &mkp LCLK          &mo SCROLLTOP        &mo SNIPE            &mkp RCLK
 &lrlMo LSHFT Z           &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kpo V                    &kpo K          &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
-&lrlMo LCTRL DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &lrrMo LCTRL ESC
+&lrlMo LALT DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &lrrMo LCTRL ESC
             >;
         };
 
@@ -153,7 +153,7 @@ west build -p \
 &kpo Q                   &kpo W           &kpo F           &kpo P          &kpo B                    &kpo J          &kpo L             &kpo U               &kpo Y               &kpo SQT
 &kpo A                   &kpo R           &kpo S           &kpo T          &kpo G                    &kpo M          &mkp LCLK          &mo SCROLL           &mo FAST             &mkp RCLK
 &lrlMo LSHFT Z           &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kpo V                    &kpo K          &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
-&lrlMo LCTRL DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &lrrMo LCTRL ESC
+&lrlMo LALT DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &lrrMo LCTRL ESC
             >;
         };
 
@@ -163,7 +163,7 @@ west build -p \
                                &kpo Q                 &kpo W           &kpo F           &kpo P          &kpo B                           &kpo J          &kpo L             &kpo U               &kpo Y               &kpo SQT
                                &kpo A                 &kpo R           &kpo S           &kpo T          &kpo G                           &kpo M          &kpo N             &kpo E               &kpo I               &kpo O
                                &lrlMo LSHFT Z         &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kpo V                           &kpo K          &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
-&lm_homerow_short LCTRL DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS &lm_homerow_short LCTRL DEL  &lm_homerow_short LSHFT BACKSPACE  &lm_homerow_short LGUI TAB                &base_th_mo_kp_hp RAISE ENTER  &spacelm LOWER SPACE  &lm_homerow LCTRL ESC
+&lm_homerow_short LALT DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS &lm_homerow_short LALT DEL  &lm_homerow_short LSHFT BACKSPACE  &lm_homerow_short LGUI TAB                &base_th_mo_kp_hp RAISE ENTER  &spacelm LOWER SPACE  &lm_homerow LCTRL ESC
             >;
         };
 
@@ -183,7 +183,7 @@ west build -p \
                   &kp N1                   &kp N2           &kp N3           &kp N4          &kp N5                    &kp N6           &kp N7                &kp N8                    &kp N9          &kp N0
                   &kpo A                   &kpo R           &kpo S           &kpo T          &kpo G                    &kpo M           &kp HOME              &kp UP                    &kp END         &kp PG_UP
                   &lrlMo LSHFT Z           &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kp V                     &kp EQUAL        &kp LEFT              &kp DOWN                  &kp RIGHT       &kp PG_DN 
-&lrlMo LCTRL DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC  
+&lrlMo LALT DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC  
             >;
         };
 
@@ -193,7 +193,7 @@ west build -p \
                   &kp EXCL                   &kp AT                      &kp HASH                         &kp DLLR                          &kp PRCNT                       &kp CARET           &kp AMPS                   &kp STAR                  &kp LPAR                  &kp RPAR
                   &kp PIPE                   &kp LBRC                    &kp RBRC                         &kp TILDE                         &kp UNDER                       &kp PLUS            &kp COLON                  &kp LT                    &kp GT                    &kp QUESTION
                   &lrlMo LSHFT BSLH          &lrlMo LCTRL LBKT           &lrlMo LALT RBKT                 &lrlMo LGUI GRAVE                 &kp MINUS                       &kp EQUAL           &lrrMo LGUI SEMI           &lrrMo RALT COMMA         &lrrMo RCTRL DOT          &lrrMo RSHFT SLASH              
-&lrlMo LCTRL DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC
+&lrlMo LALT DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC
             >;
         };
 
@@ -203,7 +203,7 @@ west build -p \
                   &kpo Q                   &kpo W                   &kpo F                            &kpo P                    &kpo B               &kpo J      &kpo L                &kpo U                   &kpo Y                     &kpo SQT
                   &kpo A                   &kpo R                   &kpo S                            &kpo T                    &kpo G               &kpo M      &kpo N                &kpo E                   &kpo I                     &kpo O
                   &lrlMo LSHFT Z           &lrlMo LCTRL X           &lrlMo LALT C                     &lrlMo LGUI D             &kpo V               &kpo K      &lrrMo RGUI H         &lrrMo RALT COMMA        &lrrMo RCTRL DOT           &lrrMo RSHFT SLASH  
-&lrlMo LCTRL DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC
+&lrlMo LALT DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC
             >;
         };
 
@@ -213,7 +213,7 @@ west build -p \
                   &kp N1                  &kp N2          &kp N3                  &kp N4                         &kp N5                          &kp N6          &kp N7                &kp N8                    &kp N9          &kp N0
                   &lrlMo LSHFT A          &lrlMo LCTRL R  &lrlMo LALT S           &lrlMo LGUI T                  &kp F11                         &kp PLUS        &kp HOME              &kp UP                    &kp END         &kp PG_UP
                   &lrlMo LALT BSLH        &kp LBKT        &kp RBKT                &kp GRAVE                      &kp MINUS                       &kp EQUAL       &kp LEFT              &kp DOWN                  &kp RIGHT       &kp PG_DN   
-&lrlMo LCTRL DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC
+&lrlMo LALT DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC
             >;
         };
 
@@ -223,7 +223,7 @@ west build -p \
 &td_find_s_ht A LG(F)  &td_find_g_ht A LG(LS(F))  &lrlMo LA(LS(H)) LA(LS(F12))  &kp LC(LS(MINUS))  &kp LC(LS(MINUS))               &kp C_VOL_UP     &kp C_PREV         &kp C_PP           &kp C_NEXT      &trans
 &kp LSHFT              &kp LCTRL                  &kp LALT                      &kp LGUI           &tdSelectCoppingLR A A          &kp C_VOL_DN     &kp LC(C_BRI_DN)   &kp LC(C_BRI_UP)   &kp LC(UP)      &kp LC(LS(LEFT)) 
 &none                  &td_find_g_ht A LG(LS(F))  &lrlMo LA(LS(H)) LA(LS(F12))  &kp LC(LS(MINUS))  &kp LC(MINUS)                   &kp C_MUTE       &kp C_BRI_DN       &kp C_BRI_UP       &kp LC(DOWN)    &kp F11
-&lrlMo LCTRL DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC
+&lrlMo LALT DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC
             >;
         };
 
@@ -233,7 +233,7 @@ west build -p \
                   &kp F1     &kp F2     &kp F3                  &kp F4                    &kp F5                          &kp F6              &kp F7                     &kp F8                    &kp F9        &kp F10
                   &kp LSHFT  &kp LCTRL  &kp LALT                &kp LGUI                  &kp F11                         &kp F12             &kp RGUI                   &kp RALT                  &kp RGUI      &kp RSHFT
                   &kp LSHFT  &kp LCTRL  &kp LALT                &kp LGUI                  &kp F11                         &kp F12             &kp RGUI                   &kp RALT                  &kp RGUI      &kp RSHFT      
-&lrlMo LCTRL DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC
+&lrlMo LALT DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC
             >;
         };
 
@@ -243,7 +243,7 @@ west build -p \
              &bt_0         &bt_1   &bt_2                   &bt_3                     &bt_4                           &trans                 &trans                  &trans                    &trans  &trans
              &out OUT_USB  &trans  &trans                  &trans                    &trans                          &trans                 &trans                  &trans                    &trans  &trans
              &sys_reset    &trans  &trans                  &trans                    &trans                          &trans                 &trans                  &trans                    &trans  &sys_reset  
-&lrlMo LCTRL DEL &trans  &trans &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC
+&lrlMo LALT DEL &trans  &trans &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC
             >;
         };
 
@@ -253,7 +253,7 @@ west build -p \
                   &kp EXCL                   &kp AT             &kp HASH                &kp DLLR                  &kp PRCNT                       &kp EQUAL          &kp N7                    &kp N8                   &kp N9           &kp STAR
                   &kp PIPE                   &kp LBRC           &kp RBRC                &kp TILDE                 &kp COMMA                       &kp DOT            &kp N4                    &kp N5                   &kp N6           &kp N0
                   &kp LSHFT                  &kp LCTRL          &kp LALT                &kp LGUI                  &kp MINUS                       &kp PLUS           &kp N1                    &kp N2                   &kp N3           &lrrMo RALT SLASH       
-&lrlMo LCTRL DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC
+&lrlMo LALT DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC
             >;
         };
 
@@ -263,7 +263,7 @@ west build -p \
 &kpo Q                   &kpo W               &kpo F           &kpo P          &kpo B                    &kpo J          &kpo L             &kpo U               &kpo Y               &kpo SQT
 &kpo A                   &kpo R               &kpo S           &kpo T          &kpo G                    &kpo M          &mkp LCLK          &mo SCROLL           &mo SNIPE            &mkp RCLK
 &lrlMo LSHFT Z           &lrlMo LCTRL X       &lrlMo LALT C    &lrlMo LGUI D   &kpo V                    &kpo K          &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
-&lrlMo LCTRL DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &lrrMo LCTRL ESC
+&lrlMo LALT DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &lrrMo LCTRL ESC
             >;
         };
 
@@ -273,7 +273,7 @@ west build -p \
 &kp LC(C_BRI_DN)       &kp LC(C_BRI_UP)           &kp C_BRI_DN                  &kp C_BRI_UP       &trans                          &kp C_VOL_UP     &kp C_PREV         &kp C_PP           &kp C_NEXT      &trans
 &none                  &kp LC(UP)                 &kp LC(LS(LEFT))              &kp LC(DOWN)       &kp F11                         &kp C_VOL_DN     &trans             &trans             &trans          &trans 
 &kp LSHFT              &kp LCTRL                  &kp LALT                      &kp LGUI           &trans                          &kp C_MUTE       &kp LGUI           &kp LALT           &kp LCTRL       &kp LSHFT
-&lrlMo LCTRL DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LCTRL DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC
+&lrlMo LALT DEL  &kp LGUI  &th_mo_kp_hp DIRECTACC CAPS  &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &lrrMo LCTRL ESC
             >;
         };
 

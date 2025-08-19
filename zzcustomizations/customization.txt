@@ -1,0 +1,34 @@
+How you define your combo
+For a single key + move:
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        move_click: move_click {
+            bindings = <&kp ENTER>;   // or your desired behavior
+            key-positions = <34>;     // the key you press
+            timeout-ms = <500>;       // regular combo timeout
+            require-pointer-move;     // gate on movement
+            pointer-move-timeout-ms = <300>; // optional; else uses timeout-ms
+            layers = <BASE>;          // where it applies
+        };
+    };
+}
+
+For multiple keys + move (e.g., hold a modifier key + your trigger key + move):
+
+/ {
+    combos {
+        multi_with_move {
+            bindings = <&kp A>;
+            key-positions = <10 34>;   // both keys must be pressed
+            timeout-ms = <500>;
+            require-pointer-move;
+            layers = <BASE>;
+        };
+    };
+}
+
+Notes:
+If you want to ensure a specific “first” key must start the combo sequence, you can still use key-positions-leader = <...>; alongside movement gating.

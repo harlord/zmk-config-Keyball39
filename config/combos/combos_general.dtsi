@@ -74,7 +74,7 @@
     timeout-ms = <500>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
-    layers = <DIRECTACC>; \
+    layers = <SYSTEM>; \
   };
 #define COMBOADJ(NAME, BINDINGS, KEYPOS) \
   comboadj_##NAME { \
@@ -266,7 +266,7 @@
         LCOMBOACT(comb_pb, &kp ENTER, 3 4)// P B
         LCOMBOACT(comb_tg, &kp TAB, 23 24)// D V
         LCOMBOACT(comb_cd, &kp BACKSPACE, 22 23)// C D
-        LCOMBOACT(comb_xc, &kp DELETE, 20 22)// Z X
+        LCOMBOACT(comb_xc, &kp DELETE, 20 21)// Z X
         LCOMBO(comb_gv, &kp MINUS, 14 24)// G V
         LCOMBO(comb_td, &kp GRAVE, 13 23)// T D 
         LCOMBO(comb_sc, &kp RBKT, 12 22)// S C
@@ -325,6 +325,24 @@
             key-positions = <16 17 18>;
             layers = <BASE>;
             timeout-ms = <500>;
+        };
+
+        combo_scroll: combo_scroll {
+            bindings = <&mo SCROLLTOP>;   // or your desired behavior
+            key-positions = <17>;     // the key you press
+            timeout-ms = <500>;       // regular combo timeout
+            require-pointer-move;     // gate on movement
+            pointer-move-timeout-ms = <300>; // optional; else uses timeout-ms
+            layers = <BASE>;          // where it applies
+        };
+
+        combo_snipe: combo_snipe {
+            bindings = <&mo SNIPE>;   // or your desired behavior
+            key-positions = <18>;     // the key you press
+            timeout-ms = <500>;       // regular combo timeout
+            require-pointer-move;     // gate on movement
+            pointer-move-timeout-ms = <300>; // optional; else uses timeout-ms
+            layers = <BASE>;          // where it applies
         };
 
         //////////////////////
@@ -538,9 +556,9 @@
         ///////////////
 
 //shift+BKSPACE<>TILDE 
-CBKSHIFT(&mshon LA(N1), 0)                CBKLLEFT(&mo DIRECTACC, 1)                   CBKLLEFT(&mo FUNC, 2)                        CBKLLEFT(&mo NUMBERS, 3)          CBKLLEFT(&mo SYSTEM, 4)                                                         CBKS(&mc_bkctilde U, 7) 
-CBKS(&mc_bkctilde A, 10)                                                                                                                                              CBKS(&caps_word, 14)                                    CBKS(&mc_ennesd N, 16)  CBKS(&mc_bkctilde E, 17)  CBKS(&mc_bkctilde I, 18)  CBKS(&mc_bkctilde O, 19)
-/*CBKDALEFT(&td_find_s_ht A LG(F), 20)*/ CBKDALEFT(&td_find_g_ht LG(F) LG(LS(F)), 21)  CBKDALEFT(&lrlMo LA(LS(H)) LA(LS(F12)), 22)  CBKDALEFT(&kp LC(LS(MINUS)), 23)  CBKDALEFT(&kp LC(MINUS), 24)                                                                                                        CBKSHIFT(&mshon LS(LA(SLASH)), 29)       
+CBKSHIFT(&mshon LA(N1), 0)                CBKLLEFT(&mo DIRECTACC, 1)                    CBKLLEFT(&mo FUNC, 2)                        CBKLLEFT(&mo NUMBERS, 3)          CBKLLEFT(&mo SYSTEM, 4)                                                                 CBKS(&mc_bkctilde U, 7) 
+CBKS(&mc_bkctilde A, 10)                  CBKDALEFT(&td_find_g_ht LG(F) LG(LS(F)), 11)  CBKDALEFT(&lrlMo LA(LS(H)) LA(LS(F12)), 12)  CBKDALEFT(&kp LC(LS(MINUS)), 13)  CBKDALEFT(&kp LC(MINUS), 14)              CBKS(&caps_word, 15)  CBKS(&mc_ennesd N, 16)  CBKS(&mc_bkctilde E, 17)  CBKS(&mc_bkctilde I, 18)  CBKS(&mc_bkctilde O, 19)
+/*CBKDALEFT(&td_find_s_ht A LG(F), 20)*/                                                                                                         //CBKSHIFT(&mshon LS(LA(SLASH)), 29)       
 //commented to avoid ALT conflict
 
 //cmd+TAB<>DRAGTHUMB(inverted LOWER and DIRECTACC in low row only when DRAGTHUMB not activated)    
@@ -553,8 +571,9 @@ CTABDLEFT(&mhr LSHFT, 10)          CTABDLEFT(&mhr LCTRL, 11)                CTAB
 //ENT+RAISE
 
 CENT(&kp LC(C_BRI_DN), 0)          CENT(&kp LC(C_BRI_UP), 1)                CENT(&kp C_BRI_DN, 2)                      CENT(&kp C_BRI_UP, 3)                                            CENT(&kp C_VOL_UP, 5)    CENT(&kp C_PREV, 6)   CENT(&kp C_PP, 7)     CENT(&kp C_NEXT, 8)     
-CENTDLEFT(&mhr LSHFT, 10)          CENTDLEFT(&mhr LCTRL, 11)                CENTDLEFT(&mhr LALT, 12)                   CENTDLEFT(&mhr LGUI, 13)       CENTDLEFT(&kp CAPS, 14)           CENT(&kp C_VOL_DN, 15)   CENTD(&mhr LGUI, 16)  CENTD(&mhr LALT, 17)  CENTD(&mhr LCTRL, 18)  CENTD(&mhr LSHFT, 19)
-                                   CENT(&kp LC(UP), 21)                     CENT(&kp LC(DOWN), 22)                     CENT(&kp F11, 23)              CENT(&kp LC(LS(LEFT)), 24)        CENT(&kp C_MUTE, 25)    
+                                   CENT(&kp LC(UP), 11)                     CENT(&kp LC(DOWN), 12)                     CENT(&kp F11, 13)              CENT(&kp LC(LS(LEFT)), 14)        CENT(&kp C_VOL_DN, 15) 
+                                                                                                                                                                                        CENT(&kp C_MUTE, 25)
+//CENTDLEFT(&mhr LSHFT, 10)          CENTDLEFT(&mhr LCTRL, 11)                CENTDLEFT(&mhr LALT, 12)                   CENTDLEFT(&mhr LGUI, 13)       CENTDLEFT(&kp CAPS, 14)           CENT(&kp C_VOL_DN, 15)   CENTD(&mhr LGUI, 16)  CENTD(&mhr LALT, 17)  CENTD(&mhr LCTRL, 18)  CENTD(&mhr LSHFT, 19)
 //CENT(LA(Q), 0)    CENT(LA(W), 1)    CENT(LA(F), 2)    CENT(LA(P), 3)    CENT(LA(B), 4)                  CENT(LA(J), 5)   CENT(LA(L), 6)   CENT(LA(U), 7)       CENT(LA(Y), 8)     CENT(LA(SQT), 9)
 //CENT(LA(A), 10)   CENT(LA(R), 11)   CENT(LA(S), 12)   CENT(LA(T), 13)   CENT(LA(G), 14)                 CENT(LA(M), 15)  CENT(LA(N), 16)  CENT(LA(E), 17)      CENT(LA(I), 18)    CENT(LA(O), 19)
 //CENT(LA(Z), 20)   CENT(LA(X), 21)   CENT(LA(C), 22)   CENT(LA(D), 23)   CENT(LA(V), 24)                 CENT(LA(K), 25)  CENT(LA(H), 26)  CENT(LA(COMMA), 27)  CENT(LA(DOT), 28)  CENT(LA(SLASH), 29)
