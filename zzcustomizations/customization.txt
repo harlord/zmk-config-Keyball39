@@ -1,3 +1,21 @@
+Asegúrate de tener ambos remotos
+git remote -v
+
+Si falta upstream, añádelo una sola vez:
+git remote add upstream https://github.com/zmkfirmware/zmk.git
+
+Trae los commits nuevos de upstream
+git fetch upstream
+
+Trae los commits nuevos de upstream
+git fetch upstream
+
+Mezcla preferiendo tus cambios en cada conflicto
+La opción correcta es el driver de fusión “recursive” con
+-X ours, no el strategy ours:
+git merge -X ours upstream/main
+
+
 How you define your combo
 For a single key + move:
 
@@ -32,3 +50,13 @@ For multiple keys + move (e.g., hold a modifier key + your trigger key + move):
 
 Notes:
 If you want to ensure a specific “first” key must start the combo sequence, you can still use key-positions-leader = <...>; alongside movement gating.
+
+
+
+git add   app/boards/arm/mikoto/Kconfig
+git add   app/boards/arm/nice_nano/Kconfig
+git add   app/boards/rpi_pico.conf
+git add   app/boards/shields/a_dux/a_dux.dtsi
+git add   app/boards/shields/nice_view/README.md
+git add   app/boards/shields/nice_view/widgets/status.c
+git add    app/boards/shields/nice_view/widgets/util.h

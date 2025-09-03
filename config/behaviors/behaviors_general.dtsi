@@ -97,9 +97,8 @@
             tapping-term-ms = <THUMB_HOLDING_TIME_SHORT>;
             #binding-cells = <2>;
             hold-trigger-on-release;
-            bindings = <&mhr>, <&kp>;
+            bindings = <&mhr>, <&kpo>;
         };
-
 
         lrlMo: lrlMo {
             compatible = "zmk,behavior-hold-tap";
