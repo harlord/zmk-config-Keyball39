@@ -74,7 +74,7 @@
             tapping-term-ms = <320>;                                 
             quick-tap-ms = <175>;
             require-prior-idle-ms = <120>;
-            bindings = <&mhr>, <&kpo>;
+            bindings = <&kp>, <&kpo>;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS LEFT_THUMB_KEYS RIGHT_THUMB_KEYS>;
             hold-trigger-on-release;
         };
@@ -86,7 +86,7 @@
             tapping-term-ms = <220>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <120>;
-            bindings = <&mhr>, <&kpo>;
+            bindings = <&kp>, <&kpo>;
             hold-trigger-key-positions = <LEFT_HAND_KEYS LEFT_THUMB_KEYS RIGHT_THUMB_KEYS>;
             hold-trigger-on-release;
         };
@@ -97,7 +97,7 @@
             tapping-term-ms = <THUMB_HOLDING_TIME_SHORT>;
             #binding-cells = <2>;
             hold-trigger-on-release;
-            bindings = <&mhr>, <&kpo>;
+            bindings = <&kp>, <&kpo>;
         };
 
         lrlMo: lrlMo {
@@ -262,7 +262,7 @@
             tapping-term-ms = <THUMB_HOLDING_TIME>;
             #binding-cells = <2>;
             hold-trigger-on-release;
-            bindings = <&mhr>, <&kp>;
+            bindings = <&kp>, <&kp>;
         };
 
         tdSelectCoppingRL: tdSelectCoppingRL {

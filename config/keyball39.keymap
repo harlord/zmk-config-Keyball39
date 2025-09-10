@@ -116,16 +116,6 @@ west build -p \
             >;
         };
 
-        layer_homerow {
-            label = "HOMEROW";
-            bindings = <
-                  &kpo Q                   &kpo W                   &kpo F                            &kpo P                    &kpo B               &kpo J      &kpo L                &kpo U                   &kpo Y                     &kpo SQT
-                  &kpo A                   &kpo R                   &kpo S                            &kpo T                    &kpo G               &kpo M      &kpo N                &kpo E                   &kpo I                     &kpo O
-                  &lrlMo LSHFT Z           &lrlMo LCTRL X           &lrlMo LALT C                     &lrlMo LGUI D             &kpo V               &kpo K      &lrrMo RGUI H         &lrrMo RALT COMMA        &lrrMo RCTRL DOT           &lrrMo RSHFT SLASH  
-&none  &none  &none  &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &none
-            >;
-        };
-
         mouse_layer {
             label = "MOUSE";
             bindings = <
@@ -270,7 +260,7 @@ west build -p \
             label = "SYSTEM";
             bindings = <
 &kp LC(C_BRI_DN)       &kp LC(C_BRI_UP)           &kp C_BRI_DN                  &kp C_BRI_UP       &none                          &kp C_VOL_UP     &kp C_PREV         &kp C_PP           &kp C_NEXT      &none
-&none                  &kp LC(UP)                 &kp LC(LS(LEFT))              &kp LC(DOWN)       &kp F11                        &kp C_VOL_DN     &none              &none              &none           &none 
+&none                  &kp LC(UP)                 &kp LC(LS(LEFT))              &kp LC(DOWN)       &kp F11                        &kp C_VOL_DN     &bt_0              &bt_1              &bt_2           &bt_3
 &kp LSHFT              &kp LCTRL                  &kp LALT                      &kp LGUI           &none                          &kp C_MUTE       &kp LGUI           &kp LALT           &kp LCTRL       &kp LSHFT
 &none  &none  &none  &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &none
             >;

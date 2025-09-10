@@ -30,7 +30,7 @@
     key-positions = <KEYPOS>; \
     slow-release; \
     require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; \
-    layers = <BASE NAVOVERR DIRECTACC HOMEROW RAISE LOWER FUNC MOUSE SNIPE WARP SCROLL FAST SCROLLBASE SCROLLTOP>; \
+    layers = <BASE NAVOVERR DIRECTACC NUMBERS RAISE LOWER FUNC MOUSE SNIPE WARP SCROLL FAST SCROLLBASE SCROLLTOP>; \
   };
 #define RCOMBO(NAME, BINDINGS, KEYPOS) \
   rcombo_##NAME { \
@@ -38,7 +38,7 @@
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; \
-    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
+    layers = <BASE DIRECTACC RAISE FUNC>; \
   };
 #define RCOMBOMOUSE(NAME, BINDINGS, KEYPOS) \
   rcombomouse_##NAME { \
@@ -61,7 +61,7 @@
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; \
-    layers = <BASE DIRECTACC HOMEROW RAISE LOWER FUNC MOUSE SNIPE WARP SCROLL FAST SCROLLBASE SCROLLTOP>; \
+    layers = <BASE DIRECTACC RAISE NUMBERS LOWER FUNC MOUSE SNIPE WARP SCROLL FAST SCROLLBASE SCROLLTOP>; \
   };
 #define NAVBACOMBO(NAME, BINDINGS, KEYPOS) \
   navcombo_##NAME { \
@@ -107,7 +107,7 @@
     key-positions = <KEYPOS 34>; \
     key-positions-leader = <KEYPOS>; \
     key-positions-first-exclude = <34>; \
-    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
+    layers = <BASE DIRECTACC RAISE FUNC>; \
   };
 #define CBKSHIFT(BINDINGS, KEYPOS) \
   cbkshift_##KEYPOS { \
@@ -117,7 +117,7 @@
     key-positions-leader = <KEYPOS>; \
     key-positions-first-exclude = <34>; \
     slow-release; \
-    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
+    layers = <BASE DIRECTACC RAISE FUNC>; \
   };
 #define CBKDALEFT(BINDINGS, KEYPOS) \
   cbkdaleft_##KEYPOS { \
@@ -127,7 +127,7 @@
     key-positions-leader = <KEYPOS>; \
     key-positions-first-exclude = <34>; \
     slow-release; \
-    layers = <BASE MOUSE DIRECTACC HOMEROW RAISE FUNC>; \
+    layers = <BASE MOUSE DIRECTACC RAISE FUNC>; \
   };
 #define CBKLLEFT(BINDINGS, KEYPOS) \
   cbklleft_##KEYPOS { \
@@ -137,7 +137,7 @@
     key-positions-leader = <KEYPOS>; \
     key-positions-first-exclude = <34>; \
     slow-release; \
-    layers = <BASE MOUSE DIRECTACC HOMEROW RAISE FUNC>; \
+    layers = <BASE MOUSE DIRECTACC RAISE FUNC>; \
   };
 #define CTKSPA(BINDINGS, KEYPOS) \
   ctkspa_##KEYPOS { \
@@ -147,7 +147,7 @@
     key-positions-first-exclude = <34>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
+    layers = <BASE DIRECTACC RAISE FUNC>; \
   };
 #define CTKSLW(BINDINGS, KEYPOS) \
   ctkspa_##KEYPOS { \
@@ -157,7 +157,7 @@
     key-positions-first-exclude = <34>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
+    layers = <BASE DIRECTACC RAISE FUNC>; \
   };
 
 #define CTAB(BINDINGS, KEYPOS) \
@@ -168,7 +168,7 @@
     key-positions-first-exclude = <35>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
+    layers = <BASE DIRECTACC RAISE FUNC>; \
   };
 #define CTABD(BINDINGS, KEYPOS) \
   ctabd_##KEYPOS { \
@@ -178,7 +178,7 @@
     key-positions-first-exclude = <35>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
+    layers = <BASE DIRECTACC RAISE FUNC>; \
   };
 #define CTABDLEFT(BINDINGS, KEYPOS) \
   ctabdleft_##KEYPOS { \
@@ -188,7 +188,7 @@
     key-positions-first-exclude = <35>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE DIRECTACC HOMEROW RAISE FUNC MOUSE SNIPE WARP SCROLL FAST SCROLLBASE SCROLLTOP>; \
+    layers = <BASE DIRECTACC NUMBERS RAISE FUNC MOUSE SNIPE WARP SCROLL FAST SCROLLBASE SCROLLTOP>; \
   };
 #define CTABS(BINDINGS, KEYPOS) \
   ctabs_##KEYPOS { \
@@ -197,7 +197,7 @@
     key-positions = <KEYPOS 35>; \
     key-positions-first-exclude = <35>; \
     key-positions-leader = <KEYPOS>; \
-    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
+    layers = <BASE DIRECTACC RAISE FUNC>; \
   };
 #define CTABDA(BINDINGS, KEYPOS) \
   ctabda_##KEYPOS { \
@@ -207,7 +207,7 @@
     key-positions-first-exclude = <35>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
+    layers = <BASE DIRECTACC RAISE FUNC>; \
   };
 #define CENT(BINDINGS, KEYPOS) \
   cent_##KEYPOS { \
@@ -217,7 +217,7 @@
     key-positions-first-exclude = <36>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE MOUSE DIRECTACC HOMEROW RAISE FUNC MOUSE SNIPE WARP SCROLL FAST SCROLLBASE SCROLLTOP>; \
+    layers = <BASE DIRECTACC NUMBERS RAISE FUNC>; \
   };
 
 
@@ -229,17 +229,17 @@
     key-positions-first-exclude = <36>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
+    layers = <BASE DIRECTACC RAISE FUNC>; \
   };
 #define CENTDLEFT(BINDINGS, KEYPOS) \
   centddleft_##KEYPOS { \
     timeout-ms = <2000>; \
-    bindings = <BINDINGS>; \
+    bindings = <&mo SYSTEM>, <BINDINGS>; \
     key-positions = <KEYPOS 36>; \
     key-positions-first-exclude = <36>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE DIRECTACC HOMEROW RAISE FUNC MOUSE SNIPE WARP SCROLL FAST SCROLLBASE SCROLLTOP>; \
+    layers = <BASE DIRECTACC RAISE NUMBERS FUNC MOUSE SNIPE WARP SCROLL FAST SCROLLBASE SCROLLTOP>; \
   };
 
 
@@ -252,7 +252,7 @@
     key-positions-leader = <KEYPOS>; \
     slow-release; \
     require-prior-idle-ms = <1000>; \
-    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
+    layers = <BASE DIRECTACC RAISE FUNC>; \
   };
 #define CSPCS(BINDINGS, KEYPOS) \
   cspcs_##KEYPOS { \
@@ -261,7 +261,7 @@
     key-positions = <KEYPOS 37>; \
     key-positions-first-exclude = <37>; \
     key-positions-leader = <KEYPOS>; \
-    layers = <BASE DIRECTACC HOMEROW RAISE FUNC>; \
+    layers = <BASE DIRECTACC RAISE FUNC>; \
   };
 
     combos {
@@ -281,7 +281,7 @@
         LCOMBO(comb_az, &kp BSLH, 10 20)// A Z
         //RIGHT HAND
 
-        RCOMBO(requal, &kp EQUAL, 15 25)
+        RCOMBOMOUSE(requal, &kp EQUAL, 15 25)
         RCOMBO(rsemi, &kp SEMI, 16 26)
         RCOMBO(SEMI, &kp COMMA, 17 27)
         RCOMBO(COLON, &kp DOT, 18 28)
@@ -319,22 +319,8 @@
         COMBODIRECTACC(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
         COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
 
-         c-seniply-l {
-            bindings = <&sl HOMEROW>;
-            key-positions = <11 12 13>;
-            layers = <BASE>;
-            timeout-ms = <500>;
-        };
-
-        c-seniply-r {
-            bindings = <&sl HOMEROW>;
-            key-positions = <16 17 18>;
-            layers = <BASE>;
-            timeout-ms = <500>;
-        };
-
         RCOMBOMOUSEOFF(offmousem, &tog_off MOUSE, 17 18, 10, MOUSE)
-        RCOMBOMOUSEOFF(offmouseb, &tog_off MOUSE, 17 18, 1000, BASE)
+        RCOMBOMOUSEOFF(offmouseb, &tog_off MOUSE, 17 18, 200, BASE)
 
         combo_scroll: combo_scroll {
             bindings = <&mc_mouse_layers SCROLLTOP>;   // or your desired behavior
@@ -342,7 +328,7 @@
             timeout-ms = <500>;       // regular combo timeout
             require-pointer-move;     // gate on movement
             pointer-move-timeout-ms = <500>; // optional; else uses timeout-ms
-            layers = <BASE HOMEROW>;          // where it applies
+            layers = <BASE>;          // where it applies
         };
 
         combo_snipe: combo_snipe {
@@ -351,7 +337,7 @@
             timeout-ms = <500>;       // regular combo timeout
             require-pointer-move;     // gate on movement
             pointer-move-timeout-ms = <500>; // optional; else uses timeout-ms
-            layers = <BASE HOMEROW>;          // where it applies
+            layers = <BASE>;          // where it applies
         };
 
         combo_mouse_scroll: combo_mouse_scroll {
@@ -613,18 +599,18 @@ CBKS(&mc_bkctilde A, 10)                  CBKDALEFT(&td_find_g_ht LG(F) LG(LS(F)
 //commented to avoid ALT conflict
 
 //cmd+TAB<>DRAGTHUMB(inverted LOWER and DIRECTACC in low row only when DRAGTHUMB not activated)    
-CTABDLEFT(&mhr LSHFT, 20)          CTABDLEFT(&mhr LCTRL, 21)                CTABDLEFT(&mhr LALT, 22)                   CTABDLEFT(&mhr LGUI, 23)       CTABDLEFT(&kp CAPS, 24)                 CTABD(&kp CAPS, 25)  CTABD(&mhr LGUI, 26)  CTABD(&mhr LALT, 27)  CTABD(&mhr LCTRL, 28)  CTABD(&mhr LSHFT, 29)
+CTABDLEFT(&kp LSHFT, 20)          CTABDLEFT(&kp LCTRL, 21)                CTABDLEFT(&kp LALT, 22)                   CTABDLEFT(&kp LGUI, 23)       CTABDLEFT(&kp CAPS, 24)                 CTABD(&kp CAPS, 25)  CTABD(&kp LGUI, 26)  CTABD(&kp LALT, 27)  CTABD(&kp LCTRL, 28)  CTABD(&kp LSHFT, 29)
 
 //CTAB(&kp N1, 0)                    CTAB(&kp N2, 1)                        CTAB(&kp N3, 2)                            CTAB(&kp N4, 3)                CTAB(&kp N5, 4)                         CTAB(&kp N6, 5)      CTAB(&kp N7, 6)       CTAB(&kp N8, 7)       CTAB(&kp N9, 8)        CTAB(&kp N0, 9)
-//CTABDLEFT(&mhr LSHFT, 10)          CTABDLEFT(&mhr LCTRL, 11)              CTABDLEFT(&mhr LALT, 12)                   CTABDLEFT(&mhr LGUI, 13)       CTABDLEFT(&kp CAPS, 14)                 CTABD(&kp CAPS, 15)  CTABD(&mhr LGUI, 16)  CTABD(&mhr LALT, 17)  CTABD(&mhr LCTRL, 18)  CTABD(&mhr LSHFT, 19)
+//CTABDLEFT(&kp LSHFT, 10)          CTABDLEFT(&kp LCTRL, 11)              CTABDLEFT(&kp LALT, 12)                   CTABDLEFT(&kp LGUI, 13)       CTABDLEFT(&kp CAPS, 14)                 CTABD(&kp CAPS, 15)  CTABD(&kp LGUI, 16)  CTABD(&kp LALT, 17)  CTABD(&kp LCTRL, 18)  CTABD(&kp LSHFT, 19)
 //CTABDA(&td_find_s_ht A LG(F), 20)  CTABDA(&td_find_g_ht A LG(LS(F)), 21)  CTABDA(&lrlMo LA(LS(H)) LA(LS(F12)), 22)   CTABDA(&kp LC(LS(MINUS)), 23)  CTABDA(&kp LC(MINUS), 24)        
 
 //ENT+RAISE
 
-CENT(&kp LC(C_BRI_DN), 0)          CENT(&kp LC(C_BRI_UP), 1)                CENT(&kp C_BRI_DN, 2)                      CENT(&kp C_BRI_UP, 3)                                            CENT(&kp C_VOL_UP, 5)    CENT(&kp C_PREV, 6)   CENT(&kp C_PP, 7)     CENT(&kp C_NEXT, 8)     
-                                   CENT(&kp LC(UP), 11)                     CENT(&kp LC(DOWN), 12)                     CENT(&kp F11, 13)              CENT(&kp LC(LS(LEFT)), 14)        CENT(&kp C_VOL_DN, 15) 
-                                                                                                                                                                                        CENT(&kp C_MUTE, 25)
-//CENTDLEFT(&mhr LSHFT, 10)          CENTDLEFT(&mhr LCTRL, 11)                CENTDLEFT(&mhr LALT, 12)                   CENTDLEFT(&mhr LGUI, 13)       CENTDLEFT(&kp CAPS, 14)           CENT(&kp C_VOL_DN, 15)   CENTD(&mhr LGUI, 16)  CENTD(&mhr LALT, 17)  CENTD(&mhr LCTRL, 18)  CENTD(&mhr LSHFT, 19)
+CENTDLEFT(&kp LC(C_BRI_DN), 0)          CENTDLEFT(&kp LC(C_BRI_UP), 1)                CENTDLEFT(&kp C_BRI_DN, 2)                      CENTDLEFT(&kp C_BRI_UP, 3)                                                 CENTDLEFT(&kp C_VOL_UP, 5)    CENT(&kp C_PREV, 6)   CENT(&kp C_PP, 7)     CENT(&kp C_NEXT, 8)     
+                                        CENTDLEFT(&kp LC(UP), 11)                     CENTDLEFT(&kp LC(DOWN), 12)                     CENTDLEFT(&kp F11, 13)              CENTDLEFT(&kp LC(LS(LEFT)), 14)        CENTDLEFT(&kp C_VOL_DN, 15)   CENT(&bt_0, 16)       CENT(&bt_1, 17)       CENT(&bt_2, 18)          CENT(&bt_3, 19)
+                                                                                                                                                                                                                 CENTDLEFT(&kp C_MUTE, 25)
+//CENTDLEFT(&kp LSHFT, 10)          CENTDLEFT(&kp LCTRL, 11)                CENTDLEFT(&kp LALT, 12)                   CENTDLEFT(&kp LGUI, 13)       CENTDLEFT(&kp CAPS, 14)           CENT(&kp C_VOL_DN, 15)   CENTD(&kp LGUI, 16)  CENTD(&kp LALT, 17)  CENTD(&kp LCTRL, 18)  CENTD(&kp LSHFT, 19)
 //CENT(LA(Q), 0)    CENT(LA(W), 1)    CENT(LA(F), 2)    CENT(LA(P), 3)    CENT(LA(B), 4)                  CENT(LA(J), 5)   CENT(LA(L), 6)   CENT(LA(U), 7)       CENT(LA(Y), 8)     CENT(LA(SQT), 9)
 //CENT(LA(A), 10)   CENT(LA(R), 11)   CENT(LA(S), 12)   CENT(LA(T), 13)   CENT(LA(G), 14)                 CENT(LA(M), 15)  CENT(LA(N), 16)  CENT(LA(E), 17)      CENT(LA(I), 18)    CENT(LA(O), 19)
 //CENT(LA(Z), 20)   CENT(LA(X), 21)   CENT(LA(C), 22)   CENT(LA(D), 23)   CENT(LA(V), 24)                 CENT(LA(K), 25)  CENT(LA(H), 26)  CENT(LA(COMMA), 27)  CENT(LA(DOT), 28)  CENT(LA(SLASH), 29)
