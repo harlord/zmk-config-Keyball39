@@ -30,7 +30,7 @@
     key-positions = <KEYPOS>; \
     slow-release; \
     require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; \
-    layers = <BASE NAVOVERR DIRECTACC NUMBERS RAISE LOWER FUNC MOUSE SNIPE WARP SCROLL FAST SCROLLBASE SCROLLTOP>; \
+    layers = <BASE NAVOVERR DIRECTACC NUMBERS RAISE LOWER FUNC MOUSE SNIPE WARP SCROLL FAST MOUSETOP SCROLLTOP>; \
   };
 #define RCOMBO(NAME, BINDINGS, KEYPOS) \
   rcombo_##NAME { \
@@ -47,13 +47,13 @@
     require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; \
     key-positions = <KEYPOS>; \
   };
-#define RCOMBOMOUSEOFF(NAME, BINDINGS, KEYPOS, IDLE_MS, LAYER) \
-  rcombomouseoff_##NAME { \
-    timeout-ms = <800>; \
-    bindings = <BINDINGS>; \
+#define RCOMBOMOUSEACTION(NAME, BINDINGS, KEYPOS) \
+  rcombomouseoaction_##NAME { \
+    timeout-ms = <1000>; \
+    bindings = <&mo MOUSE>, <BINDINGS>; \
     key-positions = <KEYPOS>; \
-    require-prior-idle-ms = <IDLE_MS>; \
-    layers = <LAYER>; \
+    slow-release; \
+    layers = <BASE DIRECTACC RAISE FUNC>; \
   };
 #define LCOMBO(NAME, BINDINGS, KEYPOS) \
   lcombo_##NAME { \
@@ -61,7 +61,7 @@
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; \
-    layers = <BASE DIRECTACC RAISE NUMBERS LOWER FUNC MOUSE SNIPE WARP SCROLL FAST SCROLLBASE SCROLLTOP>; \
+    layers = <BASE DIRECTACC RAISE NUMBERS LOWER FUNC MOUSE SNIPE WARP SCROLL FAST MOUSETOP SCROLLTOP>; \
   };
 #define NAVBACOMBO(NAME, BINDINGS, KEYPOS) \
   navcombo_##NAME { \
@@ -188,7 +188,7 @@
     key-positions-first-exclude = <35>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE DIRECTACC NUMBERS RAISE FUNC MOUSE SNIPE WARP SCROLL FAST SCROLLBASE SCROLLTOP>; \
+    layers = <BASE DIRECTACC NUMBERS RAISE FUNC MOUSE SNIPE WARP SCROLL FAST MOUSETOP SCROLLTOP>; \
   };
 #define CTABS(BINDINGS, KEYPOS) \
   ctabs_##KEYPOS { \
@@ -239,7 +239,7 @@
     key-positions-first-exclude = <36>; \
     key-positions-leader = <KEYPOS>; \
     slow-release; \
-    layers = <BASE DIRECTACC RAISE NUMBERS FUNC MOUSE SNIPE WARP SCROLL FAST SCROLLBASE SCROLLTOP>; \
+    layers = <BASE DIRECTACC RAISE NUMBERS FUNC MOUSE SNIPE WARP SCROLL FAST MOUSETOP SCROLLTOP>; \
   };
 
 
@@ -256,7 +256,7 @@
   };
 #define CSPCS(BINDINGS, KEYPOS) \
   cspcs_##KEYPOS { \
-    timeout-ms = <350>; \
+    timeout-ms = <2000>; \
     bindings = <&mo NUMBERS>, <BINDINGS>; \
     key-positions = <KEYPOS 37>; \
     key-positions-first-exclude = <37>; \
@@ -308,7 +308,6 @@
         //NAVBACOMBO(pg_5, &kp PG_DN, 17 28)// H .
 
         //MOUSE
-        RCOMBOMOUSE(offmouse3, &tog_off MOUSE, 6 7 8)
 
         //NAVBACOMBOINV(pg_0_inv, &kp HOME, 22 23 33)//  
         //NAVBACOMBOINV(pg_1_inv, &kp END, 23 24 33)// 
@@ -319,68 +318,26 @@
         COMBODIRECTACC(adj_tog_on, &tog_on ADJ,  0  1  2  3 )
         COMBOADJ(adj_tog_off, &tog_off ADJ,  0  1  2  3 )
 
-        RCOMBOMOUSEOFF(offmousem, &tog_off MOUSE, 17 18, 10, MOUSE)
-        RCOMBOMOUSEOFF(offmouseb, &tog_off MOUSE, 17 18, 200, BASE)
+        RCOMBOMOUSEACTION(l_click, &mcmou LCLK, 16 17 18)
+        RCOMBOMOUSEACTION(r_click, &mcmou RCLK, 17 18 19)
 
-        combo_scroll: combo_scroll {
-            bindings = <&mc_mouse_layers SCROLLTOP>;   // or your desired behavior
+        combo_scroll_up: combo_scroll_up {
+            bindings = <&mo SCROLLTOP>;   // or your desired behavior
             key-positions = <17>;     // the key you press
-            timeout-ms = <500>;       // regular combo timeout
+            timeout-ms = <1000>;       // regular combo timeout
             require-pointer-move;     // gate on movement
             pointer-move-timeout-ms = <500>; // optional; else uses timeout-ms
             layers = <BASE>;          // where it applies
         };
 
-        combo_snipe: combo_snipe {
-            bindings = <&mc_mouse_layers SNIPE>;   // or your desired behavior
+        combo_snipe_up: combo_snipe_up {
+            bindings = <&mo SNIPE>;   // or your desired behavior
             key-positions = <18>;     // the key you press
-            timeout-ms = <500>;       // regular combo timeout
+            timeout-ms = <1000>;       // regular combo timeout
             require-pointer-move;     // gate on movement
             pointer-move-timeout-ms = <500>; // optional; else uses timeout-ms
             layers = <BASE>;          // where it applies
         };
-
-        combo_mouse_scroll: combo_mouse_scroll {
-            bindings = <&mc_mouse_layers SCROLL>;   // or your desired behavior
-            key-positions = <17>;     // the key you press
-            timeout-ms = <500>;       // regular combo timeout
-            require-pointer-move;     // gate on movement
-            pointer-move-timeout-ms = <500>; // optional; else uses timeout-ms
-            layers = <MOUSE>;          // where it applies
-        };
-
-        combo_mouse_snipe: combo_mouse_snipe {
-            bindings = <&mc_mouse_layers SNIPE>;   // or your desired behavior
-            key-positions = <18>;     // the key you press
-            timeout-ms = <500>;       // regular combo timeout
-            require-pointer-move;     // gate on movement
-            pointer-move-timeout-ms = <500>; // optional; else uses timeout-ms
-            layers = <MOUSE>;          // where it applies
-        };
-
-        combo_mouse_scroll_off: combo_mouse_scroll_off {
-            bindings = <&mo SCROLL>, <&mo FAST>;   // first binding is slow release, second binding is quick release
-            key-positions = <17 18>;     // the key you press
-            key-positions-first-exclude = <18>; // if first press SNIPE is discarded
-            key-positions-leader = <17>; // should press SCROLL first to continue the combo
-            timeout-ms = <500>;       // regular combo timeout
-            require-pointer-move;     // gate on movement
-            pointer-move-timeout-ms = <500>; // optional; else uses timeout-ms
-            layers = <MOUSE>;          // where it applies
-        };
-
-        combo_mouse_snipe_off: combo_mouse_snipe_off {
-            bindings = <&mo SNIPE>, <&mo SCROLLTOP>;   // first binding is slow release, second binding is quick release
-            key-positions = <17 18>;     // the key you press
-            key-positions-first-exclude = <17>; // if first press SCROLL is discarded
-            key-positions-leader = <18>; // should press SNIPE first to continue the combo
-            timeout-ms = <500>;       // regular combo timeout
-            require-pointer-move;     // gate on movement
-            pointer-move-timeout-ms = <500>; // optional; else uses timeout-ms
-            layers = <MOUSE>;          // where it applies
-        };
-
-       
 
         //////////////////////
         //START Dragmod LEFT//

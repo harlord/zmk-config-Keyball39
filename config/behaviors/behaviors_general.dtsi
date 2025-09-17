@@ -74,7 +74,7 @@
             tapping-term-ms = <320>;                                 
             quick-tap-ms = <175>;
             require-prior-idle-ms = <120>;
-            bindings = <&kp>, <&kpo>;
+            bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS LEFT_THUMB_KEYS RIGHT_THUMB_KEYS>;
             hold-trigger-on-release;
         };
@@ -86,7 +86,7 @@
             tapping-term-ms = <220>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <120>;
-            bindings = <&kp>, <&kpo>;
+            bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <LEFT_HAND_KEYS LEFT_THUMB_KEYS RIGHT_THUMB_KEYS>;
             hold-trigger-on-release;
         };
@@ -97,13 +97,13 @@
             tapping-term-ms = <THUMB_HOLDING_TIME_SHORT>;
             #binding-cells = <2>;
             hold-trigger-on-release;
-            bindings = <&kp>, <&kpo>;
+            bindings = <&kp>, <&kp>;
         };
 
         lrlMo: lrlMo {
             compatible = "zmk,behavior-hold-tap";
             label = "LRLMO";
-            bindings = <&kp>, <&kpo>;
+            bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <THUMB_HOLDING_TIME>;
@@ -114,7 +114,7 @@
         lrrMo: lrrMo {
             compatible = "zmk,behavior-hold-tap";
             label = "LRRMO";
-            bindings = <&kp>, <&kpo>;
+            bindings = <&kp>, <&kp>;
             #binding-cells = <2>; 
             flavor = "balanced";
             tapping-term-ms = <THUMB_HOLDING_TIME>;
@@ -125,7 +125,7 @@
         lrDl: lrDl {
             compatible = "zmk,behavior-hold-tap";
             label = "LRDL";
-            bindings = <&kp>, <&kpo>;
+            bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             flavor = "balanced";
             require-prior-idle-ms = <120>;
@@ -215,7 +215,7 @@
             quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
             hold-trigger-on-release; // wait for other home row mods
             #binding-cells = <2>;
-            bindings = <&mcTogOff>, <&kpo>;
+            bindings = <&mo>, <&kp>;
         };
 
         th_kp_kp_hp: th_kp_kp_hp {
@@ -225,7 +225,7 @@
             quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
             #binding-cells = <2>;
             hold-trigger-on-release;
-            bindings = <&kp>, <&kpo>;
+            bindings = <&kp>, <&kp>;
         };
 
         space: space {
@@ -235,7 +235,7 @@
             //quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
             #binding-cells = <2>;
             require-prior-idle-ms = <80>;
-            bindings = <&mcTogOff>, <&kpo>;
+            bindings = <&mo>, <&kp>;
         };
 
         spacelm: thumb_layer_access_spacebarlm {

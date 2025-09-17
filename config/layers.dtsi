@@ -3,7 +3,7 @@
 #define SCROLL 2
 #define SNIPE 3
 #define SCROLLTOP 4
-#define SCROLLBASE 5
+#define MOUSETOP 5
 #define FAST 6
 #define LOWER  7
 #define RAISE  8

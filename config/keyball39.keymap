@@ -119,9 +119,9 @@ west build -p \
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&kpo Q                   &kpo W           &kpo F           &kpo P          &kpo B                    &kpo J          &kpo L             &kpo U               &kpo Y               &kpo SQT
-&kpo A                   &kpo R           &kpo S           &kpo T          &kpo G                    &kpo M          &mkp LCLK          &kpo E               &kpo I               &mkp RCLK
-&lrlMo LSHFT Z           &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kpo V                    &kpo K          &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
+&kp Q                    &kp W            &kp F            &kp P           &kp B                    &kp J          &kp L              &kp U                 &kp Y                  &mkp RCLK
+&kp A                    &kp R            &kp S            &kp T           &kp G                    &kp M          &mkp LCLK          &mo SCROLL            &mo SNIPE              &mkp RCLK
+&lrlMo LSHFT Z           &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kp V                    &kp K          &lrrMo LGUI H      &lrrMo LALT COMMA     &lrrMo LCTRL DOT       &lrrMo LSHFT SLASH 
 &none  &none  &none &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &none
             >;
         };
@@ -129,9 +129,9 @@ west build -p \
          scroll_layer {
             label = "SCROLL";
             bindings = <
-&kpo Q                   &kpo W           &kpo F           &kpo P          &kpo B                    &kpo J         &kpo L             &kpo U               &kpo Y               &kpo SQT
-&kpo A                   &kpo R           &kpo S           &kpo T          &kpo G                    &kpo M         &mkp LCLK          &mo SCROLL           &mo FAST             &mkp RCLK
-&lrlMo LSHFT Z           &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kpo V                    &kpo K         &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
+&kp Q                   &kp W           &kp F           &kp P          &kp B                        &kp J         &kp L              &kp U                &kp Y                &mkp RCLK
+&kp A                   &kp R           &kp S           &kp T          &kp G                        &kp M         &mkp LCLK          &mo SCROLL           &mo FAST             &mkp RCLK
+&lrlMo LSHFT Z           &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kp V                    &kp K         &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
 &none  &none  &none  &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &none
             >;
         };
@@ -139,9 +139,9 @@ west build -p \
         snipe_layer {
             label = "SNIPE";
             bindings = <
-&kpo Q                   &kpo W           &kpo F           &kpo P          &kpo B                    &kpo J          &kpo L             &kpo U               &kpo Y               &kpo SQT
-&kpo A                   &kpo R           &kpo S           &kpo T          &kpo G                    &kpo M          &mkp LCLK          &mo SCROLLTOP        &mo SNIPE            &mkp RCLK
-&lrlMo LSHFT Z           &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kpo V                    &kpo K          &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
+&kp Q                   &kp W           &kp F           &kp P          &kp B                        &kp J          &kp L              &kp U                &kp Y                &mkp RCLK
+&kp A                   &kp R           &kp S           &kp T          &kp G                        &kp M          &mkp LCLK          &mo MOUSETOP         &mo SNIPE            &mkp RCLK
+&lrlMo LSHFT Z           &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kp V                    &kp K          &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
 &none  &none  &none  &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &none
             >;
         };
@@ -149,19 +149,19 @@ west build -p \
         scrolltop_layer {
             label = "SCROLLTOP";
             bindings = <
-&kpo Q                   &kpo W           &kpo F           &kpo P          &kpo B                    &kpo J          &kpo L             &kpo U               &kpo Y               &kpo SQT
-&kpo A                   &kpo R           &kpo S           &kpo T          &kpo G                    &kpo M          &mkp LCLK          &mo SCROLL           &mo FAST             &mkp RCLK
-&lrlMo LSHFT Z           &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kpo V                    &kpo K          &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
-&none  &none  &none  &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &none
+&kp Q                    &kp W            &kp F            &kp P           &kp B                    &kp J          &kp L              &kp U                 &kp Y                  &mkp RCLK
+&kp A                    &kp R            &kp S            &kp T           &kp G                    &kp M          &mkp LCLK          &mo SCROLL            &mo FAST              &mkp RCLK
+&lrlMo LSHFT Z           &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kp V                    &kp K          &lrrMo LGUI H      &lrrMo LALT COMMA     &lrrMo LCTRL DOT       &lrrMo LSHFT SLASH 
+&none  &none  &none &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &none
             >;
         };
 
  basescroll_layer {
-            label = "SCROLLBASE";
+            label = "MOUSETOP";
             bindings = <
-                               &kpo Q                 &kpo W           &kpo F           &kpo P          &kpo B                           &kpo J          &kpo L             &kpo U               &kpo Y               &kpo SQT
-                               &kpo A                 &kpo R           &kpo S           &kpo T          &kpo G                           &kpo M          &kpo N             &kpo E               &kpo I               &kpo O
-                               &lrlMo LSHFT Z         &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kpo V                           &kpo K          &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
+                               &kp Q                 &kp W           &kp F           &kp P          &kp B                               &kp J          &kp L              &kp U                &kp Y                &kp SQT
+                               &kp A                 &kp R           &kp S           &kp T          &kp G                               &kp M          &kp N              &mo SCROLL           &mo SNIPE            &kp O
+                               &lrlMo LSHFT Z         &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kp V                           &kp K          &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
 &none  &none  &none &lm_homerow_short LALT DEL  &lm_homerow_short LSHFT BACKSPACE  &lm_homerow_short LGUI TAB                &base_th_mo_kp_hp RAISE ENTER  &spacelm LOWER SPACE  &none
             >;
         };
@@ -169,9 +169,9 @@ west build -p \
     fast_layer {
         label = "FAST";
         bindings = <
-&kpo Q                   &kpo W           &kpo F           &kpo P          &kpo B                    &kpo J          &kpo L             &kpo U               &kpo Y               &kpo SQT
-&kpo A                   &kpo R           &kpo S           &kpo T          &kpo G                    &kpo M          &mkp LCLK          &mo SCROLL           &mo SNIPE            &mkp RCLK
-&lrlMo LSHFT Z           &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kpo V                    &kpo K          &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
+&kp Q                   &kp W           &kp F           &kp P          &kp B                        &kp J          &kp L              &kp U                &kp Y                &mkp RCLK
+&kp A                   &kp R           &kp S           &kp T          &kp G                        &kp M          &mkp LCLK          &mo SCROLL           &mo SNIPE            &mkp RCLK
+&lrlMo LSHFT Z           &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kp V                    &kp K          &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
 &none  &none  &none &trans &trans &trans  &trans &trans         &none
         >;
     };
@@ -180,7 +180,7 @@ west build -p \
             label = "LOWER";
             bindings = <
                   &kp N1                   &kp N2           &kp N3           &kp N4          &kp N5                    &kp N6           &kp N7                &kp N8                    &kp N9          &kp N0
-                  &kpo A                   &kpo R           &kpo S           &kpo T          &kpo G                    &kpo M           &kp HOME              &kp UP                    &kp END         &kp PG_UP
+                  &kp A                    &kp R            &kp S            &kp T           &kp G                     &kp M            &kp HOME              &kp UP                    &kp END         &kp PG_UP
                   &lrlMo LSHFT Z           &lrlMo LCTRL X   &lrlMo LALT C    &lrlMo LGUI D   &kp V                     &kp EQUAL        &kp LEFT              &kp DOWN                  &kp RIGHT       &kp PG_DN 
 &none  &none  &none  &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE  &none  
             >;
@@ -249,9 +249,9 @@ west build -p \
         warp_layer {
             label = "WARP";
             bindings = <
-&kpo Q                   &kpo W               &kpo F           &kpo P          &kpo B                    &kpo J          &kpo L             &kpo U               &kpo Y               &kpo SQT
-&kpo A                   &kpo R               &kpo S           &kpo T          &kpo G                    &kpo M          &mkp LCLK          &mo SCROLL           &mo SNIPE            &mkp RCLK
-&lrlMo LSHFT Z           &lrlMo LCTRL X       &lrlMo LALT C    &lrlMo LGUI D   &kpo V                    &kpo K          &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
+&kp Q                   &kp W               &kp F           &kp P          &kp B                        &kp J          &kp L              &kp U                &kp Y                &mkp RCLK
+&kp A                   &kp R               &kp S           &kp T          &kp G                        &kp M          &mkp LCLK          &mo SCROLL           &mo SNIPE            &mkp RCLK
+&lrlMo LSHFT Z           &lrlMo LCTRL X       &lrlMo LALT C    &lrlMo LGUI D   &kp V                    &kp K          &lrrMo LGUI H      &lrrMo LALT COMMA    &lrrMo LCTRL DOT     &lrrMo LSHFT SLASH 
 &none  &none  &none  &th_kp_kp_hp LALT DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE   &none
             >;
         };
