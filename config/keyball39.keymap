@@ -110,7 +110,7 @@ west build -p \
             label = "BASE";
             bindings = <
                                &kp Q                  &kp W               &kp F             &kp P             &kp B                           &kp J    &kp L             &kp U                  &kp Y                &kp SQT
-                               &bhdel ESC A           &bhbks BSPC R       &bhtab TAB S      &kp T             &kp G                           &kp M    &kp N             &bhmou SNIPE E      &kp I                &kp O
+                               &kp A                  &kp R               &kp S             &kp T             &kp G                           &kp M    &kp N             &bhmou SNIPE E      &kp I                &kp O
                                &hml_hr LSHFT Z        &hml_hr LCTRL X     &hml_hr LALT C    &hml_hr LGUI D    &kp V                           &kp K    &hmr_hr LGUI H    &hmr_hr LALT COMMA     &hmr_hr LCTRL DOT    &hmr_hr LSHFT SLASH        
 &none  &none  &none &lm_homerow_short LALT DEL  &lm_homerow_short LSHFT BACKSPACE  &th_kp_kp_hp LGUI TAB                 &base_th_mo_kp_hp RAISE ENTER  &spacelm LOWER SPACE  &none
             >;
