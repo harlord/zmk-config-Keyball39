@@ -1,13 +1,12 @@
 #define BASE 0
 #define MOUSE 1
-#define SCROLL 2
-#define SNIPE 3
-#define SCROLLTOP 4
-#define MOUSETOP 5
+#define MOUSETOP 2
+#define SCROLL 3
+#define SNIPE 4
+#define SCROLLTOP 5
 #define FAST 6
 #define LOWER  7
 #define RAISE  8
-#define NAVOVERR 9
 #define DIRECTACC 10
 #define FUNC 11
 #define ADJ  12

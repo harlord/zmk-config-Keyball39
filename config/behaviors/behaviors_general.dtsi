@@ -33,6 +33,9 @@
 #define SLOW_THUMB_KEYS  37 
 
 
+#define MOUSE_HAND_KEYS  16 17 18 19
+
+
 
 #define LEFT_THUMB_KEYS   30 31 32 33 34 35    
 
@@ -117,18 +120,6 @@
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>; 
             flavor = "balanced";
-            tapping-term-ms = <THUMB_HOLDING_TIME>;
-            quick-tap-ms = <175>;
-            hold-trigger-on-release;
-        };
-
-        lrDl: lrDl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LRDL";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <120>;
             tapping-term-ms = <THUMB_HOLDING_TIME>;
             quick-tap-ms = <175>;
             hold-trigger-on-release;
@@ -299,4 +290,47 @@
             tapping-term-ms = <500>;
             bindings = <&mo 4>, <&none>, <&kp ESC>;
         };
+
+        bhmou: bhmou {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BHMOU";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>; 
+            flavor = "balanced";
+            tapping-term-ms = <THUMB_HOLDING_TIME>;
+            hold-trigger-key-positions = <MOUSE_HAND_KEYS>;
+        };
+
+        bhtab: bhtab {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>; 
+            flavor = "balanced";
+            tapping-term-ms = <3000>;
+            hold-trigger-key-positions = <13>;
+            quick-tap-ms = <175>;
+        };
+
+        bhbks: bhbks {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>; 
+            flavor = "balanced";
+            tapping-term-ms = <3000>;
+            hold-trigger-key-positions = <12>;
+            quick-tap-ms = <175>;
+        };
+
+        bhdel: bhdel {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>; 
+            flavor = "balanced";
+            tapping-term-ms = <3000>;
+            hold-trigger-key-positions = <11>;
+            quick-tap-ms = <175>;
+        };
+
+
+
     };
