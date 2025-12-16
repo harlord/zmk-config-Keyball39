@@ -33,7 +33,7 @@
 #define SLOW_THUMB_KEYS  37 
 
 
-#define MOUSE_HAND_KEYS  16 17 18 19
+#define MOUSE_HAND_KEYS  16 18 19
 
 
 
