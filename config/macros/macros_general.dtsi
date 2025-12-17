@@ -1,6 +1,6 @@
 macros {
 
-        mc_sleep: mc_sleep {
+        mc_lock_screen: mc_lock_screen {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -8,6 +8,32 @@ macros {
                 <&kp LG(LC(Q))>,
                 <&macro_tap_time 20>,
                 <&kp ESC>;
+        };
+
+        mc_cmd_shift: mc_cmd_shift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&kp LGUI>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LGUI>,
+                <&kp LSHFT>;
+        };
+
+        mc_alt_shift: mc_alt_shift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&kp LGUI>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LGUI>,
+                <&kp LALT>;
         };
 
         mshon: mshon {
@@ -432,4 +458,5 @@ macros {
                 <&macro_param_1to1>,
                 <&mkp MACRO_PLACEHOLDER>;
         };
+        
     };

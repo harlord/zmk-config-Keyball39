@@ -54,11 +54,10 @@
         status = "okay";
         compatible = "pixart,pmw3610";
         reg = <0>;
-        spi-max-frequency = <3000000>;
+        spi-max-frequency = <2000000>;
         irq-gpios = <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        automouse-layer = <MOUSE>;
-	scroll-layers = <SCROLL SCROLLTOP FAST>; 
-	snipe-layers = <SNIPE>;
+        scroll-layers = <SCROLL SCROLLTOP FAST>;
+        snipe-layers = <SNIPE SNIPETOP>;
     };
 };
 
@@ -72,7 +71,6 @@
   };
 };
 
-
 / {
   xy_boost_scaler: xy_boost_scaler {
     compatible = "zmk,input-processor-scaler";
@@ -83,34 +81,31 @@
   };
 };
 
-
 / {
   trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
-        //scroll {                   /* active while SCROLL layer is held */
-        //    layers = <SCROLL>;       /* SCROLL */
-        //    input-processors = <&fast_scroll_scaler 1 2>;  
-        //};
 
-        fast {                   /* active while FAST layer is held */
-            layers = <FAST>;       /* FAST */
-            input-processors = <&fast_scroll_scaler 8 1>;   
-        };
+    fast {
+        layers = <FAST>;
+        input-processors = <&fast_scroll_scaler 8 1>;
+    };
 
-        boost {                  /* active while MOUSE layer is active (automouse) */
-            layers = <MOUSE>;
-            input-processors = <&xy_boost_scaler 2 1>;
-        };
+    /* Put SNIPE first so it takes priority over BASE */
+    snipe_boost {
+        layers = <SNIPE SNIPETOP>;
+        input-processors = <&xy_boost_scaler 3 2>;
+    };
 
-        boost_top {                  /* active while MOUSE layer is active (automouse) */
-            layers = <MOUSETOP>;
-            input-processors = <&xy_boost_scaler 2 1>;
-        };
+    boost {
+        layers = <BASE DIRECTACC NUMBERS RAISE FUNC WARP SCROLL MOUSETOP SCROLLTOP>;
+        input-processors = <&xy_boost_scaler 3 1>;
+    };
 
-        snipe_boost {           /* keep the same boost while the SNIPE layer is on */
-            layers = <SNIPE>;
-            input-processors = <&xy_boost_scaler 2 1>;
-        };
+    boost_top {
+        layers = <BASE DIRECTACC NUMBERS RAISE FUNC WARP SCROLL MOUSETOP SCROLLTOP>;
+        input-processors = <&xy_boost_scaler 3 1>;
+    };
+
   };
 };

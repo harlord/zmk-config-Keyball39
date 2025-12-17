@@ -33,7 +33,7 @@
 #define SLOW_THUMB_KEYS  37 
 
 
-#define MOUSE_HAND_KEYS  16 18 19
+#define MOUSE_LEFT_HAND_KEYS  10 11 13
 
 
 
@@ -45,6 +45,26 @@
 
    
    behaviors {
+
+        mkp_toggle: behavior_mkp_toggle {
+            compatible = "zmk,behavior-mkp-toggle";
+            label = "MKP_TOGGLE";
+            #binding-cells = <1>;
+        };
+
+        mkp_on: mkp_toggle_on_only {
+            compatible = "zmk,behavior-mkp-toggle";
+            label = "MKP_TOGGLE";
+            #binding-cells = <1>;
+            toggle-mode = "on";   // o "on"
+        };
+
+        mkp_off: mkp_toggle_off_only {
+            compatible = "zmk,behavior-mkp-toggle";
+            label = "MKP_TOGGLE";
+            #binding-cells = <1>;
+            toggle-mode = "off";   // o "on"
+        };
 
         kt_on: key_toggle_on_only {
             compatible = "zmk,behavior-key-toggle";
@@ -74,9 +94,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <320>;                                 
+            tapping-term-ms = <250>;                                 
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <120>;
+            require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS LEFT_THUMB_KEYS RIGHT_THUMB_KEYS>;
             hold-trigger-on-release;
@@ -86,9 +106,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <220>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <120>;
+            require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <LEFT_HAND_KEYS LEFT_THUMB_KEYS RIGHT_THUMB_KEYS>;
             hold-trigger-on-release;
@@ -125,12 +145,19 @@
             hold-trigger-on-release;
         };
 
+        ref_imp: ref_imp {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <1000>;
+            bindings = <&kp LA(LS(F12))>, <&kp LA(LS(H))>;
+        };
+        
         bt_0: bt_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "BT_0";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&bt_select_disc_0>, <&out OUT_USB>, <&bt_pairing_c 0>;
+            bindings = <&bt_select_disc_0>, <&bt_pairing_c 0>;
         };
 
         bt_1: bt_1 {
@@ -138,7 +165,7 @@
             label = "BT_1";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&bt_select_disc_1>, <&out OUT_USB>, <&bt_pairing_c 1>;
+            bindings = <&bt_select_disc_1>, <&bt_pairing_c 1>;
         };
 
         bt_2: bt_2 {
@@ -146,7 +173,7 @@
             label = "BT_2";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&bt_select_disc_2>, <&out OUT_USB>, <&bt_pairing_c 2>;
+            bindings = <&bt_select_disc_2>, <&bt_pairing_c 2>;
         };
 
         bt_3: bt_3 {
@@ -154,7 +181,7 @@
             label = "BT_3";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&bt_select_disc_3>, <&out OUT_USB>, <&bt_pairing_c 3>;
+            bindings = <&bt_select_disc_3>, <&bt_pairing_c 3>;
         };
 
         bt_4: bt_4 {
@@ -162,7 +189,7 @@
             label = "BT_4";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&bt_select_disc_4>, <&out OUT_USB>, <&bt_pairing_c 4>;
+            bindings = <&bt_select_disc_4>, <&bt_pairing_c 4>;
         };
 
         tog_on: toggle_layer_on_only {
@@ -283,54 +310,15 @@
             bindings = <&gpfind>, <&kp>;
         };
 
-        nav_esc: nav_esc {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NAV_ESC";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&mo 4>, <&none>, <&kp ESC>;
-        };
-
-        bhmou: bhmou {
+        bhlmou: bhlmou {
             compatible = "zmk,behavior-hold-tap";
-            label = "BHMOU";
+            label = "BHLMOU";
             bindings = <&mo>, <&kp>;
             #binding-cells = <2>; 
             flavor = "balanced";
             tapping-term-ms = <THUMB_HOLDING_TIME>;
-            hold-trigger-key-positions = <MOUSE_HAND_KEYS>;
+            require-prior-idle-ms = <180>;
+            hold-trigger-key-positions = <MOUSE_LEFT_HAND_KEYS>;
         };
-
-        bhtab: bhtab {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>; 
-            flavor = "balanced";
-            tapping-term-ms = <3000>;
-            hold-trigger-key-positions = <13>;
-            quick-tap-ms = <175>;
-        };
-
-        bhbks: bhbks {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>; 
-            flavor = "balanced";
-            tapping-term-ms = <3000>;
-            hold-trigger-key-positions = <12>;
-            quick-tap-ms = <175>;
-        };
-
-        bhdel: bhdel {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>; 
-            flavor = "balanced";
-            tapping-term-ms = <3000>;
-            hold-trigger-key-positions = <11>;
-            quick-tap-ms = <175>;
-        };
-
-
 
     };
