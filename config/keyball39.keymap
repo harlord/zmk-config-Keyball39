@@ -188,7 +188,7 @@ west build -p \
             label = "LOWER";
             bindings = <
                   &kp N1                         &kp N2                        &kp N3                        &kp N4              &kp N5                                    &kp N6             &kp N7                    &kp N8                   &kp N9                 &kp N0
-                  &kp A                          &ref_imp                      &kp LC(LS(MINUS))             &kp LC(MINUS)       &kp UNDER                                 &kp PLUS           &kp COLON                 &kp LT                   &kp GT                 &kp QUESTION
+                  &kp PIPE                       &kp LBRC                      &kp RBRC                      &kp TILDE           &kp UNDER                                 &kp PLUS           &kp COLON                 &kp LT                   &kp GT                 &kp QUESTION
                   &lrlMo LSHFT BSLH              &lrlMo LCTRL LBKT             &lrlMo LALT RBKT              &lrlMo LGUI GRAVE   &kp MINUS                                 &kp EQUAL          &lrrMo LGUI SEMI          &lrrMo RALT COMMA        &lrrMo RCTRL DOT       &lrrMo RSHFT SLASH 
  &none  &none  &none  &th_mo_kp_hp FUNC DEL  &th_kp_kp_hp LSHFT BACKSPACE  &th_mo_kp_hp SNIPETOP TAB                  &th_mo_kp_hp RAISE ENTER   &space LOWER SPACE     &none
             >;
