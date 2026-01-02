@@ -12,7 +12,7 @@ west update                # fetch Zephyr, ZMK, HALs
 west zephyr-export         # sets Zephyr CMake package files in venv
 
 west build -p \
-  -s zmk/app -b nice_nano_v2 -d build/right \
+  -s zmk/app -b nice_nano -d build/right \
   -S zmk-usb-logging \
   -S studio-rpc-usb-uart \
   -- \
@@ -23,7 +23,7 @@ west build -p \
 
 
 west build -p \
-  -s zmk/app -b nice_nano_v2 -d build/left \
+  -s zmk/app -b nice_nano -d build/left \
   -S zmk-usb-logging \
   -- \
   -DZMK_CONFIG="${PWD}/config" \
@@ -41,16 +41,14 @@ west build -p \
 -------------------------------------------------
 
 west build -p \
-  -s zmk/app -b nice_nano_v2 -d build/right \
+  -s zmk/app -b nice_nano -d build/right \
   -- \
   -DZMK_CONFIG="${PWD}/config" \
   -DOVERLAY_CONFIG=${PWD}/config/debug.conf \
   -DSHIELD=keyball39_right
 
-
-
 west build -p \
-  -s zmk/app -b nice_nano_v2 -d build/left \
+  -s zmk/app -b nice_nano -d build/left \
   -- \
   -DZMK_CONFIG="${PWD}/config" \
   -DOVERLAY_CONFIG=${PWD}/config/debug.conf \

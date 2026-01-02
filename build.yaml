@@ -13,9 +13,9 @@
 #    snippet: studio-rpc-usb-uart
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: keyball39_left
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: keyball39_right
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: settings_reset
