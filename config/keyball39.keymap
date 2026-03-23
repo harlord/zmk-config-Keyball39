@@ -12,7 +12,7 @@ west update                # fetch Zephyr, ZMK, HALs
 west zephyr-export         # sets Zephyr CMake package files in venv
 
 west build -p \
-  -s zmk/app -b nice_nano_v2 -d build/right \
+  -s zmk/app -b nice_nano -d build/right \
   -S zmk-usb-logging \
   -S studio-rpc-usb-uart \
   -- \
@@ -23,7 +23,7 @@ west build -p \
 
 
 west build -p \
-  -s zmk/app -b nice_nano_v2 -d build/left \
+  -s zmk/app -b nice_nano -d build/left \
   -S zmk-usb-logging \
   -- \
   -DZMK_CONFIG="${PWD}/config" \
@@ -47,14 +47,18 @@ west build -p \
   -DOVERLAY_CONFIG=${PWD}/config/debug.conf \
   -DSHIELD=keyball39_right
 
-
-
 west build -p \
   -s zmk/app -b nice_nano_v2 -d build/left \
   -- \
   -DZMK_CONFIG="${PWD}/config" \
   -DOVERLAY_CONFIG=${PWD}/config/debug.conf \
   -DSHIELD=keyball39_left
+
+west build -p \
+  -s zmk/app -b nice_nano_v2 -d build/reset \
+  -- \
+  -DZMK_CONFIG="${PWD}/config" \
+  -DSHIELD=settings_reset
 
 */
 
@@ -115,7 +119,7 @@ west build -p \
     keymap {
         compatible = "zmk,keymap";
  base_layer {
-            label = "BASE";
+            label = "COLEMAK-DH";
             bindings = <
                                &kp Q                  &kp W               &kp F                &kp P              &kp B                             &kp J    &kp L             &kp U                  &kp Y                &kp SQT
                                &kp A                  &kp R               &bhlmou SNIPE S      &kp T              &kp G                             &kp M    &kp N             &kp E                  &kp I                &kp O
@@ -125,7 +129,7 @@ west build -p \
         };
 
         basescroll_layer {
-            label = "MOUSETOP";
+            label = "BASE_SCROLL";
             bindings = <
 &kp Q                      &kp W                    &kp F                 &kp P                 &kp B                                   &kp J           &kp HOME              &kp UP                    &kp END                    &kp PG_UP
 &mkp RCLK                  &mo SCROLL               &mo SNIPE             &mkp LCLK             &mkp RCLK                               &kp M           &kp LEFT              &kp DOWN                  &kp RIGHT                  &kp PG_DN
@@ -155,7 +159,7 @@ west build -p \
         };
 
         snipetop_layer {
-            label = "SNIPETOP";
+            label = "SNIPE_TOP";
             bindings = <
 &kp RG(Q)                  &kp RG(W)                   &kp RG(F)             &kp RG(P)             &kp RG(B)                             &kp LC(LS(MINUS))           &kp HOME              &kp UP                    &kp END                    &kp PG_UP
 &kp RG(A)                  &mo SCROLLTOP               &kp RG(S)             &mkp LCLK             &mkp RCLK                             &kp LC(MINUS)               &kp LEFT              &kp DOWN                  &kp RIGHT                  &kp PG_DN
@@ -165,7 +169,7 @@ west build -p \
         };
 
         scrolltop_layer {
-            label = "SCROLLTOP";
+            label = "SCROLL_TOP";
             bindings = <
 &kp Q                      &kp W                    &kp F                &kp P                 &kp B                                 &kp J               &kp HOME              &kp UP                    &kp END                    &kp PG_UP
 &mkp RCLK                  &mo SCROLL               &mo FAST             &mkp LCLK             &mkp RCLK                             &kp M               &kp LEFT              &kp DOWN                  &kp RIGHT                  &kp PG_DN
@@ -225,7 +229,7 @@ west build -p \
         };
 
         adjust_layer {
-            label = "ADJ";
+            label = "ADJUST";
             bindings = <
             &bt_0               &bt_1               &bt_2               &bt_3               &bt_4                                       &out OUT_USB            &trans                    &trans                    &trans           &trans
             &rgb_ug RGB_SPI     &rgb_ug RGB_SAI     &rgb_ug RGB_HUI     &rgb_ug RGB_BRI     &rgb_ug RGB_TOG                             &sys_reset              &trans                    &trans                    &trans           &trans

@@ -54,7 +54,6 @@ macros {
         // mc_bkctilde
 
         mc_bkctilde: mc_bkctilde {
-            label = "&TILDE";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -78,7 +77,6 @@ macros {
         // mc_enne
 
         mc_enne: mc_enne {
-            label = "&ENNE";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -112,7 +110,6 @@ macros {
         // Select a line copping from left to right
 
         scl_l_to_r: scl_l_to_r {
-            label = "&SCL_L_TO_R";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -126,7 +123,6 @@ macros {
         // Select a line copping from left to right
 
         scl_r_to_l: scl_r_to_l {
-            label = "&SCL_R_TO_L";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -140,7 +136,6 @@ macros {
         // Select a word from right to left
 
         scw_r_to_l: scw_r_to_l {
-            label = "&SCW_R_TO_L";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -154,7 +149,6 @@ macros {
         // Select a word from right to left
 
         scw_l_to_r: scw_l_to_r {
-            label = "&SCW_L_TO_R";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -168,7 +162,6 @@ macros {
         // Select and copy forward a word from right to left
 
         scfw_r_to_l: scfw_r_to_l {
-            label = "&SCFW_R_TO_L";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -181,7 +174,6 @@ macros {
         // Select and copy forward a word from left to right
 
         scfw_l_to_r: scfw_l_to_r {
-            label = "&SCFW_L_TO_R";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -192,7 +184,6 @@ macros {
         };
 
         bt_disc_0: bt_disc_0 {
-            label = "BT_DISC_0";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -206,7 +197,6 @@ macros {
         };
 
         bt_disc_1: bt_disc_1 {
-            label = "BT_DISC_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -220,7 +210,6 @@ macros {
         };
 
         bt_disc_2: bt_disc_2 {
-            label = "BT_DISC_2";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -234,7 +223,6 @@ macros {
         };
 
         bt_disc_3: bt_disc_3 {
-            label = "BT_DISC_3";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -248,7 +236,6 @@ macros {
         };
 
         bt_disc_4: bt_disc_4 {
-            label = "BT_DISC_4";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -262,7 +249,6 @@ macros {
         };
 
         bt_select_disc_0: bt_select_disc_0 {
-            label = "BT_SELECT_DISC_0";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -272,7 +258,6 @@ macros {
         };
 
         bt_select_disc_1: bt_select_disc_1 {
-            label = "BT_SELECT_DISC_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -282,7 +267,6 @@ macros {
         };
 
         bt_select_disc_2: bt_select_disc_2 {
-            label = "BT_SELECT_DISC_2";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -292,7 +276,6 @@ macros {
         };
 
         bt_select_disc_3: bt_select_disc_3 {
-            label = "BT_SELECT_DISC_3";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -302,7 +285,6 @@ macros {
         };
 
         bt_select_disc_4: bt_select_disc_4 {
-            label = "BT_SELECT_DISC_4";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -312,7 +294,6 @@ macros {
         };
 
         bt_select_c: bt_select_c {
-            label = "BT_SELECT_C";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -323,7 +304,6 @@ macros {
         };
 
         bt_pairing_c: bt_pairing_c {
-            label = "BT_PAIRING_C";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -340,7 +320,6 @@ macros {
         //  Copy Find
 
         pfind: pfind {
-            label = "&PFIND";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -352,7 +331,6 @@ macros {
         // Global Find Paste
 
         gpfind: gpfind {
-            label = "&GPFIND";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -392,7 +370,6 @@ macros {
         };
 
         mc_two_tap: mc_two_tap {
-            label = "MC_TWO_TAP";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
