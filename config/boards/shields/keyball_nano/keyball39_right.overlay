@@ -69,21 +69,39 @@
         , <INPUT_REL_Y INPUT_REL_WHEEL>;
   };
 
-  /* Scaler for scroll speed (negative multiplier inverts direction) */
-  scroll_scaler: scroll_scaler {
+  /* Scaler for vertical scroll (negative inverts) */
+  vscroll_scaler: vscroll_scaler {
     compatible = "zmk,input-processor-scaler";
     #input-processor-cells = <2>;
     type = <INPUT_EV_REL>;
-    codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
+    codes = <INPUT_REL_WHEEL>;
     track-remainders;
   };
 
-  /* Scaler for mouse movement */
-  xy_scaler: xy_scaler {
+  /* Scaler for horizontal scroll (positive because invert-x already inverts) */
+  hscroll_scaler: hscroll_scaler {
     compatible = "zmk,input-processor-scaler";
     #input-processor-cells = <2>;
     type = <INPUT_EV_REL>;
-    codes = <INPUT_REL_X INPUT_REL_Y>;
+    codes = <INPUT_REL_HWHEEL>;
+    track-remainders;
+  };
+
+  /* Scaler for mouse Y movement */
+  y_scaler: y_scaler {
+    compatible = "zmk,input-processor-scaler";
+    #input-processor-cells = <2>;
+    type = <INPUT_EV_REL>;
+    codes = <INPUT_REL_Y>;
+    track-remainders;
+  };
+
+  /* Scaler for mouse X movement (compensate for invert-y on cursor) */
+  x_scaler: x_scaler {
+    compatible = "zmk,input-processor-scaler";
+    #input-processor-cells = <2>;
+    type = <INPUT_EV_REL>;
+    codes = <INPUT_REL_X>;
     track-remainders;
   };
 };
@@ -93,28 +111,34 @@
     compatible = "zmk,input-listener";
     device = <&trackball>;
 
-    /* Scroll layers - convert X/Y to scroll wheel (slower, inverted with -1) */
-    scroll_mode {
-        layers = <SCROLL SCROLLTOP>;
-        input-processors = <&xy_to_scroll>, <&scroll_scaler (-1) 20>;
-    };
-
-    /* Fast scroll layer - faster than normal scroll (inverted with -1) */
+    /* Fast scroll layer - MUST be first to take priority over scroll_mode */
     fast_scroll {
         layers = <FAST>;
-        input-processors = <&xy_to_scroll>, <&scroll_scaler (-1) 5>;
+        input-processors = <&xy_to_scroll>, <&vscroll_scaler (-1) 4>, <&hscroll_scaler 1 4>;
+    };
+
+    /* Scroll layers - inverted both axes */
+    scroll_mode {
+        layers = <SCROLL SCROLLTOP>;
+        input-processors = <&xy_to_scroll>, <&vscroll_scaler (-1) 20>, <&hscroll_scaler 1 20>;
+    };
+
+    /* MOUSETOP override - base speed even when SNIPE/SNIPETOP are active */
+    mousetop_override {
+        layers = <MOUSETOP>;
+        input-processors = <&y_scaler 4 1>, <&x_scaler 4 1>;
     };
 
     /* Snipe mode - slower mouse */
     snipe_mode {
         layers = <SNIPE SNIPETOP>;
-        input-processors = <&xy_scaler 1 1>;
+        input-processors = <&y_scaler 3 2>, <&x_scaler 3 2>;
     };
 
     /* Default mouse movement */
     default_move {
-        layers = <BASE DIRECTACC NUMBERS RAISE FUNC WARP MOUSETOP>;
-        input-processors = <&xy_scaler 2 1>;
+        layers = <BASE LOWER RAISE DIRECTACC FUNC ADJ NUMBERS WARP SYSTEM>;
+        input-processors = <&y_scaler 4 1>, <&x_scaler 4 1>;
     };
 
   };
