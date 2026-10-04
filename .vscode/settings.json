@@ -1,3 +1,4 @@
 {
-    "zephyr-tools.paths.zephyrBase": "/Users/haroldhernandez/keyball39/zmk-config-Keyball39/zephyr"
+    "zephyr-tools.paths.zephyrBase": "/Users/haroldhernandez/keyball39/zmk-config-Keyball39/zephyr",
+    "cmake.sourceDirectory": "/Users/haroldhernandez/keyball39/zmk-config-Keyball39/zmk/app"
 }
