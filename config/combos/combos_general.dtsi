@@ -151,7 +151,7 @@
 
 #define COMBOMOUUACTALTTUMB(SLOWBINDING, QUICKBINDINGS, LEADERPOS, KEYPOS) \
   COMBOMOUUACTALTTUMB_##KEYPOS##LEADERPOS { \
-    timeout-ms = <2000>; \
+    timeout-ms = <250>; \
     bindings = <SLOWBINDING>, <QUICKBINDINGS>; \
     slow-release; \
     key-positions = <KEYPOS LEADERPOS>; \
@@ -290,6 +290,16 @@
             layers = <BASE>;
         };
 
+        //Shift right
+        combo_shift_right: combo_shift_right {
+            bindings = <&kp RG(X)>;
+            key-positions = <21>;
+            timeout-ms = <1000>;
+            require-pointer-move;
+            pointer-move-timeout-ms = <500>;
+            layers = < SNIPE SNIPETOP SCROLL FAST MOUSETOP SCROLLTOP>;
+        };
+
         //EDIT POINTER
         combo_t_cut: combo_t_cut {
             bindings = <&kp RG(X)>;
@@ -354,7 +364,7 @@ CBKS(&mc_bkctilde A, 10)                                                        
                                                                                                                                                                                                                                                                                                            CBKS(&mc_quesd, 29)          
 COMBOMOUUACTALTTUMB(&kp LALT, &kp BACKSPACE, 34, 22) 
 COMBOMOUUACTALTTUMB(&kp LGUI, &kp BACKSPACE, 34, 23)
-COMBOMOUUACTALTTUMB(&kp LGUI, &kp SPACE, 37, 23)
+//COMBOMOUUACTALTTUMB(&kp LGUI, &kp SPACE, 37, 23)
 
 
 
